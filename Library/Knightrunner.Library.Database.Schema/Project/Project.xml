@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project toolsVersion="1.0" xmlns="http://www.knightrunner.com/Library/Database/SchemaProject">
+  <DataSchemaSettings>
+    <InputFiles>
+      <InputFile path="CommonColumnTypes.xml" />
+      <InputFile path="LandsbankiColumnTypes.xml" />
+      <InputFile path="SoftwareRepository.xml" />
+    </InputFiles>
+    <Options>
+      <Thing></Thing>
+    </Options>
+  </DataSchemaSettings>
+  <Transformations>
+    <Transformation name="Script" method="Oracle" target="Oracle">
+      <OutputFile>out\script.sql</OutputFile>
+      <TableSchemaName>dbo</TableSchemaName>
+      <PrimaryKeyFormatString></PrimaryKeyFormatString>
+      <ForeignKeyFormatString></ForeignKeyFormatString>
+      <UniqueIndexFormatString></UniqueIndexFormatString>
+      <IndexFormatString></IndexFormatString>
+      <SequenceNameFormatString></SequenceNameFormatString>
+      <SequenceTriggerNameFormatString></SequenceTriggerNameFormatString>
+      <GenerateDocumentation>true</GenerateDocumentation>
+    </Transformation>
+    <Transformation name="PetaPoco" method="PetaPoco" target="DotNet">
+      <OutputDirectory>out\classes</OutputDirectory>
+      <ClassPerFile>true</ClassPerFile>
+    </Transformation>
+    <Transformation name="Documentation" method="Documentation">
+      <OutputDirectory>out\doc</OutputDirectory>
+      <CssFile>doc.css</CssFile>
+    </Transformation>
+  </Transformations>
+
+</Project>

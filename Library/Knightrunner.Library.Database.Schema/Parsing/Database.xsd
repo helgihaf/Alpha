@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.knightrunner.com/Library/Database/Schema" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:kr="http://www.knightrunner.com/Library/Database/Schema">
+  <!-- Type definitions -->
+  <xs:simpleType name="propertyAccess">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="internal"/>
+      <xs:enumeration value="public"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="inheritanceModifier">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none"/>
+      <xs:enumeration value="new"/>
+      <xs:enumeration value="newVirtual"/>
+      <xs:enumeration value="virtual"/>
+      <xs:enumeration value="override"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="associationEndPoint">
+    <xs:attribute name="access" type="kr:propertyAccess" use="optional" />
+    <xs:attribute name="inheritanceModifier" type="kr:inheritanceModifier" use="optional" />
+    <xs:attribute name="name" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="settings">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Setting">
+        <xs:complexType>
+          <xs:attribute name="target" type="xs:string" use="required"/>
+          <xs:attribute name="property" type="xs:string" use="required" />
+          <xs:attribute name="value" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extendedProperties">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Property">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Type definition end -->
+  <xs:element name="DataSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ColumnTypes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="ColumnType">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element maxOccurs="unbounded" name="Target">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="0">
+                          <xs:element name="ExtendedProperties" type="kr:extendedProperties" minOccurs="0" />
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="dataType" type="xs:string" use="required" />
+                        <xs:attribute name="dataTypeWhenReferenced" type="xs:string" use="optional" />
+                        <xs:attribute name="dotNetType" type="xs:string" use="optional" />
+                        <xs:attribute name="dotNetTypeNullable" type="xs:boolean" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="isDbGenerated" type="xs:boolean" use="optional" />
+                  <xs:attribute name="canBeNull" type="xs:boolean" use="optional" />
+                  <xs:attribute name="baseType" type="xs:string" use="optional" />
+                  <xs:attribute name="maxLength" type="xs:int" use="optional" />
+                  <xs:attribute name="enumType" type="xs:string" use="optional" />
+                  <xs:attribute name="precision" type="xs:unsignedByte" use="optional" />
+                  <xs:attribute name="scale" type="xs:unsignedByte" use="optional" />
+                  <xs:attribute name="description" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Tables">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Table">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Columns">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Column">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element name="AssociationCode">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Child" type="kr:associationEndPoint" minOccurs="0" nillable="true" />
+                                      <xs:element name="Parent" type="kr:associationEndPoint" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="name" type="xs:string" use="required" />
+                              <xs:attribute name="columnType" type="xs:string" use="optional" />
+                              <xs:attribute name="inPrimaryKey" type="xs:boolean" use="optional" />
+                              <xs:attribute name="references" type="xs:string" use="optional" />
+                              <xs:attribute name="canBeNull" type="xs:boolean" use="optional" />
+                              <xs:attribute name="childProperty" type="xs:string" use="optional" />
+                              <xs:attribute name="parentProperty" type="xs:string" use="optional" />
+                              <xs:attribute name="description" type="xs:string" use="optional" />
+                              <xs:attribute name="referenceName" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Indices">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="Index">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="Column">
+                                  <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="unique" type="xs:boolean" use="optional" />
+                              <xs:attribute name="name" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="ForeignKeys">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="ForeignKey">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ColumnPairs">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="1" maxOccurs="unbounded" name="ColumnPair">
+                                        <xs:complexType>
+                                          <xs:attribute name="from" type="xs:string" use="required" />
+                                          <xs:attribute name="to" type="xs:string" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="AssociationCode">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Child" type="kr:associationEndPoint" minOccurs="0" nillable="true" />
+                                      <xs:element name="Parent" type="kr:associationEndPoint" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="toTable" type="xs:string" use="required" />
+                              <xs:attribute name="name" type="xs:string" use="optional" />
+                              <xs:attribute name="childProperty" type="xs:string" use="optional" />
+                              <xs:attribute name="parentProperty" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Settings" type="kr:settings" minOccurs="0" nillable="true" />
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="description" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

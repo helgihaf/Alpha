@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema name="JobScheduler">
+  <TargetSystems>
+    <TargetSystem name="MSSQL" />
+    <TargetSystem name="CSharp" />
+  </TargetSystems>
+  <ColumnTypes>
+    <!-- Base types -->
+    <ColumnType name="Id" isDbGenerated="true" canBeNull="false">
+      <Target name="MSSQL" dataType="int identity" dbTypeReference="int" />
+      <Target name="CSharp" dataType="int" />
+    </ColumnType>
+    <ColumnType name="IdReference">
+      <Target name="MSSQL" dataType="int" />
+      <Target name="CSharp" dataType="int"/>
+    </ColumnType>
+    <ColumnType name="String">
+      <Target name="MSSQL" dataType="nvarchar(%maxLength%)" />
+      <Target name="CSharp" dataType="string"/>
+    </ColumnType>
+    <ColumnType name="FixedString">
+      <Target name="MSSQL" dataType="nchar(%maxLength%)" />
+      <Target name="CSharp" dataType="string" />
+    </ColumnType>
+    <ColumnType name="UnlimitedString">
+      <Target name="MSSQL" dataType="nvarchar(MAX)" />
+      <Target name="CSharp" dataType="string" />
+    </ColumnType>
+    <ColumnType name="Enum" canBeNull="false">
+      <Target name="MSSQL" dataType="smallint" />
+      <Target name="CSharp" dataType="int" />
+    </ColumnType>
+    <ColumnType name="Boolean">
+      <Target name="MSSQL" dataType="bit" />
+      <Target name="CSharp" dataType="bool" />
+    </ColumnType>
+    <ColumnType name="Int32">
+      <Target name="MSSQL" dataType="int" />
+      <Target name="CSharp" dataType="int" />
+    </ColumnType>
+    <ColumnType name="Decimal">
+      <Target name="MSSQL" dataType="decimal(%precision%,%scale%)"/>
+      <Target name="CSharp" dataType="decimal" />
+    </ColumnType>
+    <ColumnType name="Money">
+      <Target name="MSSQL" dataType="money"/>
+      <Target name="CSharp" dataType="decimal" />
+    </ColumnType>
+    <ColumnType name="Double">
+      <Target name="MSSQL" dataType="float"/>
+      <Target name="CSharp" dataType="double" />
+    </ColumnType>
+    <ColumnType name="Single">
+      <Target name="MSSQL" dataType="real"/>
+      <Target name="CSharp" dataType="float"/>
+    </ColumnType>
+    <ColumnType name="Float">
+      <Target name="MSSQL" dataType="float(%precision%)"/>
+      <Target name="CSharp" dataType="double" />
+    </ColumnType>
+    <ColumnType name="Guid">
+      <Target name="MSSQL" dataType="uniqueidentifier"/>
+      <Target name="CSharp" dataType="System.GUID" />
+    </ColumnType>
+
+
+    <!-- Business types -->
+    <ColumnType name="DataAreaId" baseType="String" maxLength="4" />
+    <ColumnType name="Code" baseType="String" maxLength="10" />
+    <ColumnType name="Name" baseType="String" maxLength="60" />
+    <ColumnType name="LocationKind" baseType="Enum" enumType="LSRetail.StoreController.JobScheduler.Datalayer.DataEntities.LocationKind" />
+    <ColumnType name="HostName" baseType="String" maxLength="50" />
+    <ColumnType name="Password" baseType="String" maxLength="30" />
+    <ColumnType name="Path" baseType="String" maxLength="200" />
+    <ColumnType name="ConnectionString" baseType="String" maxLength="200" />
+    <ColumnType name="ByteCount" baseType="Int32" />
+    <ColumnType name="DateTimeFormat" baseType="String" maxLength="40" />
+
+    <ColumnType name="Stuff" baseType="Decimal" precision="18" scale="0" />
+    <ColumnType name="Stuff2" baseType="Float" precision="53" />
+    
+  </ColumnTypes>
+
+  <Tables>
+    <Table name="JscLocations">
+      <Columns>
+        <Column name="Id" columnType="Id" isPrimaryKey="true" />
+        <Column name="DataAreaId" columnType="DataAreaId" />
+        <Column name="Code" columnType="Code" />
+        <Column name="Name" columnType="Name" />
+        <Column name="DatabaseDesign" references="JscDatabaseDesigns.Id" canBeNull="true" />
+        <Column name="LocationKind" columnType="LocationKind" />
+        <Column name="Host" columnType="HostName" />
+        <Column name="Enabled" columnType="Boolean" />
+        <Column name="Company" columnType="Name" canBeNull="true" />
+        <Column name="UserId" columnType="Name" canBeNull="true" />
+        <Column name="Password" columnType="Password" canBeNull="true" />
+        <Column name="DDHost" columnType="HostName" canBeNull="true" />
+        <Column name="DDForwarderHost" columnType="HostName" canBeNull="true" />
+        <Column name="DDPassword" columnType="Password" canBeNull="true" />
+        <Column name="DBServerIsUsed" columnType="Boolean" />
+        <Column name="DBServerHost" columnType="HostName" canBeNull="true" />
+        <Column name="DBPathName" columnType="Path" canBeNull="true" />
+        <Column name="DBDriverType" references="JscDrivers.Id" canBeNull="true" />
+        <Column name="DBVersion" references="JscVersions.Id" canBeNull="true" />
+        <Column name="DBConnectionString" columnType="ConnectionString" canBeNull="true" />
+        <Column name="NetType" columnType="Name" canBeNull="true" />
+        <Column name="Authentication" columnType="enum" canBeNull="false" />
+        <Column name="CommitCache" columnType="ByteCount" canBeNull="true" />
+        <Column name="CFrontPath" columnType="Path" canBeNull="true" />
+        <Column name="DateFormat" columnType="DateTimeFormat" canBeNull="true" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="DataAreaId"/>
+          <Column name="Code" />
+        </Index>
+        <Index name="doobie">
+          <Column name="NetType"/>
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscLocations">
+      <Columns>
+        <Column name="Id" columnType="Id" isPrimaryKey="true" />
+        <Column name="DataAreaId" columnType="DataAreaId" />
+        <Column name="Code" columnType="Code" />
+        <Column name="Name" columnType="Name" />
+        <Column name="DatabaseDesign" references="JscDatabaseDesigns.Id" canBeNull="true" />
+        <Column name="LocationKind" columnType="LocationKind" />
+        <Column name="Host" columnType="HostName" />
+        <Column name="Enabled" columnType="Boolean" />
+        <Column name="Company" columnType="Name" canBeNull="true" />
+        <Column name="UserId" columnType="Name" canBeNull="true" />
+        <Column name="Password" columnType="Password" canBeNull="true" />
+        <Column name="DDHost" columnType="HostName" canBeNull="true" />
+        <Column name="DDForwarderHost" columnType="HostName" canBeNull="true" />
+        <Column name="DDPassword" columnType="Password" canBeNull="true" />
+        <Column name="DBServerIsUsed" columnType="Boolean" />
+        <Column name="DBServerHost" columnType="HostName" canBeNull="true" />
+        <Column name="DBPathName" columnType="Path" canBeNull="true" />
+        <Column name="DBDriverType" references="JscDrivers.Id" canBeNull="true" />
+        <Column name="DBVersion" references="JscVersions.Id" canBeNull="true" />
+        <Column name="DBConnectionString" columnType="ConnectionString" canBeNull="true" />
+        <Column name="NetType" columnType="Name" canBeNull="true" />
+        <Column name="Authentication" columnType="enum" canBeNull="false" />
+        <Column name="CommitCache" columnType="ByteCount" canBeNull="true" />
+        <Column name="CFrontPath" columnType="Path" canBeNull="true" />
+        <Column name="DateFormat" columnType="DateTimeFormat" canBeNull="true" />
+
+      </Columns>
+    </Table>
+  </Tables>
+</DataSchema>
+

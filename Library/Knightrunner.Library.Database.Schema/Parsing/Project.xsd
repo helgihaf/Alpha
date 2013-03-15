@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.knightrunner.com/Library/Database/SchemaProject" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ProjectSettings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InputFiles">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="InputFile">
+                      <xs:complexType>
+                        <xs:attribute name="path" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Options">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PrimaryKeyFormatString" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="ForeignKeyFormatString" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="UniqueIndexFormatString" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="IndexFormatString" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Transformations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Transformation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="method" type="xs:string" use="required" />
+                  <xs:attribute name="target" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="toolsVersion" type="xs:decimal" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

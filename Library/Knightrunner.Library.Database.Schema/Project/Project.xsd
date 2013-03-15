@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.knightrunner.com/Library/Database/SchemaProject" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PropertyGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="ScriptTarget" type="xs:string" />
+              <xs:element name="ScriptOutput" type="xs:string" />
+              <xs:element name="TableSchemaName" type="xs:string" />
+              <xs:element name="CodeTarget" type="xs:string" />
+              <xs:element name="CodeOutput" type="xs:string" />
+              <xs:element name="GenerateDocumentation" type="xs:boolean" />
+              <xs:element name="DocumentOutput" type="xs:string" />
+              <xs:element name="DocumentCssFile" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Compile">
+                <xs:complexType>
+                  <xs:attribute name="Include" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="ToolsVersion" type="xs:decimal" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

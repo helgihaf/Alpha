@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.knightrunner.com/Library/Database/Schema">
+  <!--
+    Target Systems. This controls which systems we want to generate code for.
+  -->
+  <TargetSystems>
+    <TargetSystem name="MSSQL" />
+    <TargetSystem name="DotNet" />
+  </TargetSystems>
+
+  <!--
+    Column Types. This defines basic data types for the target systems. None of these data 
+    types should have business meaning. Such data types should be declared in a seperate file.
+  -->
+  <ColumnTypes>
+    <ColumnType name="Id" isDbGenerated="true" description="A unique DB generated ID">
+      <Target name="MSSQL" dataType="Int IDENTITY" dataTypeWhenReferenced="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="IdReference">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="String">
+      <Target name="MSSQL" dataType="NVarChar(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="FixedString">
+      <Target name="MSSQL" dataType="NChar(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="UnlimitedString">
+      <Target name="MSSQL" dataType="NVarChar(MAX)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="Enum">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Boolean">
+      <Target name="MSSQL" dataType="Bit" />
+      <Target name="DotNet" dataType="System.Boolean" />
+    </ColumnType>
+    <ColumnType name="Int16">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="DotNet" dataType="System.Int16" />
+    </ColumnType>
+    <ColumnType name="Int32">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Decimal">
+      <Target name="MSSQL" dataType="Decimal(%precision%,%scale%)" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Money">
+      <Target name="MSSQL" dataType="Money" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Double">
+      <Target name="MSSQL" dataType="Float" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Single">
+      <Target name="MSSQL" dataType="Real" />
+      <Target name="DotNet" dataType="System.Single" />
+    </ColumnType>
+    <ColumnType name="Float">
+      <Target name="MSSQL" dataType="Float(%precision%)" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Guid">
+      <Target name="MSSQL" dataType="UniqueIdentifier" />
+      <Target name="DotNet" dataType="System.Guid" />
+    </ColumnType>
+    <ColumnType name="Xml">
+      <Target name="MSSQL" dataType="Xml" />
+      <Target name="DotNet" dataType="System.String">
+        <ExtendedProperties>
+          <Property name="UpdateCheck">Never</Property>
+        </ExtendedProperties>
+      </Target>
+    </ColumnType>
+    <ColumnType name="DateTime">
+      <Target name="MSSQL" dataType="DateTime" />
+      <Target name="DotNet" dataType="System.DateTime" />
+    </ColumnType>
+  </ColumnTypes>
+
+</DataSchema>

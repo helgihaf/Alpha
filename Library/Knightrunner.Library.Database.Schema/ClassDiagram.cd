@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Knightrunner.Library.Database.Schema.DataSchema">
+    <Position X="0.5" Y="2.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAgoAAACAAAYAgAgAgQAQQCAAAAACACCAMAAAAEAA=</HashCode>
+      <FileName>DataSchema.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TargetSystems" />
+      <Property Name="ColumnTypes" />
+      <Property Name="Tables" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Knightrunner.Library.Database.Schema.Table">
+    <Position X="4" Y="3" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAQAAEAgAQAAAAAAAAQEIBAIABAAiAAAAAgAIAA=</HashCode>
+      <FileName>Table.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Columns" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Knightrunner.Library.Database.Schema.Column">
+    <Position X="7.25" Y="3" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAgAABAAAAgAQAAIAEAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Column.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ColumnType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Knightrunner.Library.Database.Schema.ColumnType">
+    <Position X="10.75" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAABAAgAgAQIAAAIAAAQCAIgAAFAIAAAQAAAAEAA=</HashCode>
+      <FileName>ColumnType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Knightrunner.Library.Database.Schema.TargetSystem">
+    <Position X="0.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>TargetSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Knightrunner.Library.Database.Schema.AssociationProperty">
+    <Position X="7.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AssociationProperty.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Child" />
+      <Property Name="Parent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Knightrunner.Library.Database.Schema.AssociationEndPoint">
+    <Position X="13.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAEAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AssociationProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Knightrunner.Library.Database.Schema.ForeignKey">
+    <Position X="4" Y="8.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Knightrunner.Library.Database.Schema.ForeignKey.ColumnPair">
+        <TypeIdentifier>
+          <NewMemberFileName>ForeignKey.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAACAAAQAAAAgAAAAAAAAAAgCAAA=</HashCode>
+      <FileName>ForeignKey.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AssociationProperty" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
