@@ -1,0 +1,17 @@
+﻿expression:
+        andexpr expressionRest
+	;
+
+expressionRest:
+        OR_BOOL andexpr expressionRest
+    |   e
+    ;
+
+andexpr:
+		b_orexpr andexprRest
+	;
+
+andexprRest:
+        AND_BOOL b_orexpr andexprRest
+    |   e
+    ;

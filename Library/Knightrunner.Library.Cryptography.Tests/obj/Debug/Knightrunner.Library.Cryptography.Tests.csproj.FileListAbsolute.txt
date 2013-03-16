@@ -1,0 +1,12 @@
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Cryptography.Tests.dll
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Cryptography.Tests.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.Cryptography.Tests\obj\Debug\Knightrunner.Library.Cryptography.Tests.csprojResolveAssemblyReference.cache
+C:\dev\Knightrunner\Library\Knightrunner.Library.Cryptography.Tests\obj\Debug\Knightrunner.Library.Cryptography.Tests.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Cryptography.Tests\obj\Debug\Knightrunner.Library.Cryptography.Tests.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Cryptography.Tests.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Cryptography.Tests.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Cryptography.Tests\obj\Debug\Knightrunner.Library.Cryptography.Tests.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Cryptography.Tests\obj\Debug\Knightrunner.Library.Cryptography.Tests.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Cryptography.Tests\obj\Debug\Knightrunner.Library.Cryptography.Tests.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Cryptography.Tests.dll.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Cryptography.Tests.dll.lastcodeanalysissucceeded

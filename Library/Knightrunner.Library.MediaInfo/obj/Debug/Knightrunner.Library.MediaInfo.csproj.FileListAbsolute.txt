@@ -1,0 +1,8 @@
+C:\dev\Knightrunner\Library\Knightrunner.Library.MediaInfo\bin\Debug\Knightrunner.Library.MediaInfo.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.MediaInfo\bin\Debug\Knightrunner.Library.MediaInfo.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.MediaInfo\obj\Debug\Knightrunner.Library.MediaInfo.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.MediaInfo\obj\Debug\Knightrunner.Library.MediaInfo.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.MediaInfo\bin\Debug\Knightrunner.Library.MediaInfo.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.MediaInfo\bin\Debug\Knightrunner.Library.MediaInfo.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.MediaInfo\obj\Debug\Knightrunner.Library.MediaInfo.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.MediaInfo\obj\Debug\Knightrunner.Library.MediaInfo.pdb

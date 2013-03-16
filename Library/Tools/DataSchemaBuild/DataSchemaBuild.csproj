@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{866905F6-8F21-4349-9188-237400E5613A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataSchemaBuild</RootNamespace>
+    <AssemblyName>DataSchemaBuild</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="XCopyDeploy.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Knightrunner.Library.Core\Knightrunner.Library.Core.csproj">
+      <Project>{91eb4109-f7dc-40e2-8683-ce67469aff7b}</Project>
+      <Name>Knightrunner.Library.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Knightrunner.Library.Database.Schema.Documentation\Knightrunner.Library.Database.Schema.Documentation.csproj">
+      <Project>{58ed9705-ac3f-409f-8dd7-a4d138d66805}</Project>
+      <Name>Knightrunner.Library.Database.Schema.Documentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Knightrunner.Library.Database.Schema.Oracle\Knightrunner.Library.Database.Schema.Oracle.csproj">
+      <Project>{f0139b41-18eb-40ab-9eab-77ebc9773260}</Project>
+      <Name>Knightrunner.Library.Database.Schema.Oracle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Knightrunner.Library.Database.Schema.PetaPoco\Knightrunner.Library.Database.Schema.PetaPoco.csproj">
+      <Project>{03868db9-996f-483a-8d7c-3982941d2352}</Project>
+      <Name>Knightrunner.Library.Database.Schema.PetaPoco</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Knightrunner.Library.Database.Schema.SqlServer\Knightrunner.Library.Database.Schema.SqlServer.csproj">
+      <Project>{10046547-a461-44b1-8122-6a173a4bc174}</Project>
+      <Name>Knightrunner.Library.Database.Schema.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Knightrunner.Library.Database.Schema\Knightrunner.Library.Database.Schema.csproj">
+      <Project>{5fd1c65f-8614-4776-901b-b46f7c6c922b}</Project>
+      <Name>Knightrunner.Library.Database.Schema</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Knightrunner.Library.Database\Knightrunner.Library.Database.csproj">
+      <Project>{0c329c75-67a0-4441-93d4-9b30925e5038}</Project>
+      <Name>Knightrunner.Library.Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommonColumnTypes.xml" />
+    <Content Include="LandsbankiColumnTypes.xml" />
+    <Content Include="Project.xml" />
+    <Content Include="SoftwareRepository.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

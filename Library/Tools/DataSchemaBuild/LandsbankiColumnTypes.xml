@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns="http://www.knightrunner.com/Library/Database/Schema">
+  <ColumnTypes>
+    <ColumnType name="Name" baseType="String" maxLength="255" />
+    <ColumnType name="LongName" baseType="String" maxLength="1000" />
+    <ColumnType name="UserName" baseType="String" maxLength="255" />
+    <ColumnType name="Description" baseType="String" maxLength="2000" />
+    <ColumnType name="Uri" baseType="String" maxLength="1000" />
+    <ColumnType name="FileSystemPath" baseType="String" maxLength="500" />
+    <ColumnType name="Version" baseType="String" maxLength="255" />
+    <ColumnType name="MeasurementDetail" baseType="String" maxLength="255" />
+    <ColumnType name="Period" baseType="Int32" />
+    <ColumnType name="MeasurementValue" baseType="Int64" />
+    <ColumnType name="ContactInformation" baseType="String" maxLength="1000" />
+    <ColumnType name="ExternalId" baseType="String" maxLength="100" />
+  </ColumnTypes>
+</DataSchema>

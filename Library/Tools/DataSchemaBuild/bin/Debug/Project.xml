@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project toolsVersion="1.0" xmlns="http://www.knightrunner.com/Library/Database/SchemaProject">
+  <ProjectSettings>
+    <InputFiles>
+      <InputFile path="CommonColumnTypes.xml" />
+      <InputFile path="LandsbankiColumnTypes.xml" />
+      <InputFile path="SoftwareRepository.xml" />
+    </InputFiles>
+    <Options>
+      <Thing></Thing>
+    </Options>
+  </ProjectSettings>
+  <Transformations>
+    <Transformation name="Script-Oracle" method="Oracle" target="Oracle">
+      <TableSchemaName>sr</TableSchemaName>
+      <ScriptDocumentGenerator>Oracle</ScriptDocumentGenerator>
+      <OutputFile>script-oracle.sql</OutputFile>
+      <PrimaryKeyFormatString></PrimaryKeyFormatString>
+      <ForeignKeyFormatString></ForeignKeyFormatString>
+      <UniqueIndexFormatString></UniqueIndexFormatString>
+      <IndexFormatString></IndexFormatString>
+      <SequenceNameFormatString></SequenceNameFormatString>
+      <SequenceTriggerNameFormatString></SequenceTriggerNameFormatString>
+    </Transformation>
+    <Transformation name="Script-MSSQL" method="MSSQL" target="MSSQL">
+      <TableSchemaName>dbo</TableSchemaName>
+      <ScriptDocumentGenerator></ScriptDocumentGenerator>
+      <OutputFile>script-mssql.sql</OutputFile>
+      <PrimaryKeyFormatString></PrimaryKeyFormatString>
+      <ForeignKeyFormatString></ForeignKeyFormatString>
+      <UniqueIndexFormatString></UniqueIndexFormatString>
+      <IndexFormatString></IndexFormatString>
+      <SequenceNameFormatString></SequenceNameFormatString>
+      <SequenceTriggerNameFormatString></SequenceTriggerNameFormatString>
+    </Transformation>
+    <!--<Transformation name="PetaPoco" method="PetaPoco" target="DotNet">
+      <OutputDirectory>out\classes</OutputDirectory>
+      <ClassPerFile>true</ClassPerFile>
+    </Transformation>
+    <Transformation name="Documentation" method="Documentation">
+      <OutputDirectory>out\doc</OutputDirectory>
+      <CssFile>doc.css</CssFile>
+    </Transformation>-->
+  </Transformations>
+
+</Project>

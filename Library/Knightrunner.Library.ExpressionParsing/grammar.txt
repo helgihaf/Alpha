@@ -1,0 +1,90 @@
+﻿expression:
+		expression OR_BOOL andexpr
+	|	andexpr
+	;
+
+andexpr:
+		andexpr AND_BOOL b_orexpr
+	|	b_orexpr
+	;
+
+b_orexpr:
+		b_orexpr '|' b_andexpr
+	|	b_andexpr
+	;
+
+b_andexpr:
+		b_andexpr '&' equexpr
+	|	equexpr
+	;
+
+
+equexpr:
+		equexpr '=' compexpr
+	|	equexpr NOTEQUAL compexpr
+	|	compexpr
+	;
+
+compexpr:
+		compexpr '<' term
+	|	compexpr '>' term
+	|	compexpr LESSOREQUAL term
+	|	compexpr GREATEROREQUAL term
+	|	term
+	;
+
+term:
+		term '+' factor
+	|	term '-' factor
+	|	factor
+	;
+
+factor:
+		factor '*' notexpr
+	|	factor '/' notexpr
+	|	factor '%' notexpr
+	|	notexpr
+	;
+
+notexpr:
+		'!' notexpr
+	|	'~' notexpr
+	|	memberexpr
+	;
+
+memberexpr:
+        leafexpr memberexprrest
+    ;
+
+memberexprrest:
+        '.' identifierexpr memberexprrest
+    |   e
+
+identifierexpr:
+        IDENTIFIER identifierrest
+
+identifierrest:
+        '(' expressionlistopt ')'
+    |   '[' expressionlist ']'
+    |   e
+
+leafexpr:
+        identifierexpr
+	|	INTEGER
+    |   FLOAT
+	|	CHARACTER
+    |   STRING
+	|	'(' expression ')'
+	;
+
+expressionlistopt:
+        expressionlist
+    |   e
+
+expressionlist:
+        expression expressionlistrest
+
+expressionlistrest:
+        ',' expression expressionlistrest
+    |   e
+

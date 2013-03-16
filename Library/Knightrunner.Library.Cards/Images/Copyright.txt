@@ -1,0 +1,3 @@
+The SVG Deck. Authors Jesse Fuchs and Tom Hart. For Windows and MacOSX.
+
+52 playing card deck with Jokers and 6 card backs. These card images were created form the SVG cards by David Bellot (free under the Creative Commons Licence).

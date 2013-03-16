@@ -1,0 +1,6 @@
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.ExpressionParsing.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.ExpressionParsing.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.ExpressionParsing\obj\Debug\Knightrunner.Library.ExpressionParsing.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.ExpressionParsing\obj\Debug\Knightrunner.Library.ExpressionParsing.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.ExpressionParsing.dll.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.ExpressionParsing.dll.lastcodeanalysissucceeded

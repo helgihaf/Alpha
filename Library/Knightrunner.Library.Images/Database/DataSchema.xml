@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Images" xmlns="http://www.knightrunner.com/Library/Database/Schema">
+  <!--
+    Target Systems. This controls which systems we want to generate code for.
+  -->
+  <TargetSystems>
+    <TargetSystem name="MSSQL" />
+    <TargetSystem name="DotNet" />
+  </TargetSystems>
+
+  <!--
+    Column Types. This defines all data types used by our data tables, along with all mapping inforation
+    needed for the target systems. Some types do not have a mapping for a target but rather
+    rely on a base column type. This enables us to define a column type with a business semantic
+    (e.g. NetworkHost).
+  -->
+  <ColumnTypes>
+    <ColumnType name="Id" isDbGenerated="true" description="A unique DB generated ID">
+      <Target name="MSSQL" dataType="Int IDENTITY" dataTypeWhenReferenced="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="IdReference">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="String">
+      <Target name="MSSQL" dataType="NVarChar(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="FixedString">
+      <Target name="MSSQL" dataType="NChar(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="UnlimitedString">
+      <Target name="MSSQL" dataType="NVarChar(MAX)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="Enum">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Boolean">
+      <Target name="MSSQL" dataType="Bit" />
+      <Target name="DotNet" dataType="System.Boolean" />
+    </ColumnType>
+    <ColumnType name="Int16">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="DotNet" dataType="System.Int16" />
+    </ColumnType>
+    <ColumnType name="Int32">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Int64">
+      <Target name="MSSQL" dataType="Bigint" />
+      <Target name="DotNet" dataType="System.Int64" />
+    </ColumnType>
+    <ColumnType name="Decimal">
+      <Target name="MSSQL" dataType="Decimal(%precision%,%scale%)" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Money">
+      <Target name="MSSQL" dataType="Money" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Double">
+      <Target name="MSSQL" dataType="Float" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Single">
+      <Target name="MSSQL" dataType="Real" />
+      <Target name="DotNet" dataType="System.Single" />
+    </ColumnType>
+    <ColumnType name="Float">
+      <Target name="MSSQL" dataType="Float(%precision%)" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Guid">
+      <Target name="MSSQL" dataType="UniqueIdentifier" />
+      <Target name="DotNet" dataType="System.Guid" />
+    </ColumnType>
+    <ColumnType name="Xml">
+      <Target name="MSSQL" dataType="Xml" />
+      <Target name="DotNet" dataType="System.String">
+        <ExtendedProperties>
+          <Property name="UpdateCheck">Never</Property>
+        </ExtendedProperties>
+      </Target>
+    </ColumnType>
+    <ColumnType name="DateTime">
+      <Target name="MSSQL" dataType="DateTime" />
+      <Target name="DotNet" dataType="System.DateTime" />
+    </ColumnType>
+    <ColumnType name="FixedBinary">
+      <Target name="MSSQL" dataType="Binary(%maxLength%)" />
+      <Target name="DotNet" dataType="System.Byte[]">
+        <ExtendedProperties>
+          <Property name="UpdateCheck">Never</Property>
+        </ExtendedProperties>
+      </Target>
+    </ColumnType>
+
+    <ColumnType name="Name" baseType="String" maxLength="60" />
+    <ColumnType name="Password" baseType="String" maxLength="60" />
+    <ColumnType name="TypeName" baseType="String" maxLength="250" />
+    <ColumnType name="Code" baseType="String" maxLength="20" description="A short alphanumerical code."/>
+    <ColumnType name="ShortDescription" baseType="String" maxLength="250" description="A short description."/>
+    <ColumnType name="LongDescription" baseType="String" maxLength="4000" description="A long description."/>
+    <ColumnType name="WindowsAccountName" baseType="String" maxLength="300" description="A full windows user account name with or without domain" />
+    <ColumnType name="ComputerName" baseType="String" maxLength="250" />
+    <ColumnType name="FilePath" baseType="String" maxLength="260" />
+    <ColumnType name="FileSize" baseType="Int64" />
+    <ColumnType name="FileHash" baseType="FixedBinary" maxLength="16" />
+  </ColumnTypes>
+
+  <!--
+    Tables. This contains all the tables of our schema.
+  -->
+  <Tables>
+
+    <Table name="Images" description="An image">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Computer" columnType="ComputerName" />
+        <Column name="FilePath" columnType="FilePath" canBeNull="true"/>
+        <Column name="FileSize" columnType="FileSize" />
+        <Column name="CreationTime" columnType="DateTime" />
+        <Column name="ModifiedTime" columnType="DateTime" />
+        <Column name="CameraMake" columnType="ShortDescription" canBeNull="true" />
+        <Column name="TakenTime" columnType="DateTime" canBeNull ="true"/>
+        <Column name="ImageHash" columnType="FileHash" canBeNull ="true"/>
+        <Column name="Description" columnType="LongDescription" canBeNull ="true"/>
+      </Columns>
+    </Table>
+
+    <Table name="Tags" description="Tags">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Text" columnType="Name" />
+      </Columns>
+    </Table>
+
+    <Table name="ImageTags" description="Tags of images">
+      <Columns>
+        <Column name="Image" references="Images.Id" inPrimaryKey="true" />
+        <Column name="Tag" references="Tags.Id" inPrimaryKey="true" />
+      </Columns>
+    </Table>
+
+  </Tables>
+</DataSchema>

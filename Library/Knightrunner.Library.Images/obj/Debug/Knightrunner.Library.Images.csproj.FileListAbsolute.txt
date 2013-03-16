@@ -1,0 +1,10 @@
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Images.dll
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Images.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.Images\obj\Debug\Knightrunner.Library.Images.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Images\obj\Debug\Knightrunner.Library.Images.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.Images\obj\Debug\Knightrunner.Library.Images.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Images.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Images.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Images\obj\Debug\Knightrunner.Library.Images.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Images\obj\Debug\Knightrunner.Library.Images.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Images\obj\Debug\Knightrunner.Library.Images.csprojResolveAssemblyReference.cache

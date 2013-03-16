@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JobScheduler" xmlns="http://www.knightrunner.com/Library/Database/Schema">
+  <!--
+    Target Systems. This controls which systems we want to generate code for.
+  -->
+  <TargetSystems>
+    <TargetSystem name="MSSQL" />
+    <TargetSystem name="DotNet" />
+  </TargetSystems>
+
+  <!--
+    Column Types. This defines all data types used by our data tables, along with all mapping inforation
+    needed for the target systems. Some types do not have a mapping for a target but rather
+    rely on a base column type. This enables us to define a column type with a business semantic
+    (e.g. NetworkHost).
+  -->
+  <ColumnTypes>
+    <ColumnType name="Id" isDbGenerated="true">
+      <Target name="MSSQL" dataType="Int IDENTITY" dataTypeWhenReferenced="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="IdReference">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="String">
+      <Target name="MSSQL" dataType="NVarChar(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="FixedString">
+      <Target name="MSSQL" dataType="NChar(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="UnlimitedString">
+      <Target name="MSSQL" dataType="NVarChar(MAX)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="Enum">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Boolean">
+      <Target name="MSSQL" dataType="Bit" />
+      <Target name="DotNet" dataType="System.Boolean" />
+    </ColumnType>
+    <ColumnType name="Int16">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="DotNet" dataType="System.Int16" />
+    </ColumnType>
+    <ColumnType name="Int32">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Decimal">
+      <Target name="MSSQL" dataType="Decimal(%precision%,%scale%)" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Money">
+      <Target name="MSSQL" dataType="Money" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Double">
+      <Target name="MSSQL" dataType="Float" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Single">
+      <Target name="MSSQL" dataType="Real" />
+      <Target name="DotNet" dataType="System.Single" />
+    </ColumnType>
+    <ColumnType name="Float">
+      <Target name="MSSQL" dataType="Float(%precision%)" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Guid">
+      <Target name="MSSQL" dataType="UniqueIdentifier" />
+      <Target name="DotNet" dataType="System.GUID" />
+    </ColumnType>
+    <ColumnType name="Xml">
+      <Target name="MSSQL" dataType="Xml" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="DateTime">
+      <Target name="MSSQL" dataType="DateTime" />
+      <Target name="DotNet" dataType="System.DateTime" />
+    </ColumnType>
+    <ColumnType name="Name" baseType="String" maxLength="60" />
+    <ColumnType name="TypeName" baseType="String" maxLength="250" />
+    <ColumnType name="Code" baseType="String" maxLength="20" />
+    <ColumnType name="Description" baseType="String" maxLength="60" />
+    <ColumnType name="RefId" baseType="Int32" />
+    <ColumnType name="TriggerKind" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.TriggerKind" />
+    <ColumnType name="RecurrenceType" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.RecurrenceType" />
+    <ColumnType name="CronString" baseType="String" maxLength="170" />
+    <ColumnType name="DataAreaId" baseType="String" maxLength="4" />
+    <ColumnType name="ErrorHandling" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.ErrorHandling" />
+    <ColumnType name="ConnectionString" baseType="String" maxLength="250" />
+    <ColumnType name="ListOfItems" baseType="String" maxLength="250" />
+    <ColumnType name="LocationKind" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.LocationKind" />
+    <ColumnType name="NetworkHost" baseType="String" maxLength="50" />
+    <ColumnType name="LocationCSProperty" baseType="String" maxLength="30" />
+    <ColumnType name="DBPathName" baseType="String" maxLength="200" />
+    <ColumnType name="LookupCode" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.LookupCode" />
+    <ColumnType name="ValueAsString" baseType="String" maxLength="250" />
+    <ColumnType name="FromTableFilterApplyOption" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.FromTableFilterApplyOption" />
+    <ColumnType name="TableName" baseType="String" maxLength="250" />
+    <ColumnType name="StoredProcName" baseType="String" maxLength="250" />
+    <ColumnType name="FieldName" baseType="String" maxLength="60" />
+    <ColumnType name="LinkedFilterType" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.LinkedFilterType" />
+    <ColumnType name="ReplicationTypes" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.ReplicationTypes" />
+    <ColumnType name="FieldTransferType" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.FieldTransferType" />
+    <ColumnType name="ModeDef" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.ModeDef" />
+    <ColumnType name="ConversionMethod" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.ConversionMethod" />
+    <ColumnType name="DDDataType" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.DDDataType" />
+    <ColumnType name="RBOId" baseType="String" maxLength="10" />
+    <ColumnType name="RBOName" baseType="String" maxLength="60" />
+    <ColumnType name="RBOString" baseType="String" maxLength="50" />
+    <ColumnType name="DatabaseServerType" baseType="Enum" enumType="global::LSRetail.Scheduler.Common.DataSrvType" />
+    <ColumnType name="DatabaseParams" baseType="String" maxLength="50" />
+    <ColumnType name="SystemTag" baseType="String" maxLength="50" />
+  </ColumnTypes>
+
+  <!--
+    Tables. This contains all the tables of our schema.
+  -->
+  <Tables>
+    <Table name="JscJobs">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Code" columnType="Code" />
+        <Column name="DataAreaId" columnType="DataAreaId" />
+        <Column name="Description" columnType="Description" />
+        <Column name="JobType" references="JscJobTypes.Id" childProperty=""/>
+        <Column name="Source" references="JscLocations.Id" canBeNull="true" childProperty="" parentProperty="JscSourceLocation"/>
+        <Column name="Destination" references="JscLocations.Id" canBeNull="true" childProperty="" parentProperty="JscDestinationLocation"/>
+        <Column name="ErrorHandling" columnType="ErrorHandling" />
+        <Column name="Enabled" columnType="Boolean" />
+        <Column name="SubjobJob" references="JscJobs.Id" canBeNull="true" childProperty="" parentProperty="JscSubjobJob" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="Code" />
+          <Column name="DataAreaId" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscDatabaseDesigns">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="DataAreaId" columnType="DataAreaId" />
+        <Column name="Code" columnType="Code" />
+        <Column name="Description" columnType="Description" />
+        <Column name="DriverType" references="JscDriverTypes.Id" childProperty="" parentProperty="JscDriverType" />
+        <Column name="CodePage" columnType="Int32" canBeNull="true" />
+        <Column name="Enabled" columnType="Boolean" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="Code" />
+          <Column name="DataAreaId" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscSubJobFromTableFilters">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="SubJob" references="JscSubJobs.Id" />
+        <Column name="Field" references="JscFieldDesigns.Id" parentProperty="JscField" />
+        <Column name="FilterType" columnType="LookupCode" />
+        <Column name="Value1" columnType="ValueAsString" canBeNull="true" />
+        <Column name="Value2" columnType="ValueAsString" canBeNull="true" />
+        <Column name="ApplyFilter" columnType="FromTableFilterApplyOption" />
+      </Columns>
+    </Table>
+    <Table name="JscJobTypes">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Code" columnType="Code" />
+        <Column name="Description" columnType="Description" />
+        <Column name="Enabled" columnType="Boolean" />
+        <Column name="Handler" references="JscHandlers.Id" canBeNull="true" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="Code" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscFieldMap">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="TableMap" references="JscTableMap.Id" />
+        <Column name="FromField" references="JscFieldDesigns.Id" childProperty="" parentProperty="FromJscFieldDesign" />
+        <Column name="ToField" references="JscFieldDesigns.Id" childProperty="" parentProperty="ToJscFieldDesign" />
+        <Column name="ConversionMethod" columnType="ConversionMethod" />
+        <Column name="ConversionValue" columnType="ValueAsString" canBeNull="true" />
+      </Columns>
+    </Table>
+    <Table name="JscJobSubjobs">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Job" references="JscJobs.Id" />
+        <Column name="SubJob" references="JscSubJobs.Id" />
+        <Column name="Sequence" columnType="Int32" />
+        <Column name="Enabled" columnType="Boolean" />
+      </Columns>
+    </Table>
+    
+    <Table name="JscRepCounters">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Job" references="JscJobs.Id" childProperty="" />
+        <Column name="SubJob" references="JscSubJobs.Id" childProperty="" />
+        <Column name="Location" references="JscLocations.Id" childProperty="" />
+        <Column name="Counter" columnType="RefId" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="Job" />
+          <Column name="SubJob" />
+          <Column name="Location" />
+        </Index>
+      </Indices>
+    </Table>
+    
+    <Table name="JscLocationMembers">
+      <Columns>
+        <Column name="OwnerLocation" inPrimaryKey="true" references="JscLocations.Id" childProperty="MemberLocations" parentProperty="Owner" />
+        <Column name="MemberLocation" inPrimaryKey="true" references="JscLocations.Id" childProperty="OwnerLocations" parentProperty="Member" />
+      </Columns>
+    </Table>
+    <Table name="JscSubJobFields">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="SubJob" references="JscSubJobs.Id" />
+        <Column name="FieldName" columnType="FieldName" />
+      </Columns>
+    </Table>
+    <Table name="JscLinkedTables">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="FromTable" references="JscTableDesigns.Id" childProperty="" parentProperty="FromJscTableDesign" />
+        <Column name="ToTable" references="JscTableDesigns.Id" childProperty="" parentProperty="ToJscTableDesign" />
+      </Columns>
+    </Table>
+    <Table name="JscSubJobs">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="DataAreaId" columnType="DataAreaId" />
+        <Column name="Code" columnType="Code" />
+        <Column name="Description" columnType="Description" />
+        <Column name="TableFrom" references="JscTableDesigns.Id" canBeNull="true" parentProperty="JscTableFrom" />
+        <Column name="StoredProcName" columnType="StoredProcName" canBeNull="true" />
+        <Column name="TableNameTo" columnType="TableName" canBeNull="true" />
+        <Column name="ReplicationMethod" columnType="ReplicationTypes" />
+        <Column name="FieldTransferType" columnType="FieldTransferType" />
+        <Column name="WhatToDo" columnType="ModeDef" />
+        <Column name="Enabled" columnType="Boolean" />
+        <Column name="IncludeFlowFields" columnType="Boolean" />
+        <Column name="ActionTable" references="JscTableDesigns.Id" canBeNull="true" childProperty="" parentProperty="JscActionTable"/>
+        <Column name="ActionCounterInterval" columnType="Int32" canBeNull="true" />
+        <Column name="MoveActions" columnType="Boolean" />
+        <Column name="NoDistributionFilter" columnType="Boolean" />
+        <Column name="RepCounterField" references="JscFieldDesigns.Id" canBeNull="true" childProperty="" parentProperty="JscRepCounterField"/>
+        <Column name="RepCounterInterval" columnType="Int32" canBeNull="true" />
+        <Column name="UpdateRepCounter" columnType="Boolean" />
+        <Column name="UpdateRepCounterOnEmptyInt" columnType="Boolean" />
+        <Column name="MarkSentRecordsField" references="JscFieldDesigns.Id" canBeNull="true"  childProperty="" parentProperty="JscMarkSentRecordsField"/>
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="DataAreaId" />
+          <Column name="Code" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscHandlers">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Name" columnType="Name" />
+        <Column name="InterfaceName" columnType="TypeName" />
+        <Column name="AssemblyName" columnType="TypeName" canBeNull="true" />
+        <Column name="ClassName" columnType="TypeName" canBeNull="true" />
+      </Columns>
+    </Table>
+    <Table name="JscLinkedFilters">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="LinkedTable" references="JscLinkedTables.Id" />
+        <Column name="LinkedField" references="JscFieldDesigns.Id" parentProperty="LinkedJscFieldDesign" />
+        <Column name="LinkType" columnType="LinkedFilterType" />
+        <Column name="ToField" references="JscFieldDesigns.Id" canBeNull="true" parentProperty="ToJscFieldDesign" />
+        <Column name="Filter" columnType="ValueAsString" canBeNull="true" />
+      </Columns>
+    </Table>
+    <Table name="JscTableDesigns">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="DatabaseDesign" references="JscDatabaseDesigns.Id" childProperty="" parentProperty="JscDatabaseDesign" />
+        <Column name="TableName" columnType="TableName" />
+        <Column name="Enabled" columnType="Boolean" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="DatabaseDesign" />
+          <Column name="TableName" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscDriverTypes">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Name" columnType="Name" />
+        <Column name="DatabaseServerType" columnType="DatabaseServerType" />
+        <Column name="DatabaseParams" columnType="DatabaseParams" canBeNull="true" />
+        <Column name="ConnectionStringFormat" columnType="ConnectionString" canBeNull="true" />
+        <Column name="EnabledFields" columnType="ListOfItems" canBeNull="true" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="Name" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscJobTriggers">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Job" references="JscJobs.Id" />
+        <Column name="TriggerKind" columnType="TriggerKind" />
+        <Column name="Enabled" columnType="Boolean" />
+        <Column name="RecurrenceType" columnType="RecurrenceType" />
+        <Column name="Seconds" columnType="CronString" canBeNull="true" />
+        <Column name="Minutes" columnType="CronString" canBeNull="true" />
+        <Column name="Hours" columnType="CronString" canBeNull="true" />
+        <Column name="Months" columnType="CronString" canBeNull="true" />
+        <Column name="Years" columnType="CronString" canBeNull="true" />
+        <Column name="DaysOfMonth" columnType="CronString" canBeNull="true" />
+        <Column name="DaysOfWeek" columnType="CronString" canBeNull="true" />
+        <Column name="StartTime" columnType="DateTime" canBeNull="true" />
+        <Column name="EndTime" columnType="DateTime" canBeNull="true" />
+        <Column name="Tag" columnType="CronString" canBeNull="true" />
+      </Columns>
+    </Table>
+    <Table name="JscFieldDesigns">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="TableDesign" references="JscTableDesigns.Id" childProperty="" />
+        <Column name="FieldName" columnType="FieldName" />
+        <Column name="Sequence" columnType="Int32" />
+        <Column name="DataType" columnType="DDDataType" />
+        <Column name="Length" columnType="Int32" canBeNull="true" />
+        <Column name="FieldClass" columnType="Int16" />
+        <Column name="FieldOption" columnType="ValueAsString" canBeNull="true" />
+        <Column name="Enabled" columnType="Boolean" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="TableDesign" />
+          <Column name="FieldName" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscLocations">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="DataAreaId" columnType="DataAreaId" />
+        <Column name="Code" columnType="Code" />
+        <Column name="Name" columnType="Name" />
+        <Column name="DatabaseDesign" references="JscDatabaseDesigns.Id" canBeNull="true" />
+        <Column name="LocationKind" columnType="LocationKind" />
+        <Column name="DefaultOwner" references="JscLocations.Id" canBeNull="true" childProperty="DefaultOwnerJscLocations" parentProperty="JscDefaultOwner" />
+        <Column name="DDHost" columnType="NetworkHost" canBeNull="true" />
+        <Column name="Enabled" columnType="Boolean" />
+        <Column name="Company" columnType="LocationCSProperty" canBeNull="true" />
+        <Column name="UserId" columnType="LocationCSProperty" canBeNull="true" />
+        <Column name="Password" columnType="LocationCSProperty" canBeNull="true" />
+        <Column name="DBServerIsUsed" columnType="Boolean" />
+        <Column name="DBServerHost" columnType="NetworkHost" canBeNull="true" />
+        <Column name="DBPathName" columnType="DBPathName" canBeNull="true" />
+        <Column name="DBDriverType" references="JscDriverTypes.Id" canBeNull="true" />
+        <Column name="DBConnectionString" columnType="ConnectionString" canBeNull="true" />
+        <Column name="NetType" columnType="LocationCSProperty" canBeNull="true" />
+        <Column name="SystemTag" columnType="SystemTag" canBeNull="true" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="DataAreaId" />
+          <Column name="Code" />
+          <Column name="LocationKind" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="JscTableMap">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="DataAreaId" columnType="DataAreaId" />
+        <Column name="Code" columnType="Code" />
+        <Column name="FromTable" references="JscTableDesigns.Id" parentProperty="FromJscTableDesign" />
+        <Column name="ToTable" references="JscTableDesigns.Id" parentProperty="ToJscTableDesign" />
+        <Column name="Description" columnType="Description" canBeNull="true" />
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="DataAreaId" />
+          <Column name="Code" />
+        </Index>
+      </Indices>
+    </Table>
+
+
+    <Table name="RboStoreTable">
+      <Columns>
+        <Column name="STOREID" columnType="RBOId" inPrimaryKey="true" canBeNull="false" />
+        <Column name="NAME" columnType="RBOName" canBeNull="true" />
+        <Column name="DATAAREAID" columnType="DataAreaId" inPrimaryKey="true" canBeNull="false" />
+        <!--<Association Name="RboStoreTable_RboTerminalTable" Member="RboTerminalTables" ThisKey="DATAAREAID,STOREID" OtherKey="DATAAREAID,STOREID" Type="RboTerminalTable" />-->
+      </Columns>
+      <Settings>
+        <Setting target="MSSQL" property="Ignore" value="true" />
+      </Settings>
+    </Table>
+    <Table name="RboTerminalTable">
+      <Columns>
+        <Column name="TERMINALID" columnType="RBOId" inPrimaryKey="true" canBeNull="false" />
+        <Column name="NAME" columnType="RBOName" canBeNull="true" />
+        <Column name="STOREID" columnType="RBOId" canBeNull="true" />
+        <Column name="DATAAREAID" columnType="DataAreaId" inPrimaryKey="true" canBeNull="false"/>
+        <Column name="DatabaseName" columnType="RBOString" canBeNull="true" />
+        <Column name="DatabaseServer" columnType="RBOString" canBeNull="true" />
+        <Column name="DatabaseUserName" columnType="RBOString" canBeNull="true" />
+        <Column name="DatabasePassword" columnType="RBOString" canBeNull="true" />
+        <!--<Association Name="RboStoreTable_RboTerminalTable" Member="RboStoreTable" ThisKey="DATAAREAID,STOREID" OtherKey="DATAAREAID,STOREID" Type="RboStoreTable" IsForeignKey="true" />-->
+      </Columns>
+      <ForeignKeys>
+        <ForeignKey toTable="RboStoreTable" childProperty="RboTerminalTables" parentProperty="RboStoreTable">
+          <ColumnPairs>
+            <ColumnPair from="DATAAREAID" to="DATAAREAID" />
+            <ColumnPair from="STOREID" to="STOREID" />
+          </ColumnPairs>
+          <AssociationCode>
+            <Child access="internal" inheritanceModifier="virtual" name="doobie"/>
+            <Parent access="internal" inheritanceModifier="virtual" name="scoobie"/>
+          </AssociationCode>
+        </ForeignKey>
+      </ForeignKeys>
+      <Settings>
+        <Setting target="MSSQL" property="Ignore" value="true" />
+      </Settings>
+
+    </Table>
+
+  </Tables>
+</DataSchema>

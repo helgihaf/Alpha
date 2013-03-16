@@ -1,0 +1,8 @@
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus\bin\Debug\Knightrunner.Library.Bus.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus\bin\Debug\Knightrunner.Library.Bus.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus\obj\Debug\Knightrunner.Library.Bus.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus\obj\Debug\Knightrunner.Library.Bus.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus\bin\Debug\Knightrunner.Library.Bus.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus\bin\Debug\Knightrunner.Library.Bus.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus\obj\Debug\Knightrunner.Library.Bus.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus\obj\Debug\Knightrunner.Library.Bus.pdb

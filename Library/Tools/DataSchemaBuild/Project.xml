@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project toolsVersion="1.0" xmlns="http://www.knightrunner.com/Library/Database/SchemaProject">
+  <ProjectSettings>
+    <InputFiles>
+      <InputFile path="CommonColumnTypes.xml" />
+      <InputFile path="LandsbankiColumnTypes.xml" />
+      <InputFile path="SoftwareRepository.xml" />
+    </InputFiles>
+    <Options>
+      <PrimaryKeyFormatString>{0}_pk</PrimaryKeyFormatString>
+      <ForeignKeyFormatString>{0}_{2}_fk</ForeignKeyFormatString>
+      <UniqueIndexFormatString>{0}_{1}_uq</UniqueIndexFormatString>
+      <IndexFormatString>{0}_{1}_ix</IndexFormatString>
+    </Options>
+  </ProjectSettings>
+  <Transformations>
+    <Transformation name="Script-Oracle" method="Oracle" target="Oracle">
+      <DatabaseSchemaName>sr</DatabaseSchemaName>
+      <ScriptDocumentGenerator>Oracle</ScriptDocumentGenerator>
+      <OutputFile>c:\dev\BusinessSupport\Services\SoftwareRepository\Branches\SI_Fetures\Business\SoftwareRepository.Resource\sql\script-latest.sql</OutputFile>
+      <SequenceNameFormatString></SequenceNameFormatString>
+      <SequenceTriggerNameFormatString></SequenceTriggerNameFormatString>
+    </Transformation>
+    <Transformation name="Script-MSSQL" method="MSSQL" target="MSSQL">
+      <DatabaseSchemaName>dbo</DatabaseSchemaName>
+      <ScriptDocumentGenerator></ScriptDocumentGenerator>
+      <OutputFile>script-mssql.sql</OutputFile>
+    </Transformation>
+    <Transformation name="PetaPoco" method="PetaPoco" target="Oracle">
+      <UseTableNameAttribute>true</UseTableNameAttribute>
+      <UsePrimaryKeyAttribute>true</UsePrimaryKeyAttribute>
+      <UseExplicitColumnsAttribute>false</UseExplicitColumnsAttribute>
+      <UseColumnAttribute>true</UseColumnAttribute>
+      <DirectoryPath>classes</DirectoryPath>
+      <CodeNamespace>MyNamespace</CodeNamespace>
+      <DatabaseSchemaName>sr</DatabaseSchemaName>
+      <UsingNamespaces>Landsbanki.Framework.Database.Micro</UsingNamespaces>
+    </Transformation>
+    <!--<Transformation name="Documentation" method="Documentation">
+      <OutputDirectory>out\doc</OutputDirectory>
+      <CssFile>doc.css</CssFile>
+    </Transformation>-->
+  </Transformations>
+
+</Project>

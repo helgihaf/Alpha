@@ -1,0 +1,13 @@
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.Versioning.Tests.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.Versioning.Tests.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.Versioning.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.Versioning.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.Versioning_Accessor.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.Versioning_Accessor.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\obj\Debug\Knightrunner.Library.Database.Versioning.Tests.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\obj\Debug\Knightrunner.Library.Database.Versioning.Tests.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\obj\Debug\Knightrunner.Library.Database.Versioning.Tests.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.Versioning.Tests.dll.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Versioning.Tests\bin\Debug\Knightrunner.Library.Database.Versioning.Tests.dll.lastcodeanalysissucceeded

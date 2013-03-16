@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Images" Class="ImagesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Images" Member="Images">
+    <Type Name="Image">
+      <Column Name="Id" Type="System.Int32" DbType="Int IDENTITY NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Computer" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(260)" CanBeNull="true" />
+      <Column Name="FileSize" Type="System.Int64" DbType="Bigint NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CameraMake" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TakenTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImageHash" Type="System.Byte[]" DbType="Binary(16)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Association Name="Image_ImageTag" Member="ImageTags" ThisKey="Id" OtherKey="Image" Type="ImageTag" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tags" Member="Tags">
+    <Type Name="Tag">
+      <Column Name="Id" Type="System.Int32" DbType="Int IDENTITY NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="Tag_ImageTag" Member="ImageTags" ThisKey="Id" OtherKey="Tag" Type="ImageTag" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ImageTags" Member="ImageTags">
+    <Type Name="ImageTag">
+      <Column Name="Image" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tag" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Image_ImageTag" Member="Image1" ThisKey="Image" OtherKey="Id" Type="Image" IsForeignKey="true" />
+      <Association Name="Tag_ImageTag" Member="Tag1" ThisKey="Tag" OtherKey="Id" Type="Tag" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

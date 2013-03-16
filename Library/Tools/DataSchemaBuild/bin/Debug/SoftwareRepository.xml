@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.knightrunner.com/Library/Database/Schema">
+  <ColumnTypes>
+    
+  </ColumnTypes>
+  <Tables>
+    <Table name="sr_repository" description="A software repository">
+      <Columns>
+        <Column name="id_repository" columnType="Id" inPrimaryKey="true" description="Unique ID" />
+        <Column name="name" columnType="Name" description="A unique name of the repository" />
+        <Column name="created" columnType="DateTime" description="Date+time when created" />
+        <Column name="created_by" columnType="UserName" description="Username that created" />
+        <Column name="modified" columnType="DateTime" description="Date+time when last modified"/>
+        <Column name="modified_by" columnType="UserName" description="Username that last modified"/>
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_repository_name_uq">
+          <Column name="name" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_software_item" description="A software item, such as a SF service or a module">
+      <Columns>
+        <Column name="id_software_item" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_repository" references="sr_repository.id_repository" description="ID of the repository that this software item belongs to" referenceName="sr_software_item_repository_fk"/>
+        <Column name="name" columnType="LongName" description="A unique name of the software item within its repository" />
+        <Column name="software_item_type" columnType="Enum" description="Type of software item: 0=undefined, 1=service, 2=client module, 3=web module" />
+        <Column name="status" columnType="Enum" description="Current status of the software item: 0=undefined, 1=new, 2=staged, 3=active, 4=deprecated, 5=dying, 6=dead" />
+        <Column name="id_team" references="sr_team.id_team" canBeNull="true" description="The team responsible for this service" />
+        <Column name="description" columnType="Description" canBeNull="true" description="A short description of the software item" />
+        <Column name="description_url" columnType="Uri" canBeNull="true" description="An URL to detailed information on the software item" />
+        <Column name="deployment_directory" columnType="FileSystemPath" canBeNull="true" description="A full directory path where the software item is deployed" />
+        <Column name="implementation" columnType="Uri" canBeNull="true" description="For SoftwareItemType == Service, this is an optional address (URL) of the implementing service."/>
+        <Column name="source_control_path" columnType="FileSystemPath" canBeNull="true" description="Full source control path for the code of this software item" />
+        <Column name="drop_location" columnType="FileSystemPath" canBeNull="true" description="Full directory path of the drop location of this software item" />
+        <Column name="build_name" columnType="Name" canBeNull="true" description="TFS build name of this software item" />
+        <Column name="log_application_name" columnType="Name" canBeNull="true" description="The application name of the software item as it appears in logs" />
+        <Column name="log_application_version" columnType="Version" canBeNull="true" description="The application log version of the software item as it appears in logs" />
+        <Column name="external_id" columnType="ExternalId" canBeNull="true" description="Any external id needed to connect this team to a third party system." />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_software_item_id_name_uk">
+          <Column name="id_repository" />
+          <Column name="name" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_file_item" description="A file that belongs to a software item">
+      <Columns>
+        <Column name="id_file_item" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_software_item" references="sr_software_item.id_software_item" description="ID of the software item that owns this file item" referenceName="sr_file_item_software_item_fk"/>
+        <Column name="file_path" columnType="FileSystemPath" description="Full file path"/>
+        <Column name="version" columnType="Version" canBeNull="true" description="Version of the file"/>
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_file_item_path_uk">
+          <Column name="id_software_item" />
+          <Column name="file_path" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_measurement" description="A measurement of some of the behaviour and/or use of a software item">
+      <Columns>
+        <Column name="id_measurement" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_software_item" references="sr_software_item.id_software_item" description="ID of the software item that owns this measurement" referenceName="sr_measurement_fk"/>
+        <Column name="measurement_type" columnType="Enum" description="Type of measurement: 0=undefined, 1=count of PCS lookups, 2=count of calls to a service function." />
+        <Column name="created" columnType="DateTime" description="Date+time when the measurement was created" />
+        <Column name="period" columnType="Period" description="The period that this measurement covers. It is an integer value spanning a whole month calculated as follows: period = year*12 + (month-1)"/>
+        <Column name="detail" columnType="MeasurementDetail" canBeNull="true" description="Additional detail breakup of the measurement, like a sub-part of the software item, for example the name of a service method" />
+        <Column name="measurement_value" columnType="MeasurementValue" description="The value of this measurement, like number of times a service was called"/>
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_measurement_uk">
+          <Column name="id_software_item" />
+          <Column name="measurement_type" />
+          <Column name="period" />
+          <Column name="detail" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_dependency" description="A software item dependency, records the dependency of one software item on another software item">
+      <Columns>
+        <Column name="id_dependency" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_software_item_from" references="sr_software_item.id_software_item" description="ID of the software item that holds the dependency" referenceName="sr_dependency_from_fk"/>
+        <Column name="id_software_item_to" references="sr_software_item.id_software_item" description="ID of the software item that id_software_item_from is dependent on" referenceName="sr_dependency_to_fk" />
+        <Column name="source" columnType="Enum" canBeNull="false" description="Source of registration: 0=undefined, 1=agent, 2=manual"/>
+        <Column name="type" columnType="Enum" canBeNull="false" description="Type of dependency: 0=undefined, 1=static analysis, 2=actual usage"/>
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_dependency_from_to_uk">
+          <Column name="id_software_item_from" />
+          <Column name="id_software_item_to" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_measurement_bookmark" description="A measurement bookmark. It is used to store location in data where scanning agents last scanned so they can later resume at this point">
+      <Columns>
+        <Column name="id_measurement_bookmark" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_repository" references="sr_repository.id_repository" description="ID of the repository that owns this bookmark" referenceName="sr_measurement_bookmark_fk"/>
+        <Column name="measurement_type" columnType="Enum" description="The measurement type of this bookmark (see sr.sr_measurement.measurement_type)" />
+        <Column name="last_datetime" columnType="DateTime" description="The last date+time used" />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_measurement_bookmark_uq">
+          <Column name="id_repository"/>
+          <Column name="measurement_type"/>
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_team" description="A team. Teams do not belong to a repostory, they are global.">
+      <Columns>
+        <Column name="id_team" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="name" columnType="Name" description="A unique name of the team" />
+        <Column name="active" columnType="Boolean" description="True if we allow new data to use this team, false otherwise." />
+        <Column name="contact" columnType="ContactInformation" canBeNull="true" description="Contact information such as a list of emails etc." />
+        <Column name="external_id" columnType="ExternalId" canBeNull="true" description="Any external id needed to connect this team to a third party system." />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_team_uq">
+          <Column name="name"/>
+        </Index>
+      </Indices>
+    </Table>
+
+  </Tables>
+</DataSchema>

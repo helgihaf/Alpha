@@ -1,0 +1,14 @@
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Controls.dll
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Controls.pdb
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Controls.dll.CodeAnalysisLog.xml
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Controls.dll.lastcodeanalysissucceeded
+C:\dev\Knightrunner\Library\Knightrunner.Library.Controls\obj\Debug\Knightrunner.Library.Controls.csprojResolveAssemblyReference.cache
+C:\dev\Knightrunner\Library\Knightrunner.Library.Controls\obj\Debug\Knightrunner.Library.Controls.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Controls\obj\Debug\Knightrunner.Library.Controls.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Controls.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Controls.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Controls.dll.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Controls.dll.lastcodeanalysissucceeded
+C:\GitHub\Alpha\Library\Knightrunner.Library.Controls\obj\Debug\Knightrunner.Library.Controls.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Controls\obj\Debug\Knightrunner.Library.Controls.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Controls\obj\Debug\Knightrunner.Library.Controls.pdb

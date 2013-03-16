@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns="http://www.knightrunner.com/Library/Database/Schema" name="">
+  <ColumnTypes>
+    <ColumnType name="Id" isDbGenerated="true">
+      <Target name="MSSQL" dataType="Int IDENTITY" dataTypeWhenReferenced="Int" />
+      <Target name="Oracle" dataType="number(*,0)" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="IdReference">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="Oracle" dataType="number(*,0)" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="String">
+      <Target name="MSSQL" dataType="NVarChar(%maxLength%)" />
+      <Target name="Oracle" dataType="varchar2(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="FixedString">
+      <Target name="MSSQL" dataType="NChar(%maxLength%)" />
+      <Target name="Oracle" dataType="Char(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="UnlimitedString">
+      <Target name="MSSQL" dataType="NVarChar(MAX)" />
+      <Target name="Oracle" dataType="CLOB" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="Enum">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="Oracle" dataType="decimal(3)" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Boolean">
+      <Target name="MSSQL" dataType="Bit" />
+      <Target name="Oracle" dataType="decimal(1)" />
+      <Target name="DotNet" dataType="System.Boolean" />
+    </ColumnType>
+    <ColumnType name="Int16">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="Oracle" dataType="decimal(5)" />
+      <Target name="DotNet" dataType="System.Int16" />
+    </ColumnType>
+    <ColumnType name="Int32">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="Oracle" dataType="decimal(10)" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Decimal">
+      <Target name="MSSQL" dataType="Decimal(%precision%,%scale%)" />
+      <Target name="Oracle" dataType="Decimal(%precision%,%scale%)" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Money">
+      <Target name="MSSQL" dataType="Money" />
+      <Target name="Oracle" dataType="Decimal(19,4)" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Double">
+      <Target name="MSSQL" dataType="Float" />
+      <Target name="Oracle" dataType="binary_double" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Single">
+      <Target name="MSSQL" dataType="Real" />
+      <Target name="Oracle" dataType="binary_float" />
+      <Target name="DotNet" dataType="System.Single" />
+    </ColumnType>
+    <ColumnType name="Float">
+      <Target name="MSSQL" dataType="Float(%precision%)" />
+      <Target name="Oracle" dataType="binary_float" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Guid">
+      <Target name="MSSQL" dataType="UniqueIdentifier" />
+      <Target name="Oracle" dataType="raw(16)" />
+      <Target name="DotNet" dataType="System.GUID" />
+    </ColumnType>
+    <ColumnType name="Xml">
+      <Target name="MSSQL" dataType="Xml" />
+      <Target name="Oracle" dataType="xmltype" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="DateTime">
+      <Target name="MSSQL" dataType="DateTime" />
+      <Target name="Oracle" dataType="date" />
+      <Target name="DotNet" dataType="System.DateTime" />
+    </ColumnType>
+  </ColumnTypes>
+</DataSchema>
+
+

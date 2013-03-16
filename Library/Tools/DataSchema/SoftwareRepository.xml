@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="sr" xmlns="http://www.knightrunner.com/Library/Database/Schema">
+  <!--
+    Target Systems. This controls which systems we want to generate code for.
+  -->
+  <TargetSystems>
+    <TargetSystem name="MSSQL" />
+    <TargetSystem name="Oracle" />
+    <TargetSystem name="DotNet" />
+  </TargetSystems>
+  <ColumnTypes>
+    <ColumnType name="Id" isDbGenerated="true">
+      <Target name="MSSQL" dataType="Int IDENTITY" dataTypeWhenReferenced="Int" />
+      <Target name="Oracle" dataType="number(*,0)" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="IdReference">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="Oracle" dataType="number(*,0)" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="String">
+      <Target name="MSSQL" dataType="NVarChar(%maxLength%)" />
+      <Target name="Oracle" dataType="varchar2(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="FixedString">
+      <Target name="MSSQL" dataType="NChar(%maxLength%)" />
+      <Target name="Oracle" dataType="Char(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="UnlimitedString">
+      <Target name="MSSQL" dataType="NVarChar(MAX)" />
+      <Target name="Oracle" dataType="CLOB" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="Enum">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="Oracle" dataType="number(3,0)" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Boolean">
+      <Target name="MSSQL" dataType="Bit" />
+      <Target name="Oracle" dataType="number(1,0)" />
+      <Target name="DotNet" dataType="System.Boolean" />
+    </ColumnType>
+    <ColumnType name="Int16">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="Oracle" dataType="number(5,0)" />
+      <Target name="DotNet" dataType="System.Int16" />
+    </ColumnType>
+    <ColumnType name="Int32">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="Oracle" dataType="number(10,0)" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Int64">
+      <Target name="MSSQL" dataType="Bigint" />
+      <Target name="Oracle" dataType="number(*,0)" />
+      <Target name="DotNet" dataType="System.Int64" />
+    </ColumnType>
+    <ColumnType name="Decimal">
+      <Target name="MSSQL" dataType="number(%precision%,%scale%)" />
+      <Target name="Oracle" dataType="number(%precision%,%scale%)" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Money">
+      <Target name="MSSQL" dataType="Money" />
+      <Target name="Oracle" dataType="number(19,4)" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Double">
+      <Target name="MSSQL" dataType="Float" />
+      <Target name="Oracle" dataType="binary_double" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Single">
+      <Target name="MSSQL" dataType="Real" />
+      <Target name="Oracle" dataType="binary_float" />
+      <Target name="DotNet" dataType="System.Single" />
+    </ColumnType>
+    <ColumnType name="Float">
+      <Target name="MSSQL" dataType="Float(%precision%)" />
+      <Target name="Oracle" dataType="binary_float" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Guid">
+      <Target name="MSSQL" dataType="UniqueIdentifier" />
+      <Target name="Oracle" dataType="raw(16)" />
+      <Target name="DotNet" dataType="System.GUID" />
+    </ColumnType>
+    <ColumnType name="Xml">
+      <Target name="MSSQL" dataType="Xml" />
+      <Target name="Oracle" dataType="xmltype" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="DateTime">
+      <Target name="MSSQL" dataType="DateTime" />
+      <Target name="Oracle" dataType="date" />
+      <Target name="DotNet" dataType="System.DateTime" />
+    </ColumnType>
+    <!-- Business types -->
+    <ColumnType name="Name" baseType="String" maxLength="255" />
+    <ColumnType name="LongName" baseType="String" maxLength="1000" />
+    <ColumnType name="UserName" baseType="String" maxLength="255" />
+    <ColumnType name="Description" baseType="String" maxLength="2000" />
+    <ColumnType name="Uri" baseType="String" maxLength="1000" />
+    <ColumnType name="FileSystemPath" baseType="String" maxLength="500" />
+    <ColumnType name="Version" baseType="String" maxLength="255" />
+    <ColumnType name="MeasurementDetail" baseType="String" maxLength="255" />
+    <ColumnType name="Period" baseType="Int32" />
+    <ColumnType name="MeasurementValue" baseType="Int64" />
+    <ColumnType name="ContactInformation" baseType="String" maxLength="1000" />
+    <ColumnType name="ExternalId" baseType="String" maxLength="100" />
+  </ColumnTypes>
+  <Tables>
+    <Table name="sr_repository" description="A software repository">
+      <Columns>
+        <Column name="id_repository" columnType="Id" inPrimaryKey="true" description="Unique ID" />
+        <Column name="name" columnType="Name" description="A unique name of the repository" />
+        <Column name="created" columnType="DateTime" description="Date+time when created" />
+        <Column name="created_by" columnType="UserName" description="Username that created" />
+        <Column name="modified" columnType="DateTime" description="Date+time when last modified"/>
+        <Column name="modified_by" columnType="UserName" description="Username that last modified"/>
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_repository_name_uq">
+          <Column name="name" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_software_item" description="A software item, such as a SF service or a module">
+      <Columns>
+        <Column name="id_software_item" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_repository" references="sr_repository.id_repository" description="ID of the repository that this software item belongs to" referenceName="sr_software_item_repository_fk"/>
+        <Column name="name" columnType="LongName" description="A unique name of the software item within its repository" />
+        <Column name="software_item_type" columnType="Enum" description="Type of software item: 0=undefined, 1=service, 2=client module, 3=web module" />
+        <Column name="status" columnType="Enum" description="Current status of the software item: 0=undefined, 1=new, 2=staged, 3=active, 4=deprecated, 5=dying, 6=dead" />
+        <Column name="id_team" references="sr_team.id_team" canBeNull="true" description="The team responsible for this service" />
+        <Column name="description" columnType="Description" canBeNull="true" description="A short description of the software item" />
+        <Column name="description_url" columnType="Uri" canBeNull="true" description="An URL to detailed information on the software item" />
+        <Column name="deployment_directory" columnType="FileSystemPath" canBeNull="true" description="A full directory path where the software item is deployed" />
+        <Column name="implementation" columnType="Uri" canBeNull="true" description="For SoftwareItemType == Service, this is an optional address (URL) of the implementing service."/>
+        <Column name="source_control_path" columnType="FileSystemPath" canBeNull="true" description="Full source control path for the code of this software item" />
+        <Column name="drop_location" columnType="FileSystemPath" canBeNull="true" description="Full directory path of the drop location of this software item" />
+        <Column name="build_name" columnType="Name" canBeNull="true" description="TFS build name of this software item" />
+        <Column name="log_application_name" columnType="Name" canBeNull="true" description="The application name of the software item as it appears in logs" />
+        <Column name="log_application_version" columnType="Version" canBeNull="true" description="The application log version of the software item as it appears in logs" />
+        <Column name="external_id" columnType="ExternalId" canBeNull="true" description="Any external id needed to connect this team to a third party system." />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_software_item_id_name_uk">
+          <Column name="id_repository" />
+          <Column name="name" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_file_item" description="A file that belongs to a software item">
+      <Columns>
+        <Column name="id_file_item" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_software_item" references="sr_software_item.id_software_item" description="ID of the software item that owns this file item" referenceName="sr_file_item_software_item_fk"/>
+        <Column name="file_path" columnType="FileSystemPath" description="Full file path"/>
+        <Column name="version" columnType="Version" canBeNull="true" description="Version of the file"/>
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_file_item_path_uk">
+          <Column name="id_software_item" />
+          <Column name="file_path" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_measurement" description="A measurement of some of the behaviour and/or use of a software item">
+      <Columns>
+        <Column name="id_measurement" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_software_item" references="sr_software_item.id_software_item" description="ID of the software item that owns this measurement" referenceName="sr_measurement_fk"/>
+        <Column name="measurement_type" columnType="Enum" description="Type of measurement: 0=undefined, 1=count of PCS lookups, 2=count of calls to a service function." />
+        <Column name="created" columnType="DateTime" description="Date+time when the measurement was created" />
+        <Column name="period" columnType="Period" description="The period that this measurement covers. It is an integer value spanning a whole month calculated as follows: period = year*12 + (month-1)"/>
+        <Column name="detail" columnType="MeasurementDetail" canBeNull="true" description="Additional detail breakup of the measurement, like a sub-part of the software item, for example the name of a service method" />
+        <Column name="measurement_value" columnType="MeasurementValue" description="The value of this measurement, like number of times a service was called"/>
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_measurement_uk">
+          <Column name="id_software_item" />
+          <Column name="measurement_type" />
+          <Column name="period" />
+          <Column name="detail" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_dependency" description="A software item dependency, records the dependency of one software item on another software item">
+      <Columns>
+        <Column name="id_dependency" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_software_item_from" references="sr_software_item.id_software_item" description="ID of the software item that holds the dependency" referenceName="sr_dependency_from_fk"/>
+        <Column name="id_software_item_to" references="sr_software_item.id_software_item" description="ID of the software item that id_software_item_from is dependent on" referenceName="sr_dependency_to_fk" />
+        <Column name="source" columnType="Enum" canBeNull="false" description="Source of registration: 0=undefined, 1=agent, 2=manual"/>
+        <Column name="type" columnType="Enum" canBeNull="false" description="Type of dependency: 0=undefined, 1=static analysis, 2=actual usage"/>
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_dependency_from_to_uk">
+          <Column name="id_software_item_from" />
+          <Column name="id_software_item_to" />
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_measurement_bookmark" description="A measurement bookmark. It is used to store location in data where scanning agents last scanned so they can later resume at this point">
+      <Columns>
+        <Column name="id_measurement_bookmark" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="id_repository" references="sr_repository.id_repository" description="ID of the repository that owns this bookmark" referenceName="sr_measurement_bookmark_fk"/>
+        <Column name="measurement_type" columnType="Enum" description="The measurement type of this bookmark (see sr.sr_measurement.measurement_type)" />
+        <Column name="last_datetime" columnType="DateTime" description="The last date+time used" />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_measurement_bookmark_uq">
+          <Column name="id_repository"/>
+          <Column name="measurement_type"/>
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="sr_team" description="A team. Teams do not belong to a repostory, they are global.">
+      <Columns>
+        <Column name="id_team" columnType="Id" inPrimaryKey="true" description="Unique ID"/>
+        <Column name="name" columnType="Name" description="A unique name of the team" />
+        <Column name="active" columnType="Boolean" description="True if we allow new data to use this team, false otherwise." />
+        <Column name="contact" columnType="ContactInformation" canBeNull="true" description="Contact information such as a list of emails etc." />
+        <Column name="external_id" columnType="ExternalId" canBeNull="true" description="Any external id needed to connect this team to a third party system." />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="sr_team_uq">
+          <Column name="name"/>
+        </Index>
+      </Indices>
+    </Table>
+
+  </Tables>
+</DataSchema>

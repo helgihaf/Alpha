@@ -1,0 +1,6 @@
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Core.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Core.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Core\obj\Debug\Knightrunner.Library.Core.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Core\obj\Debug\Knightrunner.Library.Core.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Core.dll.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Core.dll.lastcodeanalysissucceeded

@@ -1,0 +1,10 @@
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.ExpressionParsing.Tests.dll
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.ExpressionParsing.Tests.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.ExpressionParsing.Tests\obj\Debug\Knightrunner.Library.ExpressionParsing.Tests.csprojResolveAssemblyReference.cache
+C:\dev\Knightrunner\Library\Knightrunner.Library.ExpressionParsing.Tests\obj\Debug\Knightrunner.Library.ExpressionParsing.Tests.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.ExpressionParsing.Tests\obj\Debug\Knightrunner.Library.ExpressionParsing.Tests.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.ExpressionParsing.Tests.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.ExpressionParsing.Tests.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.ExpressionParsing.Tests\obj\Debug\Knightrunner.Library.ExpressionParsing.Tests.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.ExpressionParsing.Tests\obj\Debug\Knightrunner.Library.ExpressionParsing.Tests.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.ExpressionParsing.Tests\obj\Debug\Knightrunner.Library.ExpressionParsing.Tests.pdb

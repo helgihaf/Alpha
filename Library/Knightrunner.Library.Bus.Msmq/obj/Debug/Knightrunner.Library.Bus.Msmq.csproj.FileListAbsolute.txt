@@ -1,0 +1,14 @@
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus.Msmq\bin\Debug\Knightrunner.Library.Bus.Msmq.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus.Msmq\bin\Debug\Knightrunner.Library.Bus.Msmq.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus.Msmq\bin\Debug\Knightrunner.Library.Bus.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus.Msmq\bin\Debug\Knightrunner.Library.Bus.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus.Msmq\obj\Debug\Knightrunner.Library.Bus.Msmq.csprojResolveAssemblyReference.cache
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus.Msmq\obj\Debug\Knightrunner.Library.Bus.Msmq.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Bus.Msmq\obj\Debug\Knightrunner.Library.Bus.Msmq.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus.Msmq\bin\Debug\Knightrunner.Library.Bus.Msmq.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus.Msmq\bin\Debug\Knightrunner.Library.Bus.Msmq.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus.Msmq\bin\Debug\Knightrunner.Library.Bus.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus.Msmq\bin\Debug\Knightrunner.Library.Bus.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus.Msmq\obj\Debug\Knightrunner.Library.Bus.Msmq.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus.Msmq\obj\Debug\Knightrunner.Library.Bus.Msmq.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Bus.Msmq\obj\Debug\Knightrunner.Library.Bus.Msmq.pdb

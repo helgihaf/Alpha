@@ -1,0 +1,15 @@
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Database.Schema.PetaPoco.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Database.Schema.PetaPoco.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Database.Schema.PetaPoco.dll.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Database.Schema.PetaPoco.dll.lastcodeanalysissucceeded
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Core.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Database.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Database.Schema.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Core.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Database.Schema.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\bin\Debug\Knightrunner.Library.Database.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\obj\Debug\Knightrunner.Library.Database.Schema.PetaPoco.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\obj\Debug\Knightrunner.Library.Database.Schema.PetaPoco.Properties.Resources.resources
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\obj\Debug\Knightrunner.Library.Database.Schema.PetaPoco.csproj.GenerateResource.Cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\obj\Debug\Knightrunner.Library.Database.Schema.PetaPoco.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.PetaPoco\obj\Debug\Knightrunner.Library.Database.Schema.PetaPoco.pdb

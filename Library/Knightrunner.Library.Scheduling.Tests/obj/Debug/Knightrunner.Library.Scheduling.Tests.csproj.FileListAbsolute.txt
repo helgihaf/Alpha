@@ -1,0 +1,10 @@
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Scheduling.Tests.dll
+C:\dev\Knightrunner\Library\bin\Debug\Knightrunner.Library.Scheduling.Tests.pdb
+C:\dev\Knightrunner\Library\Knightrunner.Library.Scheduling.Tests\obj\Debug\Knightrunner.Library.Scheduling.Tests.csprojResolveAssemblyReference.cache
+C:\dev\Knightrunner\Library\Knightrunner.Library.Scheduling.Tests\obj\Debug\Knightrunner.Library.Scheduling.Tests.dll
+C:\dev\Knightrunner\Library\Knightrunner.Library.Scheduling.Tests\obj\Debug\Knightrunner.Library.Scheduling.Tests.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Scheduling.Tests.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Scheduling.Tests.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.Scheduling.Tests\obj\Debug\Knightrunner.Library.Scheduling.Tests.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Scheduling.Tests\obj\Debug\Knightrunner.Library.Scheduling.Tests.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Scheduling.Tests\obj\Debug\Knightrunner.Library.Scheduling.Tests.pdb

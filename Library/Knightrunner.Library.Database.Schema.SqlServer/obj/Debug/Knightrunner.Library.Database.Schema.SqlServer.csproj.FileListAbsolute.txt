@@ -1,0 +1,7 @@
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Database.Schema.SqlServer.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Database.Schema.SqlServer.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Database.Schema.SqlServer.dll.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Database.Schema.SqlServer.dll.lastcodeanalysissucceeded
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.SqlServer\obj\Debug\Knightrunner.Library.Database.Schema.SqlServer.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.SqlServer\obj\Debug\Knightrunner.Library.Database.Schema.SqlServer.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.SqlServer\obj\Debug\Knightrunner.Library.Database.Schema.SqlServer.pdb

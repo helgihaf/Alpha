@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns="http://www.knightrunner.com/Library/Database/Schema" name="DemoSystem">
+  <TargetSystems>
+    <TargetSystem name="MSSQL" codeGenerator="Knightrunner.Library.Database.Schema.SqlServer.SqlServerScriptGenerator, Knightrunner.Library.Database.Schema" />
+    <TargetSystem name="CSharp" codeGenerator="Knightrunner.Library.Database.Schema.SqlServer.LinqCodeGenerator, Knightrunner.Library.Database.Schema" />
+  </TargetSystems>
+  <ColumnTypes>
+    <!-- Base types -->
+    <ColumnType name="Id" isDbGenerated="true" canBeNull="false">
+      <Target name="MSSQL" dataType="Int IDENTITY" dataTypeWhenReferenced="int" />
+      <Target name="CSharp" dataType="int" />
+    </ColumnType>
+    <ColumnType name="IdReference">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="CSharp" dataType="int"/>
+    </ColumnType>
+    <ColumnType name="String">
+      <Target name="MSSQL" dataType="NVarChar(%maxLength%)" />
+      <Target name="CSharp" dataType="string"/>
+    </ColumnType>
+    <ColumnType name="FixedString">
+      <Target name="MSSQL" dataType="NChar(%maxLength%)" />
+      <Target name="CSharp" dataType="string" />
+    </ColumnType>
+    <ColumnType name="UnlimitedString">
+      <Target name="MSSQL" dataType="NVvarChar(MAX)" />
+      <Target name="CSharp" dataType="string" />
+    </ColumnType>
+    <ColumnType name="Enum" canBeNull="false">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="CSharp" dataType="int" />
+    </ColumnType>
+    <ColumnType name="Bool">
+      <Target name="MSSQL" dataType="Bit" />
+      <Target name="CSharp" dataType="bool" />
+    </ColumnType>
+    <ColumnType name="Int32">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="CSharp" dataType="int" />
+    </ColumnType>
+    <ColumnType name="Decimal">
+      <Target name="MSSQL" dataType="Decimal(%precision%,%scale%)"/>
+      <Target name="CSharp" dataType="decimal" />
+    </ColumnType>
+    <ColumnType name="Money">
+      <Target name="MSSQL" dataType="Money"/>
+      <Target name="CSharp" dataType="decimal" />
+    </ColumnType>
+    <ColumnType name="Double">
+      <Target name="MSSQL" dataType="Float"/>
+      <Target name="CSharp" dataType="double" />
+    </ColumnType>
+    <ColumnType name="Single">
+      <Target name="MSSQL" dataType="Real"/>
+      <Target name="CSharp" dataType="float"/>
+    </ColumnType>
+    <ColumnType name="Float">
+      <Target name="MSSQL" dataType="Float(%precision%)"/>
+      <Target name="CSharp" dataType="double" />
+    </ColumnType>
+    <ColumnType name="Guid">
+      <Target name="MSSQL" dataType="UniqueIdentifier"/>
+      <Target name="CSharp" dataType="System.GUID" />
+    </ColumnType>
+    <ColumnType name="DateTime">
+      <Target name="MSSQL" dataType="DateTime"/>
+      <Target name="CSharp" dataType="System.DateTime" />
+    </ColumnType>
+
+    <!-- Business types -->
+    <ColumnType name="DataAreaId" baseType="String" maxLength="4" />
+    <ColumnType name="Code" baseType="String" maxLength="10" />
+    <ColumnType name="Name" baseType="String" maxLength="100" />
+    <ColumnType name="Email" baseType="String" maxLength="100" />
+    <ColumnType name="Password" baseType="String" maxLength="100" />
+    <ColumnType name="Activity" baseType="Enum" enumType="Knightrunner.Game.Core.Accounting.Activity" />
+    <ColumnType name="Description" baseType="UnlimitedString" />
+    
+    <ColumnType name="Address" baseType="String" maxLength="400" />
+    <ColumnType name="HostName" baseType="String" maxLength="50" />
+    <ColumnType name="Path" baseType="String" maxLength="200" />
+    <ColumnType name="ConnectionString" baseType="String" maxLength="200" />
+    <ColumnType name="ByteCount" baseType="Int32" />
+    <ColumnType name="DateTimeFormat" baseType="String" maxLength="40" />
+    <ColumnType name="Something" baseType="Decimal" precision="18" scale="0" />
+    <ColumnType name="Factor" baseType="Float" precision="53" />
+
+  </ColumnTypes>
+
+  <Tables>
+    <Table name="Accounts">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="UserName" columnType="Name" />
+        <Column name="Email" columnType="Email" />
+        <Column name="Password" columnType="Password" />
+        <Column name="CreationDate" columnType="DateTime" />
+        <Column name="IsApproved" columnType="Bool" />
+        <Column name="IsLockedOut" columnType="Bool" />
+        <Column name="IsOnline" columnType="Bool" />
+        <Column name="LastActivityDate" columnType="DateTime" canBeNull="true"/>
+        <Column name="LastLockoutDate" columnType="DateTime" canBeNull="true"/>
+        <Column name="LastLoginDate" columnType="DateTime" canBeNull="true"/>
+        <Column name="LastPasswordChange" columnType="DateTime" canBeNull="true"/>
+        <Column name="ExpireDate" columnType="DateTime" canBeNull="true"/>
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="UserName"/>
+        </Index>
+        <Index unique="true">
+          <Column name="Email"/>
+        </Index>
+      </Indices>
+    </Table>
+    <Table name="AccountActivityLog">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="AccountId" references="Accounts.Id" />
+        <Column name="Activity" columnType="Activity" />
+        <Column name="DateTime" columnType="DateTime" />
+        <Column name="IntParam" columnType="Int32" />
+        <Column name="Description" columnType="Description" />
+      </Columns>
+      <Indices>
+        <Index unique="false">
+          <Column name="AccountId"/>
+          <Column name="DateTime" />
+        </Index>
+      </Indices>
+    </Table>
+
+    <Table name="Groups">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="Name" columnType="Name" />
+      </Columns>
+    </Table>
+
+    <Table name="GroupMemberships">
+      <Columns>
+        <Column name="GroupOwner" inPrimaryKey="true" references="Groups.Id"/>
+        <Column name="GroupMember" inPrimaryKey="true" references="Groups.Id"/>
+      </Columns>
+    </Table>
+    <Table name="CombinedFkTable">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true"/>
+        <Column name="GroupMembershipOwner" references="GroupMemberships.0"/>
+        <Column name="GroupMembershipOwner" references="GroupMemberships.1"/>
+      </Columns>
+    </Table>
+  </Tables>
+
+  </Table>
+</DataSchema>
+

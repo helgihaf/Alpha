@@ -1,0 +1,7 @@
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Database.Schema.Documentation.dll
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Database.Schema.Documentation.pdb
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Database.Schema.Documentation.dll.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Database.Schema.Documentation.dll.lastcodeanalysissucceeded
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.Documentation\obj\Debug\Knightrunner.Library.Database.Schema.Documentation.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.Documentation\obj\Debug\Knightrunner.Library.Database.Schema.Documentation.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.Database.Schema.Documentation\obj\Debug\Knightrunner.Library.Database.Schema.Documentation.pdb

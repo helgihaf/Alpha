@@ -1,0 +1,51 @@
+<Database Name="UserAccounting" Class="UserAccountingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" Provider="System.Data.SqlClient" />
+  <Table Name="UserAccounts" Member="UserAccounts">
+    <Type Name="UserAccount">
+      <Column Name="Id" Type="System.Int32" DbType="int identity NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="nvarchar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="nvarchar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="nvarchar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="nvarchar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressLine1" Type="System.String" DbType="nvarchar(100)" CanBeNull="true" />
+      <Column Name="AddressLine2" Type="System.String" DbType="nvarchar(100)" CanBeNull="true" />
+      <Column Name="AddressLine3" Type="System.String" DbType="nvarchar(100)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="nvarchar(30)" CanBeNull="true" />
+      <Column Name="CountryCode" Type="System.String" DbType="nchar(2)" CanBeNull="true" />
+      <Column Name="Telephone1" Type="System.String" DbType="nvarchar(15)" CanBeNull="true" />
+      <Column Name="Telephone2" Type="System.String" DbType="nvarchar(15)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="datetime NOT NULL" CanBeNull="false" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsOnline" Type="System.Boolean" DbType="bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivityDate" Type="System.DateTime?" DbType="datetime" CanBeNull="true" />
+      <Column Name="LastLockoutDate" Type="System.DateTime?" DbType="datetime" CanBeNull="true" />
+      <Column Name="LastLoginDate" Type="System.DateTime?" DbType="datetime" CanBeNull="true" />
+      <Column Name="LastPasswordChangeDate" Type="System.DateTime?" DbType="datetime" CanBeNull="true" />
+      <Column Name="ExpireDate" Type="System.DateTime?" DbType="datetime" CanBeNull="true" />
+      <Association Name="Payment_UserAccount" Member="Payments" ThisKey="Id" OtherKey="AccountId" Type="Payment" />
+      <Association Name="AccountTransaction_UserAccount" Member="AccountTransactions" ThisKey="Id" OtherKey="AccountId" Type="AccountTransaction" />
+    </Type>
+  </Table>
+  <Table Name="Payments" Member="Payments">
+    <Type Name="Payment">
+      <Column Name="Id" Type="System.Int32" DbType="int identity NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountId" Type="System.Int32" DbType="int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentType" Type="System.Int32" DbType="smallint NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentBrand" Type="System.Int32" DbType="smallint NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentDetails" Type="System.String" DbType="xml" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="int NOT NULL" CanBeNull="false" />
+      <Association Name="Payment_UserAccount" Member="UserAccounts" ThisKey="AccountId" OtherKey="Id" Type="UserAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="AccountTransactions" Member="AccountTransactions">
+    <Type Name="AccountTransaction">
+      <Column Name="Id" Type="System.Int32" DbType="int identity NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountId" Type="System.Int32" DbType="int NOT NULL" CanBeNull="false" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="datetime NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionType" Type="System.Int32" DbType="smallint NOT NULL" CanBeNull="false" />
+      <Column Name="Data" Type="System.String" DbType="xml NOT NULL" CanBeNull="false" />
+      <Association Name="AccountTransaction_UserAccount" Member="UserAccounts" ThisKey="AccountId" OtherKey="Id" Type="UserAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
