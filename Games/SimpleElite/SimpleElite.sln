@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleElite", "SimpleElite\SimpleElite.csproj", "{839E07AC-D069-476B-876B-849004079B6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test3D", "Test3D\Test3D.csproj", "{2E78BB35-FCA0-497F-85A3-24F8A0E58F30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knightrunner.Library.Drawing3D", "..\..\Library\Knightrunner.Library.Drawing3D\Knightrunner.Library.Drawing3D.csproj", "{12CD4DFC-3DB4-4BD0-993D-2AEC40BAE914}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{839E07AC-D069-476B-876B-849004079B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839E07AC-D069-476B-876B-849004079B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839E07AC-D069-476B-876B-849004079B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839E07AC-D069-476B-876B-849004079B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E78BB35-FCA0-497F-85A3-24F8A0E58F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E78BB35-FCA0-497F-85A3-24F8A0E58F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E78BB35-FCA0-497F-85A3-24F8A0E58F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E78BB35-FCA0-497F-85A3-24F8A0E58F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12CD4DFC-3DB4-4BD0-993D-2AEC40BAE914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CD4DFC-3DB4-4BD0-993D-2AEC40BAE914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CD4DFC-3DB4-4BD0-993D-2AEC40BAE914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CD4DFC-3DB4-4BD0-993D-2AEC40BAE914}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

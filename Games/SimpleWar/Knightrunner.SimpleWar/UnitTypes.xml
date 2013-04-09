@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UnitTypes>
+  <UnitType>
+    <Name>Tank</Name>
+    <UnitClass>HeavyMechanized</UnitClass>
+    <Attack>16</Attack>
+    <Range>12</Range>
+    <Defense>17</Defense>
+    <Movement>6</Movement>
+  </UnitType>
+  <UnitType>
+    <Name>Infantry</Name>
+    <UnitClass>Infantry</UnitClass>
+    <Attack>14</Attack>
+    <Range>8</Range>
+    <Defense>6</Defense>
+    <Movement>1</Movement>
+  </UnitType>
+  <UnitType>
+    <Name>Mortar</Name>
+    <UnitClass>LightMechanized</UnitClass>
+    <Attack>5</Attack>
+    <Range>25</Range>
+    <Defense>8</Defense>
+    <Movement>6</Movement>
+  </UnitType>
+</UnitTypes>

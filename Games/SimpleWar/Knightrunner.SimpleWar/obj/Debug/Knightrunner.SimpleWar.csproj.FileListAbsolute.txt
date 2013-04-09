@@ -1,0 +1,10 @@
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar\bin\Debug\Knightrunner.SimpleWar.dll
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar\bin\Debug\Knightrunner.SimpleWar.pdb
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar\obj\Debug\Knightrunner.SimpleWar.dll
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar\obj\Debug\Knightrunner.SimpleWar.pdb
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar\obj\Debug\Knightrunner.SimpleWar.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar\bin\Debug\Knightrunner.SimpleWar.dll
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar\bin\Debug\Knightrunner.SimpleWar.pdb
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar\obj\Debug\Knightrunner.SimpleWar.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar\obj\Debug\Knightrunner.SimpleWar.dll
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar\obj\Debug\Knightrunner.SimpleWar.pdb

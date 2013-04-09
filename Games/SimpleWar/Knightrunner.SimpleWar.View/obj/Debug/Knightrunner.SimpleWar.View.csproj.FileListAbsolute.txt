@@ -1,0 +1,14 @@
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar.View\obj\Debug\Knightrunner.SimpleWar.View.csprojResolveAssemblyReference.cache
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar.View\bin\Debug\Knightrunner.SimpleWar.View.dll
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar.View\bin\Debug\Knightrunner.SimpleWar.View.pdb
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar.View\bin\Debug\Knightrunner.SimpleWar.dll
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar.View\bin\Debug\Knightrunner.SimpleWar.pdb
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar.View\obj\Debug\Knightrunner.SimpleWar.View.dll
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleWar\Knightrunner.SimpleWar.View\obj\Debug\Knightrunner.SimpleWar.View.pdb
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar.View\bin\Debug\Knightrunner.SimpleWar.View.dll
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar.View\bin\Debug\Knightrunner.SimpleWar.View.pdb
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar.View\bin\Debug\Knightrunner.SimpleWar.dll
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar.View\bin\Debug\Knightrunner.SimpleWar.pdb
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar.View\obj\Debug\Knightrunner.SimpleWar.View.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar.View\obj\Debug\Knightrunner.SimpleWar.View.dll
+C:\GitHub\Alpha\Games\SimpleWar\Knightrunner.SimpleWar.View\obj\Debug\Knightrunner.SimpleWar.View.pdb

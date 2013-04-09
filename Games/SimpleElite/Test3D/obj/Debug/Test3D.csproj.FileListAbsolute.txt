@@ -1,0 +1,14 @@
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\bin\Debug\Test3D.exe.config
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\obj\Debug\Test3D.csprojResolveAssemblyReference.cache
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\obj\Debug\Test3D.MainForm.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\obj\Debug\Test3D.Properties.Resources.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\obj\Debug\Test3D.csproj.GenerateResource.Cache
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\bin\Debug\Test3D.exe
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\bin\Debug\Test3D.pdb
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\bin\Debug\Knightrunner.Library.Drawing3D.dll
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\bin\Debug\Knightrunner.Library.Drawing3D.pdb
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\obj\Debug\Test3D.exe
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\Test3D\obj\Debug\Test3D.pdb
+C:\GitHub\Alpha\Games\SimpleElite\Test3D\bin\Debug\Test3D.exe.config
+C:\GitHub\Alpha\Games\SimpleElite\Test3D\obj\Debug\Test3D.exe
+C:\GitHub\Alpha\Games\SimpleElite\Test3D\obj\Debug\Test3D.pdb

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<TerrainTypes>
+  
+  <TerrainType>
+    <Name>Plain</Name>
+    <MovementCost>
+      <UnitClass>Infantry</UnitClass>
+      <Value>1</Value>
+    </MovementCost>
+    <MovementCost>
+      <UnitClass>LightMechanized</UnitClass>
+      <Value>2</Value>
+    </MovementCost>
+    <MovementCost>
+      <UnitClass>HeavyMechanized</UnitClass>
+      <Value>1</Value>
+    </MovementCost>
+    <Concealment>0</Concealment>
+  </TerrainType>
+
+  <TerrainType>
+    <Name>Wood</Name>
+    <MovementCost>
+      <UnitClass>Infantry</UnitClass>
+      <Value>3</Value>
+    </MovementCost>
+    <MovementCost>
+      <UnitClass>LightMechanized</UnitClass>
+      <Value>7</Value>
+    </MovementCost>
+    <MovementCost>
+      <UnitClass>HeavyMechanized</UnitClass>
+      <Value>4</Value>
+    </MovementCost>
+    <Concealment>4</Concealment>
+  </TerrainType>
+
+  <TerrainType>
+    <Name>Rocks</Name>
+    <MovementCost>
+      <UnitClass>Infantry</UnitClass>
+      <Value>3</Value>
+    </MovementCost>
+    <MovementCost>
+      <UnitClass>LightMechanized</UnitClass>
+      <Value>99</Value>
+    </MovementCost>
+    <MovementCost>
+      <UnitClass>HeavyMechanized</UnitClass>
+      <Value>4</Value>
+    </MovementCost>
+    <Concealment>2</Concealment>
+  </TerrainType>
+
+  <TerrainType>
+    <Name>Water</Name>
+    <MovementCost>
+      <UnitClass>Infantry</UnitClass>
+      <Value>99</Value>
+    </MovementCost>
+    <MovementCost>
+      <UnitClass>LightMechanized</UnitClass>
+      <Value>99</Value>
+    </MovementCost>
+    <MovementCost>
+      <UnitClass>HeavyMechanized</UnitClass>
+      <Value>99</Value>
+    </MovementCost>
+    <Concealment>0</Concealment>
+  </TerrainType>
+
+</TerrainTypes>

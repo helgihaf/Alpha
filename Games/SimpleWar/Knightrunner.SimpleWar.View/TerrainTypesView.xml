@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TerrainTypes>
+  <TerrainType>
+    <Name>Plain</Name>
+    <Color>Cornsilk</Color>
+  </TerrainType>
+  <TerrainType>
+    <Name>Wood</Name>
+    <Color>Green</Color>
+  </TerrainType>
+  <TerrainType>
+    <Name>Rocks</Name>
+    <Color>Gray</Color>
+  </TerrainType>
+  <TerrainType>
+    <Name>Water</Name>
+    <Color>Blue</Color>
+  </TerrainType>
+</TerrainTypes>
+
+  

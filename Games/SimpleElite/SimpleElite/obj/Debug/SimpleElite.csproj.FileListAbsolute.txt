@@ -1,0 +1,16 @@
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\bin\Debug\SimpleElite.exe.config
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\bin\Debug\SimpleElite.exe
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\bin\Debug\SimpleElite.pdb
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.Properties.Resources.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.csproj.GenerateResource.Cache
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.exe
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.pdb
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.View.ControlPanel.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.View.MainForm.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.View.SpacePanel.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.View.LeftControlPanel.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.View.MeasureBar.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.View.RightControlPanel.resources
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\obj\Debug\SimpleElite.csprojResolveAssemblyReference.cache
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\bin\Debug\Knightrunner.Library.Drawing3D.dll
+C:\dev\Knightrunner\Knightrunner_unmapped\Game\SimpleElite\SimpleElite\bin\Debug\Knightrunner.Library.Drawing3D.pdb

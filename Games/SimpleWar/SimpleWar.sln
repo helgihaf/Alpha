@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knightrunner.SimpleWar", "Knightrunner.SimpleWar\Knightrunner.SimpleWar.csproj", "{24577D5C-C92F-41DC-A2B9-B302FACE68B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knightrunner.SimpleWar.Editor", "Knightrunner.SimpleWar.Editor\Knightrunner.SimpleWar.Editor.csproj", "{824D25D7-DF0D-4038-9056-F11C9AB31670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knightrunner.SimpleWar.View", "Knightrunner.SimpleWar.View\Knightrunner.SimpleWar.View.csproj", "{FAA69DE4-D9A0-4D6E-8A5F-6D4B090D400C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24577D5C-C92F-41DC-A2B9-B302FACE68B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24577D5C-C92F-41DC-A2B9-B302FACE68B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24577D5C-C92F-41DC-A2B9-B302FACE68B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24577D5C-C92F-41DC-A2B9-B302FACE68B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824D25D7-DF0D-4038-9056-F11C9AB31670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824D25D7-DF0D-4038-9056-F11C9AB31670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824D25D7-DF0D-4038-9056-F11C9AB31670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824D25D7-DF0D-4038-9056-F11C9AB31670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA69DE4-D9A0-4D6E-8A5F-6D4B090D400C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA69DE4-D9A0-4D6E-8A5F-6D4B090D400C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA69DE4-D9A0-4D6E-8A5F-6D4B090D400C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA69DE4-D9A0-4D6E-8A5F-6D4B090D400C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
