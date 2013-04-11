@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" VisualStudioProjectFilename="C:\dev\Knightrunner\Organizers\WorkTrackLite\WorkTrackLite\WorkTrackLite.csproj" AssemblyName="WorkTrackLite" AssemblyType="Exe" RootNamespace="WorkTrackLite" AutoDoNotTranslate="true" InvariantLocale="en" AllowEditingInvariant="false">
+  <items>
+    <it rn="Properties\Resources.resx" nm="BallonTipText" rc="" dnt="false" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="What are you up to?" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Hvað ertu að gera?" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="BaloonTipTitle" rc="" dnt="true" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Work Track Lite" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="&#xD;&#xA;    " ts="Changed" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ExitMenuItem" rc="" dnt="false" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Exit" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Hætta" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="RestartNeededBySettings" rc="" dnt="false" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The program must be restarted for these changes to take effect." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Til að virkja þessar stillingar þarf að endurræsa forritið." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="RestartNeededBySettingsTitle" rc="" dnt="false" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Work Track Lite" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="SettingsMenuItem" rc="" dnt="false" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Settings" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Stillingar" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="TrackWorkMenuItem" rc="" dnt="false" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Track work" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Skrá vinnu" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="VersionFormat" rc="" dnt="false" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Version {0}" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Útgáfa {0}" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="WorkOverviewMenuItem" rc="" dnt="false" nms="WorkTrackLite.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Work overview" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Yfirlit vinnu" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="$this.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Settings" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Stillingar" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="buttonCancel.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="23" wdt="75">
+      <lis>
+        <li lc="nn-nn" tx="&amp;Cancel" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="&amp;Hætta við" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="buttonOk.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="23" wdt="75">
+      <lis>
+        <li lc="nn-nn" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Í lagi" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="checkBoxNotifications.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="17" wdt="118">
+      <lis>
+        <li lc="nn-nn" tx="Enable notifications" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Virkja áminningar" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="label1.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="13" wdt="80">
+      <lis>
+        <li lc="nn-nn" tx="Notify me every" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Áminning á" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="label2.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="13" wdt="43">
+      <lis>
+        <li lc="nn-nn" tx="minutes" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="mínútna fresti" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="label3.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="13" wdt="86">
+      <lis>
+        <li lc="nn-nn" tx="Data file location" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Slóð gagnaskrár" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="label5.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="13" wdt="55">
+      <lis>
+        <li lc="nn-nn" tx="Language" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="SettingsDialog.resx" nm="labelVersion.Text" rc="Text" dnt="true" nms="WorkTrackLite" cln="SettingsDialog" bac="EmbeddedResource" hgt="23" wdt="177">
+      <lis>
+        <li lc="nn-nn" tx="label5" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="TrackWorkDialog.resx" nm="$this.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="TrackWorkDialog" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Track Your Work" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Skrá vinnu" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="TrackWorkDialog.resx" nm="buttonCancel.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="TrackWorkDialog" bac="EmbeddedResource" hgt="23" wdt="75">
+      <lis>
+        <li lc="nn-nn" tx="&amp;Cancel" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="&amp;Hætta við" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="TrackWorkDialog.resx" nm="buttonOk.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="TrackWorkDialog" bac="EmbeddedResource" hgt="23" wdt="75">
+      <lis>
+        <li lc="nn-nn" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Í lagi" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="TrackWorkDialog.resx" nm="label1.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="TrackWorkDialog" bac="EmbeddedResource" hgt="13" wdt="104">
+      <lis>
+        <li lc="nn-nn" tx="What are you up to?" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Hvað ertu að gera" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WorkOverviewForm.resx" nm="$this.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="WorkOverviewForm" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Work Overview" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Yfirlit vinnu" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WorkOverviewForm.resx" nm="buttonCopy.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="WorkOverviewForm" bac="EmbeddedResource" hgt="22" wdt="23">
+      <lis>
+        <li lc="nn-nn" tx="Copy selected lines" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Afrita valdar línur" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WorkOverviewForm.resx" nm="columnHeader1.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="WorkOverviewForm" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Date" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Dagsetning" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WorkOverviewForm.resx" nm="columnHeader2.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="WorkOverviewForm" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Time" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Tími" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WorkOverviewForm.resx" nm="columnHeader3.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="WorkOverviewForm" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Description" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Lýsing" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WorkOverviewForm.resx" nm="copySelectedLinesToolStripMenuItem.Text" rc="Text" dnt="false" nms="WorkTrackLite" cln="WorkOverviewForm" bac="EmbeddedResource" hgt="22" wdt="225">
+      <lis>
+        <li lc="nn-nn" tx="Copy selected line(s)" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Afrita valdar línur" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WorkOverviewForm.resx" nm="toolStrip1.Text" rc="Text" dnt="true" nms="WorkTrackLite" cln="WorkOverviewForm" bac="EmbeddedResource" hgt="25" wdt="434">
+      <lis>
+        <li lc="nn-nn" tx="toolStrip1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+  </items>
+  <locales>
+    <locale />
+    <locale>is</locale>
+  </locales>
+  <Name>WorkTrackLite</Name>
+</Project>

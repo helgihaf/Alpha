@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{559EA045-A114-4F51-AC5E-AAAE3EFAFA10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Knightrunner.WorkTrack.UI</RootNamespace>
+    <AssemblyName>Knightrunner.WorkTrack.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Knightrunner.Library.Controls">
+      <HintPath>..\..\..\Library\Knightrunner.Library.Controls\bin\Release\Knightrunner.Library.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Knightrunner.Library.Core">
+      <HintPath>..\..\..\Library\Knightrunner.Library.Core\bin\Release\Knightrunner.Library.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Knightrunner.Library.Cryptography, Version=1.1.0.17481, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Library\bin\Release\Knightrunner.Library.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Knightrunner.WorkTrack.Database\Properties\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ComboUtils.cs" />
+    <Compile Include="DataGridController.cs" />
+    <Compile Include="DataSelector.cs" />
+    <Compile Include="Dialogs\ViewHostDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ViewHostDialog.Designer.cs">
+      <DependentUpon>ViewHostDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ActivitiesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ActivitiesView.Designer.cs">
+      <DependentUpon>ActivitiesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnectionInfo.cs" />
+    <Compile Include="Dialogs\DatabaseLoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseLoginDialog.Designer.cs">
+      <DependentUpon>DatabaseLoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataGridBaseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DataGridBaseView.Designer.cs">
+      <DependentUpon>DataGridBaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DateTimeEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DateTimeEditControl.Designer.cs">
+      <DependentUpon>DateTimeEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DialogBase.Designer.cs">
+      <DependentUpon>DialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoadingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LoadingView.Designer.cs">
+      <DependentUpon>LoadingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OKCancelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OKCancelControl.Designer.cs">
+      <DependentUpon>OKCancelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProjectsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProjectsView.Designer.cs">
+      <DependentUpon>ProjectsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TrackWorkDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TrackWorkDialog.Designer.cs">
+      <DependentUpon>TrackWorkDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TrackWorkSimpleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TrackWorkSimpleDialog.Designer.cs">
+      <DependentUpon>TrackWorkSimpleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UsersView.Designer.cs">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorkEntriesEditView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\WorkEntriesEditView.Designer.cs">
+      <DependentUpon>WorkEntriesEditView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ViewHostDialog.resx">
+      <DependentUpon>ViewHostDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ActivitiesView.resx">
+      <DependentUpon>ActivitiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseLoginDialog.resx">
+      <DependentUpon>DatabaseLoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DataGridBaseView.resx">
+      <DependentUpon>DataGridBaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DateTimeEditControl.resx">
+      <DependentUpon>DateTimeEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DialogBase.resx">
+      <DependentUpon>DialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoadingView.resx">
+      <DependentUpon>LoadingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OKCancelControl.resx">
+      <DependentUpon>OKCancelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TrackWorkDialog.resx">
+      <DependentUpon>TrackWorkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TrackWorkSimpleDialog.resx">
+      <DependentUpon>TrackWorkSimpleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WorkEntriesEditView.resx">
+      <DependentUpon>WorkEntriesEditView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Knightrunner.WorkTrack.Database.Activity.datasource" />
+    <None Include="Properties\DataSources\Knightrunner.WorkTrack.Database.Project.datasource" />
+    <None Include="Properties\DataSources\Knightrunner.WorkTrack.Database.User.datasource" />
+    <None Include="Properties\DataSources\Knightrunner.WorkTrack.Database.WorkEntry.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Knightrunner.WorkTrack.Database\Knightrunner.WorkTrack.Database.csproj">
+      <Project>{1B258701-9350-4FEA-94B8-6DD01A6FF125}</Project>
+      <Name>Knightrunner.WorkTrack.Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

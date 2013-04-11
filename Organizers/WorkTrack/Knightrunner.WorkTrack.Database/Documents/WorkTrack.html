@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>WorkTrack</title>
+</head>
+<body>
+<h2>Projects</h2>
+<p>A project that can have work entries.</p>
+<table border="1">
+<tr>
+<th align="left"> </th>
+<th align="left">Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+<tr>
+<td>PK</td>
+<td><u><b>Id</b></u></td>
+<td>UniqueIdentifier</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><b>Name</b></td>
+<td>NVarChar(60)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Description</td>
+<td>NVarChar(250)</td>
+<td>A short description.</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Active</b></td>
+<td>Bit</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ExternalCode</td>
+<td>NVarChar(20)</td>
+<td>A short alphanumerical code.</td>
+</tr>
+</table>
+<br/>
+<h2>Activities</h2>
+<p>An activity.</p>
+<table border="1">
+<tr>
+<th align="left"> </th>
+<th align="left">Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+<tr>
+<td>PK</td>
+<td><u><b>Id</b></u></td>
+<td>UniqueIdentifier</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><b>Name</b></td>
+<td>NVarChar(60)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Description</td>
+<td>NVarChar(250)</td>
+<td>A short description.</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Active</b></td>
+<td>Bit</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ExternalCode</td>
+<td>NVarChar(20)</td>
+<td>A short alphanumerical code.</td>
+</tr>
+<tr>
+<td>FK1</td>
+<td>Project</td>
+<td>UniqueIdentifier<br/>→Projects</td>
+<td></td>
+</tr>
+</table>
+<br/>
+<h2>Users</h2>
+<p>Users.</p>
+<table border="1">
+<tr>
+<th align="left"> </th>
+<th align="left">Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+<tr>
+<td>PK</td>
+<td><u><b>Id</b></u></td>
+<td>UniqueIdentifier</td>
+<td></td>
+</tr>
+<tr>
+<td>U1</td>
+<td>Username</td>
+<td>NVarChar(60)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Password</td>
+<td>NVarChar(60)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><b>FullName</b></td>
+<td>NVarChar(60)</td>
+<td></td>
+</tr>
+<tr>
+<td>U1</td>
+<td>WindowsAccount</td>
+<td>NVarChar(300)</td>
+<td>A full windows user account name with or without domain</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Active</b></td>
+<td>Bit</td>
+<td></td>
+</tr>
+</table>
+<br/>
+<h2>WorkEntries</h2>
+<p>Work entries</p>
+<table border="1">
+<tr>
+<th align="left"> </th>
+<th align="left">Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+<tr>
+<td>PK</td>
+<td><u><b>Id</b></u></td>
+<td>UniqueIdentifier</td>
+<td></td>
+</tr>
+<tr>
+<td>FK1</td>
+<td><b>User</b></td>
+<td>UniqueIdentifier<br/>→Users</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><b>Start</b></td>
+<td>DateTime</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>End</td>
+<td>DateTime</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Text</td>
+<td>NVarChar(250)</td>
+<td>A short description.</td>
+</tr>
+<tr>
+<td>FK2</td>
+<td>Project</td>
+<td>UniqueIdentifier<br/>→Projects</td>
+<td></td>
+</tr>
+<tr>
+<td>FK3</td>
+<td>Activity</td>
+<td>UniqueIdentifier<br/>→Activities</td>
+<td></td>
+</tr>
+</table>
+<br/>
+</body>
+</html>

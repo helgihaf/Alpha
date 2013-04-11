@@ -1,0 +1,7 @@
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\WorkTrack\bin\Debug\WorkTrack.exe.config
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\WorkTrack\obj\Debug\WorkTrack.Properties.Resources.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\WorkTrack\obj\Debug\WorkTrack.csproj.GenerateResource.Cache
+C:\GitHub\Organizers\WorkTrack\WorkTrack\bin\Debug\WorkTrack.exe.config
+C:\GitHub\Organizers\WorkTrack\WorkTrack\obj\Debug\WorkTrack.Properties.Resources.resources
+C:\GitHub\Organizers\WorkTrack\WorkTrack\obj\Debug\WorkTrack.csproj.GenerateResource.Cache
+C:\GitHub\Alpha\Organizers\WorkTrack\WorkTrack\bin\Debug\WorkTrack.exe.config

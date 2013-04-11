@@ -1,0 +1,6 @@
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\bin\Debug\Knightrunner.WorkTrack.Database.dll
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\bin\Debug\Knightrunner.WorkTrack.Database.pdb
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.Database\obj\Debug\Knightrunner.WorkTrack.Database.Properties.Resources.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.Database\obj\Debug\Knightrunner.WorkTrack.Database.csproj.GenerateResource.Cache
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.Database\obj\Debug\Knightrunner.WorkTrack.Database.dll
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.Database\obj\Debug\Knightrunner.WorkTrack.Database.pdb

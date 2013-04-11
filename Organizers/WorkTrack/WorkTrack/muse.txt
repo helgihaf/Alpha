@@ -1,0 +1,8 @@
+﻿Startup
+	if no database has been set then
+	begin
+		popup window:
+			* Create a new database
+			* Connect to an existing database
+
+			

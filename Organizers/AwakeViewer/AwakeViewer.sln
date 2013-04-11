@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwakeViewer", "AwakeViewer\AwakeViewer.csproj", "{4103CE8E-6D6B-4754-9C6D-E410E9C898C1}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{089858A2-4198-4306-9C89-F19A2644A71E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setupx64", "Setupx64\Setupx64.vdproj", "{DB215C0E-52D4-4272-BDA5-747712F37C5F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.lsretail.com:8088/tfs/main
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AwakeViewer\\AwakeViewer.csproj
+		SccProjectName1 = AwakeViewer
+		SccLocalPath1 = AwakeViewer
+		SccProjectUniqueName2 = Setup\\Setup.vdproj
+		SccProjectName2 = Setup
+		SccLocalPath2 = Setup
+		SccProjectUniqueName3 = Setupx64\\Setupx64.vdproj
+		SccProjectName3 = Setupx64
+		SccLocalPath3 = Setupx64
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4103CE8E-6D6B-4754-9C6D-E410E9C898C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4103CE8E-6D6B-4754-9C6D-E410E9C898C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4103CE8E-6D6B-4754-9C6D-E410E9C898C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4103CE8E-6D6B-4754-9C6D-E410E9C898C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089858A2-4198-4306-9C89-F19A2644A71E}.Debug|Any CPU.ActiveCfg = Debug
+		{089858A2-4198-4306-9C89-F19A2644A71E}.Debug|Any CPU.Build.0 = Debug
+		{089858A2-4198-4306-9C89-F19A2644A71E}.Release|Any CPU.ActiveCfg = Release
+		{089858A2-4198-4306-9C89-F19A2644A71E}.Release|Any CPU.Build.0 = Release
+		{DB215C0E-52D4-4272-BDA5-747712F37C5F}.Debug|Any CPU.ActiveCfg = Debug
+		{DB215C0E-52D4-4272-BDA5-747712F37C5F}.Debug|Any CPU.Build.0 = Debug
+		{DB215C0E-52D4-4272-BDA5-747712F37C5F}.Release|Any CPU.ActiveCfg = Release
+		{DB215C0E-52D4-4272-BDA5-747712F37C5F}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

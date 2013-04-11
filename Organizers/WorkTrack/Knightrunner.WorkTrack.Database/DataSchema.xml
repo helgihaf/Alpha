@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WorkTrack" xmlns="http://www.knightrunner.com/Library/Database/Schema">
+  <!--
+    Target Systems. This controls which systems we want to generate code for.
+  -->
+  <TargetSystems>
+    <TargetSystem name="MSSQL" />
+    <TargetSystem name="DotNet" />
+  </TargetSystems>
+
+  <!--
+    Column Types. This defines all data types used by our data tables, along with all mapping inforation
+    needed for the target systems. Some types do not have a mapping for a target but rather
+    rely on a base column type. This enables us to define a column type with a business semantic
+    (e.g. NetworkHost).
+  -->
+  <ColumnTypes>
+    <ColumnType name="Id" isDbGenerated="true" description="A unique DB generated ID">
+      <Target name="MSSQL" dataType="Int IDENTITY" dataTypeWhenReferenced="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="IdReference">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="String">
+      <Target name="MSSQL" dataType="NVarChar(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="FixedString">
+      <Target name="MSSQL" dataType="NChar(%maxLength%)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="UnlimitedString">
+      <Target name="MSSQL" dataType="NVarChar(MAX)" />
+      <Target name="DotNet" dataType="System.String" />
+    </ColumnType>
+    <ColumnType name="Enum">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Boolean">
+      <Target name="MSSQL" dataType="Bit" />
+      <Target name="DotNet" dataType="System.Boolean" />
+    </ColumnType>
+    <ColumnType name="Int16">
+      <Target name="MSSQL" dataType="SmallInt" />
+      <Target name="DotNet" dataType="System.Int16" />
+    </ColumnType>
+    <ColumnType name="Int32">
+      <Target name="MSSQL" dataType="Int" />
+      <Target name="DotNet" dataType="System.Int32" />
+    </ColumnType>
+    <ColumnType name="Decimal">
+      <Target name="MSSQL" dataType="Decimal(%precision%,%scale%)" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Money">
+      <Target name="MSSQL" dataType="Money" />
+      <Target name="DotNet" dataType="System.Decimal" />
+    </ColumnType>
+    <ColumnType name="Double">
+      <Target name="MSSQL" dataType="Float" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Single">
+      <Target name="MSSQL" dataType="Real" />
+      <Target name="DotNet" dataType="System.Single" />
+    </ColumnType>
+    <ColumnType name="Float">
+      <Target name="MSSQL" dataType="Float(%precision%)" />
+      <Target name="DotNet" dataType="System.Double" />
+    </ColumnType>
+    <ColumnType name="Guid">
+      <Target name="MSSQL" dataType="UniqueIdentifier" />
+      <Target name="DotNet" dataType="System.Guid" />
+    </ColumnType>
+    <ColumnType name="Xml">
+      <Target name="MSSQL" dataType="Xml" />
+      <Target name="DotNet" dataType="System.String">
+        <ExtendedProperties>
+          <Property name="UpdateCheck">Never</Property>
+        </ExtendedProperties>
+      </Target>
+    </ColumnType>
+    <ColumnType name="DateTime">
+      <Target name="MSSQL" dataType="DateTime" />
+      <Target name="DotNet" dataType="System.DateTime" />
+    </ColumnType>
+    <ColumnType name="Name" baseType="String" maxLength="60" />
+    <ColumnType name="Password" baseType="String" maxLength="60" />
+    <ColumnType name="TypeName" baseType="String" maxLength="250" />
+    <ColumnType name="Code" baseType="String" maxLength="20" description="A short alphanumerical code."/>
+    <ColumnType name="Description" baseType="String" maxLength="250" description="A short description."/>
+    <ColumnType name="WindowsAccountName" baseType="String" maxLength="300" description="A full windows user account name with or without domain" />
+  </ColumnTypes>
+
+  <!--
+    Tables. This contains all the tables of our schema.
+  -->
+  <Tables>
+
+    <Table name="Projects" description="A project that can have work entries.">
+      <Columns>
+        <Column name="Id" columnType="Guid" inPrimaryKey="true" />
+        <Column name="Name" columnType="Name" />
+        <Column name="Description" columnType="Description" canBeNull="true"/>
+        <Column name="Active" columnType="Boolean"/>
+        <Column name="ExternalCode" columnType="Code" canBeNull="true"/>
+      </Columns>
+    </Table>
+
+    <Table name="Activities" description="An activity.">
+      <Columns>
+        <Column name="Id" columnType="Guid" inPrimaryKey="true" />
+        <Column name="Name" columnType="Name" />
+        <Column name="Description" columnType="Description" canBeNull="true"/>
+        <Column name="Active" columnType="Boolean"/>
+        <Column name="ExternalCode" columnType="Code" canBeNull="true"/>
+        <Column name="Project" references="Projects.Id" canBeNull="true" childProperty="(default)" parentProperty="ProjectEntity"/>
+      </Columns>
+    </Table>
+
+    <Table name="Users" description="Users.">
+      <Columns>
+        <Column name="Id" columnType="Guid" inPrimaryKey="true" />
+        <Column name="Username" columnType="Name" canBeNull="true" />
+        <Column name="Password" columnType="Password" canBeNull="true" />
+        <Column name="FullName" columnType="Name" />
+        <Column name="WindowsAccount" columnType="WindowsAccountName" canBeNull="true"/>
+        <Column name="Active" columnType="Boolean"/>
+      </Columns>
+      <Indices>
+        <Index unique="true">
+          <Column name="Username" />
+          <Column name="WindowsAccount"/>
+        </Index>
+      </Indices>
+    </Table>
+
+    <Table name="WorkEntries" description="Work entries">
+      <Columns>
+        <Column name="Id" columnType="Guid" inPrimaryKey="true" />
+        <Column name="User" references="Users.Id" parentProperty="UserEntity" />
+        <Column name="Start" columnType="DateTime" />
+        <Column name="End" columnType="DateTime" canBeNull="true" />
+        <Column name="Text" columnType="Description" canBeNull="true" />
+        <Column name="Project" references="Projects.Id" canBeNull="true" parentProperty="ProjectEntity" />
+        <Column name="Activity" references="Activities.Id" canBeNull="true" parentProperty="ActivityEntity" />
+      </Columns>
+    </Table>
+    
+  </Tables>
+</DataSchema>

@@ -1,0 +1,13 @@
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Dialogs.ViewHostDialog.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Views.ActivitiesView.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Dialogs.DatabaseLoginDialog.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Views.DataGridBaseView.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Controls.DateTimeEditControl.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Dialogs.DialogBase.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Views.LoadingView.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Controls.OKCancelControl.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Properties.Resources.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Dialogs.TrackWorkDialog.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Dialogs.TrackWorkSimpleDialog.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.Views.WorkEntriesEditView.resources
+C:\helgihaf.visualstudio.com\Alpha\Knightrunner\Organizers\WorkTrack\Knightrunner.WorkTrack.UI\obj\Debug\Knightrunner.WorkTrack.UI.csproj.GenerateResource.Cache
