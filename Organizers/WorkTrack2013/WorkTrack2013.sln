@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeClient", "Prototyp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knightrunner.WorkTrack2013.Contract", "Knightrunner.WorkTrack2013.Contract\Knightrunner.WorkTrack2013.Contract.csproj", "{3825EA26-38B4-4207-906A-393B27C15421}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knightrunner.WorkTrack2013.Database", "Knightrunner.WorkTrack2013.Database\Knightrunner.WorkTrack2013.Database.csproj", "{36FFFF7C-5700-4D57-BCED-AA3371914F0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{3825EA26-38B4-4207-906A-393B27C15421}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3825EA26-38B4-4207-906A-393B27C15421}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3825EA26-38B4-4207-906A-393B27C15421}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36FFFF7C-5700-4D57-BCED-AA3371914F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FFFF7C-5700-4D57-BCED-AA3371914F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FFFF7C-5700-4D57-BCED-AA3371914F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FFFF7C-5700-4D57-BCED-AA3371914F0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

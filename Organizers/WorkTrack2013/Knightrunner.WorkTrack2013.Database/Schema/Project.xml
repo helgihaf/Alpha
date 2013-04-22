@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project toolsVersion="1.0" xmlns="http://www.knightrunner.com/Library/Database/SchemaProject">
+  <ProjectSettings>
+    <InputFiles>
+      <InputFile path="C:\tools\ds\CommonColumnTypes.xml" />
+      <InputFile path="WorkTrack.xml" />
+    </InputFiles>
+    <Options>
+      <PrimaryKeyFormatString>{0}_pk</PrimaryKeyFormatString>
+      <ForeignKeyFormatString>{0}_{2}_fk</ForeignKeyFormatString>
+      <UniqueIndexFormatString>{0}_{1}_uq</UniqueIndexFormatString>
+      <IndexFormatString>{0}_{1}_ix</IndexFormatString>
+    </Options>
+  </ProjectSettings>
+  <Transformations>
+    <Transformation name="Script-MSSQL" method="MSSQL" target="MSSQL">
+      <DatabaseSchemaName>dbo</DatabaseSchemaName>
+      <ScriptDocumentGenerator></ScriptDocumentGenerator>
+      <OutputFile>script-mssql.sql</OutputFile>
+    </Transformation>
+    <Transformation name="PetaPoco" method="PetaPoco" target="MSSQL">
+      <UseTableNameAttribute>true</UseTableNameAttribute>
+      <UsePrimaryKeyAttribute>true</UsePrimaryKeyAttribute>
+      <UseExplicitColumnsAttribute>false</UseExplicitColumnsAttribute>
+      <UseColumnAttribute>true</UseColumnAttribute>
+      <DirectoryPath>..\Entities</DirectoryPath>
+      <CodeNamespace>Knightrunner.WorkTrack2013.Database.Entities</CodeNamespace>
+      <DatabaseSchemaName>dbo</DatabaseSchemaName>
+      <UsingNamespaces>PetaPoco</UsingNamespaces>
+    </Transformation>
+    <!--<Transformation name="Documentation" method="Documentation">
+      <OutputDirectory>out\doc</OutputDirectory>
+      <CssFile>doc.css</CssFile>
+    </Transformation>-->
+  </Transformations>
+
+</Project>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.knightrunner.com/Library/Database/Schema">
+  <ColumnTypes>
+    <ColumnType name="UniqueName" baseType="String" maxLength="255" />
+    <ColumnType name="Description" baseType="String" maxLength="2000" />
+    <ColumnType name="Duration" baseType="Int32" />
+    <ColumnType name="UserId" baseType="String" maxLength="255" />
+    <ColumnType name="CronString" baseType="String" maxLength="50" />
+  </ColumnTypes>
+  <Tables>
+    <Table name="Users">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" description="Unique ID" />
+        <Column name="PublicId" columnType="UniqueName" />
+        <Column name="Active" columnType="Boolean" />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="UsersPublicId_ux">
+          <Column name="PublicId" />
+        </Index>
+      </Indices>
+    </Table>
+
+    <Table name="Projects">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" description="Unique ID" />
+        <Column name="PublicId" columnType="UniqueName" />
+        <Column name="ParentId" references="Projects.Id" referenceName="ProjectsParent_fk" canBeNull="true" />
+        <Column name="Text" columnType="Description" />
+        <Column name="Active" columnType="Boolean" />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="ProjectPublicId_ux">
+          <Column name="PublicId" />
+        </Index>
+      </Indices>
+    </Table>
+
+    <Table name="ActivityTypes">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" description="Unique ID" />
+        <Column name="PublicId" columnType="UniqueName" />
+        <Column name="Text" columnType="Description" />
+        <Column name="Active" columnType="Boolean" />
+      </Columns>
+      <Indices>
+        <Index unique="true" name="ActivityTypePublicId_ux">
+          <Column name="PublicId" />
+        </Index>
+      </Indices>
+    </Table>
+
+    <Table name="Activities">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" description="Unique ID" />
+        <Column name="UserId" references="Users.Id" />
+        <Column name="ProjectId" references="Projects.Id" canBeNull="true"/>
+        <Column name="ActivityTypeId" references="ActivityTypes.Id" canBeNull="true" />
+        <Column name="Start" columnType="DateTime" />
+        <Column name="Duration" columnType="Duration" canBeNull="true"/>
+        <Column name="Text" columnType="Description" canBeNull="true"/>
+      </Columns>
+      <Indices>
+        <Index name="ActivitiesUserStart_ix">
+          <Column name="UserId" />
+          <Column name="Start" />
+        </Index>
+      </Indices>
+    </Table>
+
+    <Table name="JournalEntries">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="UserId" references="Users.Id" />
+        <Column name="DateTime" columnType="DateTime" />
+        <Column name="Type" columnType="Enum" />
+        <Column name="TypeOrigin" columnType="Enum" />
+        <Column name="Text" columnType="Description" canBeNull="true" />
+      </Columns>
+      <Indices>
+        <Index name="JournalEntriesUserDate_ix">
+          <Column name="UserId" />
+          <Column name="DateTime" />
+        </Index>
+      </Indices>
+    </Table>
+
+    <Table name="Reminders">
+      <Columns>
+        <Column name="Id" columnType="Id" inPrimaryKey="true" />
+        <Column name="UserId" references="Users.Id" />
+        <Column name="Text" columnType="Description" canBeNull="true" />
+        <Column name="Active" columnType="Boolean" />
+        <Column name="ValidFrom" columnType="DateTime" />
+        <Column name="Seconds" columnType="CronString" />
+        <Column name="Minutes" columnType="CronString" />
+        <Column name="Hours" columnType="CronString" />
+        <Column name="Months" columnType="CronString" />
+        <Column name="DaysOfMonth" columnType="CronString" />
+        <Column name="DaysOfWeek" columnType="CronString" />
+        <Column name="Years" columnType="CronString" />
+      </Columns>
+    </Table>
+  </Tables>
+</DataSchema>

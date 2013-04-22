@@ -129,6 +129,13 @@ using System.Text;";
             }
 
             string[] nameParts = databaseIdentifier.Split('_');
+
+            // Shortcut: If no underscore used in db identifiers, simply return the identifier with first char uppercase
+            if (nameParts.Length == 1)
+            {
+                return databaseIdentifier[0].ToString().ToUpperInvariant() + databaseIdentifier.Substring(1);
+            }
+
             StringBuilder sb = new StringBuilder();
             foreach(string namePart in nameParts)
             {
