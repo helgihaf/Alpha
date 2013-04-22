@@ -1,0 +1,5 @@
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Contract\obj\Debug\Knightrunner.WorkTrack2013.Contract.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Contract\bin\Debug\Knightrunner.WorkTrack2013.Contract.dll
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Contract\bin\Debug\Knightrunner.WorkTrack2013.Contract.pdb
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Contract\obj\Debug\Knightrunner.WorkTrack2013.Contract.dll
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Contract\obj\Debug\Knightrunner.WorkTrack2013.Contract.pdb

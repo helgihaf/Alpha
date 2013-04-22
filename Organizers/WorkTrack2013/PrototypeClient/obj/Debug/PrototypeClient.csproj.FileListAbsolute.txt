@@ -1,0 +1,12 @@
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\bin\Debug\PrototypeClient.exe.config
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\bin\Debug\PrototypeClient.exe
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\bin\Debug\PrototypeClient.pdb
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\bin\Debug\Knightrunner.WorkTrack2013.Contract.dll
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\bin\Debug\Knightrunner.WorkTrack2013.Contract.pdb
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\obj\Debug\PrototypeClient.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\obj\Debug\PrototypeClient.Properties.Resources.resources
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\obj\Debug\PrototypeClient.TimelineControl.resources
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\obj\Debug\PrototypeClient.csproj.GenerateResource.Cache
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\obj\Debug\PrototypeClient.exe
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\obj\Debug\PrototypeClient.pdb
+C:\GitHub\Alpha\Organizers\WorkTrack2013\PrototypeClient\obj\Debug\PrototypeClient.Form1.resources
