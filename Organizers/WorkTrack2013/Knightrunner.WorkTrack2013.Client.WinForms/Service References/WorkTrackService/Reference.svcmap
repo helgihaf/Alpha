@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8f26bb3e-a701-4f9d-bea3-32091afa8555" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1862/WorkTrack.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WorkTrack.disco" MetadataType="Disco" ID="9101fed1-928a-4aee-bae7-c54536143736" SourceId="1" SourceUrl="http://localhost:1862/WorkTrack.svc?disco" />
+    <MetadataFile FileName="WorkTrack.xsd" MetadataType="Schema" ID="8c553c17-abd7-4a47-9fa8-5e516c6b446e" SourceId="1" SourceUrl="http://localhost:1862/WorkTrack.svc?xsd=xsd1" />
+    <MetadataFile FileName="WorkTrack1.xsd" MetadataType="Schema" ID="44e132f7-6bad-4cff-a348-41f7fa85a4f2" SourceId="1" SourceUrl="http://localhost:1862/WorkTrack.svc?xsd=xsd3" />
+    <MetadataFile FileName="WorkTrack.wsdl" MetadataType="Wsdl" ID="031ae111-5a76-4793-bdfb-1084037f82d5" SourceId="1" SourceUrl="http://localhost:1862/WorkTrack.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="WorkTrack1.wsdl" MetadataType="Wsdl" ID="3d9204ea-2cd4-4d8d-950c-afa0971d7b26" SourceId="1" SourceUrl="http://localhost:1862/WorkTrack.svc?wsdl" />
+    <MetadataFile FileName="WorkTrack2.xsd" MetadataType="Schema" ID="a5bcb882-1dfa-4da6-906d-ad3a785d1b7c" SourceId="1" SourceUrl="http://localhost:1862/WorkTrack.svc?xsd=xsd0" />
+    <MetadataFile FileName="WorkTrack3.xsd" MetadataType="Schema" ID="9cc4e9e8-e07f-4d85-a2ab-c7e20a5847c0" SourceId="1" SourceUrl="http://localhost:1862/WorkTrack.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

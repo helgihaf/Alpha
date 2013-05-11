@@ -16,7 +16,7 @@ namespace Knightrunner.WorkTrack2013.Contract
         [DataMember]
         public string Text { get; set; }
         [DataMember]
-        public bool Enabled { get; set; }
+        public bool Active { get; set; }
 
         //-----------------------------------------------------------------------------------------
         /// <summary>

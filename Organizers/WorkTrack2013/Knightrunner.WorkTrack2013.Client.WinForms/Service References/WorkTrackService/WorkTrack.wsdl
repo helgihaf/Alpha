@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/Imports">
+      <xsd:import schemaLocation="http://localhost:1862/WorkTrack.svc?xsd=xsd0" namespace="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0" />
+      <xsd:import schemaLocation="http://localhost:1862/WorkTrack.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1862/WorkTrack.svc?xsd=xsd2" namespace="http://schemas.knightrunner.com/Organizers/WorkTrack2013/1.0" />
+      <xsd:import schemaLocation="http://localhost:1862/WorkTrack.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Knightrunner.WorkTrack2013.Contract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkTrack_GetProjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjects" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetProjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetChildProjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildProjects" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetChildProjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveProject" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetActivityTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityTypes" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetActivityTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveActivityType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveActivityType" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveActivityType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveActivityTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetReminders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReminders" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetReminders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRemindersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveReminder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReminder" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveReminder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReminderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_DeleteReminder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReminder" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_DeleteReminder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReminderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetJournalEntries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJournalEntries" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetJournalEntries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJournalEntriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveJournalEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJournalEntry" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveJournalEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJournalEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_DeleteJournalEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJournalEntry" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_DeleteJournalEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJournalEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetActivities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivities" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_GetActivities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveActivity" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_SaveActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_DeleteActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActivity" />
+  </wsdl:message>
+  <wsdl:message name="IWorkTrack_DeleteActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActivityResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkTrack">
+    <wsdl:operation name="GetProjects">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetProjects" message="tns:IWorkTrack_GetProjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetProjectsResponse" message="tns:IWorkTrack_GetProjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildProjects">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetChildProjects" message="tns:IWorkTrack_GetChildProjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetChildProjectsResponse" message="tns:IWorkTrack_GetChildProjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveProject">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveProject" message="tns:IWorkTrack_SaveProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveProjectResponse" message="tns:IWorkTrack_SaveProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityTypes">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetActivityTypes" message="tns:IWorkTrack_GetActivityTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetActivityTypesResponse" message="tns:IWorkTrack_GetActivityTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveActivityType">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveActivityType" message="tns:IWorkTrack_SaveActivityType_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveActivityTypeResponse" message="tns:IWorkTrack_SaveActivityType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReminders">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetReminders" message="tns:IWorkTrack_GetReminders_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetRemindersResponse" message="tns:IWorkTrack_GetReminders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveReminder">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveReminder" message="tns:IWorkTrack_SaveReminder_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveReminderResponse" message="tns:IWorkTrack_SaveReminder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReminder">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/DeleteReminder" message="tns:IWorkTrack_DeleteReminder_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/DeleteReminderResponse" message="tns:IWorkTrack_DeleteReminder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJournalEntries">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetJournalEntries" message="tns:IWorkTrack_GetJournalEntries_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetJournalEntriesResponse" message="tns:IWorkTrack_GetJournalEntries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveJournalEntry">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveJournalEntry" message="tns:IWorkTrack_SaveJournalEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveJournalEntryResponse" message="tns:IWorkTrack_SaveJournalEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJournalEntry">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/DeleteJournalEntry" message="tns:IWorkTrack_DeleteJournalEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/DeleteJournalEntryResponse" message="tns:IWorkTrack_DeleteJournalEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetActivities" message="tns:IWorkTrack_GetActivities_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetActivitiesResponse" message="tns:IWorkTrack_GetActivities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveActivity">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveActivity" message="tns:IWorkTrack_SaveActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveActivityResponse" message="tns:IWorkTrack_SaveActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivity">
+      <wsdl:input wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/DeleteActivity" message="tns:IWorkTrack_DeleteActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/DeleteActivityResponse" message="tns:IWorkTrack_DeleteActivity_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

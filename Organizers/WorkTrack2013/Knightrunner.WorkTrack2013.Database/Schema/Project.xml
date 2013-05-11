@@ -27,6 +27,7 @@
       <CodeNamespace>Knightrunner.WorkTrack2013.Database.Entities</CodeNamespace>
       <DatabaseSchemaName>dbo</DatabaseSchemaName>
       <UsingNamespaces>PetaPoco</UsingNamespaces>
+      <ConvertTableNamesToSingularClassNames>true</ConvertTableNamesToSingularClassNames>
     </Transformation>
     <!--<Transformation name="Documentation" method="Documentation">
       <OutputDirectory>out\doc</OutputDirectory>

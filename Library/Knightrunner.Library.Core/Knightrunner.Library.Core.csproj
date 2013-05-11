@@ -68,6 +68,7 @@
     <Compile Include="Collections\KeyedItemCollection.cs" />
     <Compile Include="CommandLineParameter.cs" />
     <Compile Include="CommandLineProcessor.cs" />
+    <Compile Include="EnglishLanguage.cs" />
     <Compile Include="EnumUtilities.cs" />
     <Compile Include="ExceptionExtensions.cs" />
     <Compile Include="ExceptionSummary.cs" />

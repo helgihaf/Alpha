@@ -29,6 +29,7 @@ using System.Text;";
         public bool UseExplicitColumnsAttribute { get; set; }
         public bool UseColumnAttribute { get; set; }
         public List<string> UsingNamespaces { get; internal set; }
+        public bool ConvertTableNamesToSingularClassNames { get; set; }
         
         public string DatabaseSchemaName { get; set; }
         public string CodeNamespace { get; set; }
@@ -81,7 +82,7 @@ using System.Text;";
                 writer.WriteLine(indent + "[ExplicitColumns]");
             }
 
-            writer.WriteLine(indent + "public partial class " + GenerateClassName(table.Name));
+            writer.WriteLine(indent + "public partial class " + GenerateClassName(table.Name, ConvertTableNamesToSingularClassNames));
             writer.WriteLine(indent + "{");
             foreach (Column column in table.Columns)
             {
@@ -109,7 +110,7 @@ using System.Text;";
             writer.WriteLine();
         }
 
-        private string GenerateClassName(string tableName)
+        public static string GenerateClassName(string tableName, bool convertToSingular)
         {
             string[] names = tableName.Split('.');
             if (names.Length == 0)
@@ -117,13 +118,20 @@ using System.Text;";
                 throw new ArgumentException("Invalid table name");
             }
 
-            return DatabaseIdentifierToCSharp(names[names.Length - 1]);
+            var csharpIdentifier = DatabaseIdentifierToCSharp(names[names.Length - 1]);
+            if (convertToSingular)
+            {
+                csharpIdentifier = Knightrunner.Library.Core.EnglishLanguage.SingularOf(csharpIdentifier);
+            }
+
+            return csharpIdentifier;
         }
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase")]
         public static string DatabaseIdentifierToCSharp(string databaseIdentifier)
         {
-            if(string.IsNullOrEmpty(databaseIdentifier))
+            if (string.IsNullOrEmpty(databaseIdentifier))
             {
                 throw new ArgumentException("Invalid identifier");
             }

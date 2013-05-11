@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.knightrunner.com/Organizers/WorkTrack2013/1.0" elementFormDefault="qualified" targetNamespace="http://schemas.knightrunner.com/Organizers/WorkTrack2013/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1862/WorkTrack.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Project" nillable="true" type="tns:Project" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProject" nillable="true" type="tns:ArrayOfProject" />
+  <xs:complexType name="Project">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ParentProjectPublicId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublicId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Project" nillable="true" type="tns:Project" />
+  <xs:complexType name="ArrayOfActivityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActivityType" nillable="true" type="tns:ActivityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivityType" nillable="true" type="tns:ArrayOfActivityType" />
+  <xs:complexType name="ActivityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PublicId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActivityType" nillable="true" type="tns:ActivityType" />
+  <xs:complexType name="ArrayOfJournalEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JournalEntry" nillable="true" type="tns:JournalEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJournalEntry" nillable="true" type="tns:ArrayOfJournalEntry" />
+  <xs:complexType name="JournalEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:JournalEntryType" />
+      <xs:element minOccurs="0" name="TypeOrigin" type="tns:JournalEntryTypeOrigin" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JournalEntry" nillable="true" type="tns:JournalEntry" />
+  <xs:simpleType name="JournalEntryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="User" />
+      <xs:enumeration value="OperatingSystem" />
+      <xs:enumeration value="UserSession" />
+      <xs:enumeration value="LockUnlock" />
+      <xs:enumeration value="Idle" />
+      <xs:enumeration value="Application" />
+      <xs:enumeration value="PunchClock" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JournalEntryType" nillable="true" type="tns:JournalEntryType" />
+  <xs:simpleType name="JournalEntryTypeOrigin">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Undefined" />
+      <xs:enumeration value="Start" />
+      <xs:enumeration value="End" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JournalEntryTypeOrigin" nillable="true" type="tns:JournalEntryTypeOrigin" />
+  <xs:complexType name="ArrayOfActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity" nillable="true" type="tns:Activity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivity" nillable="true" type="tns:ArrayOfActivity" />
+  <xs:complexType name="Activity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityPublicId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ProjectPublicId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Start" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Activity" nillable="true" type="tns:Activity" />
+</xs:schema>

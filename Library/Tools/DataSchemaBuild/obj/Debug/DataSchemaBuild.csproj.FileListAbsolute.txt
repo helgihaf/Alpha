@@ -19,3 +19,5 @@ C:\GitHub\Alpha\Library\Tools\DataSchemaBuild\bin\Debug\Knightrunner.Library.Dat
 C:\GitHub\Alpha\Library\Tools\DataSchemaBuild\obj\Debug\DataSchemaBuild.csprojResolveAssemblyReference.cache
 C:\GitHub\Alpha\Library\Tools\DataSchemaBuild\obj\Debug\DataSchemaBuild.exe
 C:\GitHub\Alpha\Library\Tools\DataSchemaBuild\obj\Debug\DataSchemaBuild.pdb
+C:\GitHub\Alpha\Library\Tools\DataSchemaBuild\bin\Debug\DataSchemaBuild.exe.CodeAnalysisLog.xml
+C:\GitHub\Alpha\Library\Tools\DataSchemaBuild\bin\Debug\DataSchemaBuild.exe.lastcodeanalysissucceeded

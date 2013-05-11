@@ -17,7 +17,6 @@ namespace PrototypeClient
         private const string defaultStartTime = "00:00";
         private const string defaultDuration = "06:00";
 
-        private string title;
         private Color majorColor;
         public TimeSpan startTime;
         public TimeSpan duration;
@@ -27,20 +26,10 @@ namespace PrototypeClient
             InitializeComponent();
             Zoom = 1;
             LeftMargin = 16;
-            TopMargin = 16;
+            TopMargin = 0;
             majorColor = Color.Red;
             startTime = TimeSpan.Parse(defaultStartTime);
             duration = TimeSpan.Parse(defaultDuration);
-        }
-
-        public string Title
-        {
-            get { return title; }
-            set
-            {
-                title = value;
-                Invalidate();
-            }
         }
 
         [DefaultValue("Red")]

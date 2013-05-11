@@ -3,3 +3,7 @@ C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Database\bin
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Database\obj\Debug\Knightrunner.WorkTrack2013.Database.csprojResolveAssemblyReference.cache
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Database\obj\Debug\Knightrunner.WorkTrack2013.Database.dll
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Database\obj\Debug\Knightrunner.WorkTrack2013.Database.pdb
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Database\bin\Debug\Knightrunner.WorkTrack2013.Contract.dll
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Database\bin\Debug\Knightrunner.WorkTrack2013.Interface.dll
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Database\bin\Debug\Knightrunner.WorkTrack2013.Contract.pdb
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Database\bin\Debug\Knightrunner.WorkTrack2013.Interface.pdb

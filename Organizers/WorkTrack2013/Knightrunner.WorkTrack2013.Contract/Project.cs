@@ -16,9 +16,9 @@ namespace Knightrunner.WorkTrack2013.Contract
         public string Text { get; set; }
         
         [DataMember]
-        public bool Closed { get; set; }
+        public bool Active { get; set; }
 
         [DataMember]
-        public string ParentProjectId { get; set; }
+        public string ParentProjectPublicId { get; set; }
     }
 }

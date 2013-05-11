@@ -1,0 +1,5 @@
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Business\obj\Debug\Knightrunner.WorkTrack2013.Business.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Business\bin\Debug\Knightrunner.WorkTrack2013.Business.dll
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Business\bin\Debug\Knightrunner.WorkTrack2013.Business.pdb
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Business\obj\Debug\Knightrunner.WorkTrack2013.Business.dll
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Business\obj\Debug\Knightrunner.WorkTrack2013.Business.pdb

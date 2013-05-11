@@ -40,13 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters.cs" />
     <Compile Include="DataSource.cs" />
-    <Compile Include="Entities\Activities.cs" />
-    <Compile Include="Entities\Activitytypes.cs" />
-    <Compile Include="Entities\Journalentries.cs" />
-    <Compile Include="Entities\Projects.cs" />
-    <Compile Include="Entities\Reminders.cs" />
-    <Compile Include="Entities\Users.cs" />
+    <Compile Include="Entities\Activity.cs" />
+    <Compile Include="Entities\ActivityType.cs" />
+    <Compile Include="Entities\JournalEntry.cs" />
+    <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\Reminder.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +64,10 @@
     <ProjectReference Include="..\Knightrunner.WorkTrack2013.Contract\Knightrunner.WorkTrack2013.Contract.csproj">
       <Project>{3825ea26-38b4-4207-906a-393b27c15421}</Project>
       <Name>Knightrunner.WorkTrack2013.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Knightrunner.WorkTrack2013.Interface\Knightrunner.WorkTrack2013.Interface.csproj">
+      <Project>{c774fb2e-9086-49a3-9eb7-be72a121801d}</Project>
+      <Name>Knightrunner.WorkTrack2013.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
