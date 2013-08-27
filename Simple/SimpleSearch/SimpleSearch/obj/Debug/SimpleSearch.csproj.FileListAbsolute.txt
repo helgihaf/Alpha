@@ -1,0 +1,16 @@
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\bin\Debug\SimpleSearch.exe.config
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\bin\Debug\SimpleSearch.exe.manifest
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\bin\Debug\SimpleSearch.application
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\bin\Debug\SimpleSearch.exe
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\bin\Debug\SimpleSearch.pdb
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.MainForm.resources
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.Properties.Resources.resources
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.SearchDates.resources
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.SearchTextForm.resources
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.TextForm.resources
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.csproj.GenerateResource.Cache
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.exe.manifest
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.application
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.exe
+C:\GitHub\Alpha\Simple\SimpleSearch\SimpleSearch\obj\Debug\SimpleSearch.pdb

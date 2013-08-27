@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>http://is-hdq-dev2/G5Tools/SimpleSearch/|http://is-hdq-dev2/G5Tools/G5Buddy/publish.htm/|c:\dev\knightrunner\SimpleSearchPublish\|http://localhost/SimpleSearch/</PublishUrlHistory>
+    <InstallUrlHistory>http://www.internet.is/helgihaf/files/ssearch/</InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+    <ErrorReportUrlHistory>
+    </ErrorReportUrlHistory>
+  </PropertyGroup>
+</Project>

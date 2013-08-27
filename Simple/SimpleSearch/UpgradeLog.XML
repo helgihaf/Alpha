@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SimpleSearch">
+</Property><Property Name="Solution File" Value="C:\dev\Knightrunner\Simple\SimpleSearch\SimpleSearch.sln">
+</Property><Property Name="User Options File" Value="C:\dev\Knightrunner\Simple\SimpleSearch\SimpleSearch.suo">
+</Property><Property Name="Date" Value="14. júní 2010">
+</Property><Property Name="Time" Value="10:40">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="SimpleSearch.sln" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch.sln">
+</Event><Event ErrorLevel="0" Project="" Source="SimpleSearch.suo" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch.suo">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SimpleSearch.csproj" Description="Project file successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\SimpleSearch.csproj">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SimpleSearch.csproj.user" Description="Project user file successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\SimpleSearch.csproj.user">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\ListViewColumnSorter.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\ListViewColumnSorter.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\MainForm.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\MainForm.Designer.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\MainForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\Program.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\Program.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SearchEngine.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\SearchEngine.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SearchTextForm.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\SearchTextForm.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SearchTextForm.Designer.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\SearchTextForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\TextForm.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\TextForm.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\TextForm.Designer.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\TextForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\Utils.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\Utils.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\Wildcard.cs" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\Wildcard.cs">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\app.config" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\app.config">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\Properties\Settings.settings" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SimpleSearch_TemporaryKey.pfx" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\SimpleSearch_TemporaryKey.pfx">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\flashlight.ico" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\flashlight.ico">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\MainForm.resx" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\Properties\Resources.resx" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SearchTextForm.resx" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\SearchTextForm.resx">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\TextForm.resx" Description="File successfully backed up as C:\dev\Knightrunner\Simple\SimpleSearch\Backup\SimpleSearch\TextForm.resx">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SimpleSearch.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SimpleSearch" Source="SimpleSearch\SimpleSearch.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SimpleSearch.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="SimpleSearch.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SimpleSearch" Source="SimpleSearch\SimpleSearch.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
