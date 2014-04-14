@@ -22,7 +22,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -31,7 +31,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\bin\Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,16 +53,32 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ComboUtils.cs" />
-    <Compile Include="DateTimeBox.cs">
+    <Compile Include="Controls\FileSystemPathTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\InProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SpinningProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SpinningProgressRenderer.cs" />
+    <Compile Include="IUserNotificationHandler.cs" />
+    <Compile Include="MessageBoxNotificationHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserNotification.cs" />
+    <Compile Include="UserNotificationPortal.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Knightrunner.Library.Core\Knightrunner.Library.Core.csproj">
+    <ProjectReference Include="..\..\..\..\dev\Libraries\Library\Knightrunner.Library.Core\Knightrunner.Library.Core.csproj">
       <Project>{91eb4109-f7dc-40e2-8683-ce67469aff7b}</Project>
       <Name>Knightrunner.Library.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FileSystemPathTextBox.resx">
+      <DependentUpon>FileSystemPathTextBox.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

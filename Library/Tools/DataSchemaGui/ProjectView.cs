@@ -8,14 +8,15 @@ using System.Text;
 using System.Windows.Forms;
 using Knightrunner.Library.Controls.PageSelection;
 using Knightrunner.Library.Database.Schema;
+using Knightrunner.Library.Database.Schema.Project;
 
 namespace DataSchemaGui
 {
-    public partial class DataSchemaView : BaseDirector
+    public partial class ProjectView : BaseDirector
     {
-        private DataSchema dataSchema;
+        private DataSchemaProject project;
 
-        public DataSchemaView()
+        public ProjectView()
         {
             InitializeComponent();
             projectExplorer.Initialize(this);
@@ -35,12 +36,12 @@ namespace DataSchemaGui
             }
         }
 
-        public DataSchema DataSchema
+        public DataSchemaProject Project
         {
-            get { return dataSchema; }
+            get { return project; }
             set
             {
-                if (object.ReferenceEquals(dataSchema, value))
+                if (object.ReferenceEquals(project, value))
                 {
                     return;
                 }
@@ -50,8 +51,8 @@ namespace DataSchemaGui
                     throw new InvalidOperationException("Cannot hide current page");
                 }
 
-                dataSchema = value;
-                projectExplorer.DataSchema = value;
+                project = value;
+                projectExplorer.Project = value;
             }
         }
 

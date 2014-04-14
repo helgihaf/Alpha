@@ -6,4 +6,3 @@ C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Drawing3D.dll
 C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Drawing3D.pdb
 C:\GitHub\Alpha\Library\Knightrunner.Library.Drawing3D\obj\Debug\Knightrunner.Library.Drawing3D.dll
 C:\GitHub\Alpha\Library\Knightrunner.Library.Drawing3D\obj\Debug\Knightrunner.Library.Drawing3D.pdb
-C:\GitHub\Alpha\Library\Knightrunner.Library.Drawing3D\obj\Debug\Knightrunner.Library.Drawing3D.csprojResolveAssemblyReference.cache

@@ -12,10 +12,8 @@
          <Members>
           <Member Name="#CreateDetailPage(System.Type,Knightrunner.Library.Controls.PageSelection.IDirector)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-03-15 21:58:27Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-05-29 21:55:59Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui" File="DetailPageRepository.cs" Line="44">In method 'DetailPageRepository.CreateDetailPage(Type, IDirector)', call System.IDisposable.Dispose on object 'control' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui" File="DetailPageRepository.cs" Line="48">In method 'DetailPageRepository.CreateDetailPage(Type, IDirector)', call System.IDisposable.Dispose on object 'control' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui" File="DetailPageRepository.cs" Line="52">In method 'DetailPageRepository.CreateDetailPage(Type, IDirector)', call System.IDisposable.Dispose on object 'control' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -25,7 +23,7 @@
          <Members>
           <Member Name="#RefreshSchema()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-03-15 21:58:27Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-05-29 21:55:59Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui" File="Diagram.cs" Line="51">In method 'Diagram.RefreshSchema()', object 'tableShape' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'tableShape' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -36,14 +34,14 @@
          <Members>
           <Member Name="#Knightrunner.Library.Database.Schema.ISchemaTransformationFactory.Create(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2013-03-15 21:58:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui" File="MainForm.cs" Line="214">Make 'MainForm' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISchemaTransformationFactory.Create(string)' and is visible to derived classes.</Issue>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2013-05-29 21:55:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui" File="MainForm.cs" Line="213">Make 'MainForm' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISchemaTransformationFactory.Create(string)' and is visible to derived classes.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#verificationContext_MessageAdded(System.Object,Knightrunner.Library.Database.Schema.Verification.MessageAddedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Provide correct arguments to formatting methods" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2013-03-15 21:58:27Z" FixCategory="DependsOnFix">
+            <Message TypeName="Provide correct arguments to formatting methods" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2013-05-29 21:55:59Z" FixCategory="DependsOnFix">
              <Issue Name="UnexpectedFormatStringCharacter" Certainty="75" Level="Warning" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui" File="MainForm.cs" Line="35">Method 'MainForm.verificationContext_MessageAdded(object, MessageAddedEventArgs)' calls 'string.Format(string, object, object, object)' with a format string that contains an unexpected character '"H"' at index '3'. The provided format string is: '"{0,HH:mm:ss} {1} {2}"'</Issue>
             </Message>
            </Messages>
@@ -58,7 +56,7 @@
          <Members>
           <Member Name="#.cctor()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-03-15 21:58:27Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-05-29 21:55:59Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui\Shapes" File="Shape.cs" Line="39">In method 'Shape.Shape()', call System.IDisposable.Dispose on object 'new HatchBrush(HatchStyle.Percent50, Color.Black, Color.White)' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -69,7 +67,7 @@
          <Members>
           <Member Name="#CreateLabel()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-03-15 21:58:27Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-05-29 21:55:59Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="c:\GitHub\Alpha\Library\Tools\DataSchemaGui\Shapes" File="TableShape.cs" Line="99">In method 'TableShape.CreateLabel()', object 'label' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'label' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -199,51 +197,55 @@
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2123' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2123' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2131' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2131' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2132' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2132' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2133' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2133' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2134' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2134' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2137' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2137' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2138' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2138' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2140' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2140' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2141' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2141' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2146' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2146' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2147' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2147' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
   <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
    <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>The rule 'CA2149' referenced in rule set 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset' could not be found.</ExceptionMessage>
+   <ExceptionMessage>The rule 'CA2149' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
+  </Exception>
+  <Exception Keyword="CA0062" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>The rule 'CA2130' referenced in rule set 'C:\GitHub\Alpha\Library\Tools\DataSchemaGui\..\..\Knightrunner.ruleset' could not be found.</ExceptionMessage>
   </Exception>
  </Exceptions>
 </FxCopReport>

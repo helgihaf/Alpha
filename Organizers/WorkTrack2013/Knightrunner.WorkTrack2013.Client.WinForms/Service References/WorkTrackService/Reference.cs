@@ -563,7 +563,7 @@ namespace Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ActivityPublicIdField;
+        private string ActivityTypePublicIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.TimeSpan> DurationField;
@@ -594,14 +594,14 @@ namespace Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ActivityPublicId {
+        public string ActivityTypePublicId {
             get {
-                return this.ActivityPublicIdField;
+                return this.ActivityTypePublicIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.ActivityPublicIdField, value) != true)) {
-                    this.ActivityPublicIdField = value;
-                    this.RaisePropertyChanged("ActivityPublicId");
+                if ((object.ReferenceEquals(this.ActivityTypePublicIdField, value) != true)) {
+                    this.ActivityTypePublicIdField = value;
+                    this.RaisePropertyChanged("ActivityTypePublicId");
                 }
             }
         }
@@ -751,12 +751,12 @@ namespace Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetRemin" +
             "ders", ReplyAction="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetRemin" +
             "dersResponse")]
-        Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService.Reminder GetReminders(string userId);
+        Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService.Reminder[] GetReminders(string userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetRemin" +
             "ders", ReplyAction="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/GetRemin" +
             "dersResponse")]
-        System.Threading.Tasks.Task<Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService.Reminder> GetRemindersAsync(string userId);
+        System.Threading.Tasks.Task<Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService.Reminder[]> GetRemindersAsync(string userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveRemi" +
             "nder", ReplyAction="http://services.knightrunner.com/Organizers/WorkTrack2013/1.0/IWorkTrack/SaveRemi" +
@@ -906,11 +906,11 @@ namespace Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService {
             return base.Channel.SaveActivityTypeAsync(activityType);
         }
         
-        public Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService.Reminder GetReminders(string userId) {
+        public Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService.Reminder[] GetReminders(string userId) {
             return base.Channel.GetReminders(userId);
         }
         
-        public System.Threading.Tasks.Task<Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService.Reminder> GetRemindersAsync(string userId) {
+        public System.Threading.Tasks.Task<Knightrunner.WorkTrack2013.Client.WinForms.WorkTrackService.Reminder[]> GetRemindersAsync(string userId) {
             return base.Channel.GetRemindersAsync(userId);
         }
         

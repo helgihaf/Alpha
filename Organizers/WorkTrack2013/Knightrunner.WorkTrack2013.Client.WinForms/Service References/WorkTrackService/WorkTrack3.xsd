@@ -75,7 +75,7 @@
   <xs:element name="ArrayOfActivity" nillable="true" type="tns:ArrayOfActivity" />
   <xs:complexType name="Activity">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ActivityPublicId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActivityTypePublicId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Duration" nillable="true" type="ser:duration" />
       <xs:element minOccurs="0" name="Id" type="xs:long" />
       <xs:element minOccurs="0" name="ProjectPublicId" nillable="true" type="xs:string" />

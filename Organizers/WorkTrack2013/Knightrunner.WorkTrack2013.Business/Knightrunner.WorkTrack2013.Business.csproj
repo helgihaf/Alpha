@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{155776C3-CE19-4C11-8C61-CEA917E4D8EA}</ProjectGuid>
+    <ProjectGuid>{6AAC1954-5794-4C85-914A-ED995097DA44}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Knightrunner.WorkTrack2013.Business</RootNamespace>
@@ -32,8 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,16 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity.cs" />
-    <Compile Include="ActivityType.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="IWorkTrack.cs" />
-    <Compile Include="JournalEntry.cs" />
-    <Compile Include="JournalEntryType.cs" />
-    <Compile Include="JournalEntryTypeOrigin.cs" />
-    <Compile Include="Project.cs" />
+    <Compile Include="ValidationException.cs" />
+    <Compile Include="WorkTrack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reminder.cs" />
+    <Compile Include="WorkTrackContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Knightrunner.WorkTrack2013.Interface\Knightrunner.WorkTrack2013.Interface.csproj">
+      <Project>{c774fb2e-9086-49a3-9eb7-be72a121801d}</Project>
+      <Name>Knightrunner.WorkTrack2013.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -41,7 +41,7 @@
             this.separatorExitToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.dataSchemaView = new DataSchemaGui.DataSchemaView();
+            this.projectView = new DataSchemaGui.ProjectView();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,19 +143,19 @@
             // 
             // dataSchemaView
             // 
-            this.dataSchemaView.DataSchema = null;
-            this.dataSchemaView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataSchemaView.Location = new System.Drawing.Point(0, 24);
-            this.dataSchemaView.Name = "dataSchemaView";
-            this.dataSchemaView.Size = new System.Drawing.Size(1111, 597);
-            this.dataSchemaView.TabIndex = 0;
+            this.projectView.Project = null;
+            this.projectView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.projectView.Location = new System.Drawing.Point(0, 24);
+            this.projectView.Name = "dataSchemaView";
+            this.projectView.Size = new System.Drawing.Size(1111, 597);
+            this.projectView.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 643);
-            this.Controls.Add(this.dataSchemaView);
+            this.Controls.Add(this.projectView);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStripMain);
             this.Name = "MainForm";
@@ -184,7 +184,7 @@
         private System.Windows.Forms.ToolStripMenuItem recentToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator separatorExitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private DataSchemaView dataSchemaView;
+        private ProjectView projectView;
     }
 }
 

@@ -1,9 +1,7 @@
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\bin\Debug\Knightrunner.WorkTrack2013.DatabaseTest.dll
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\bin\Debug\Knightrunner.WorkTrack2013.DatabaseTest.pdb
-C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\bin\Debug\Knightrunner.WorkTrack2013.Contract.dll
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\bin\Debug\Knightrunner.WorkTrack2013.Database.dll
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\bin\Debug\Knightrunner.WorkTrack2013.Interface.dll
-C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\bin\Debug\Knightrunner.WorkTrack2013.Contract.pdb
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\bin\Debug\Knightrunner.WorkTrack2013.Database.pdb
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\bin\Debug\Knightrunner.WorkTrack2013.Interface.pdb
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.DatabaseTest\obj\Debug\Knightrunner.WorkTrack2013.DatabaseTest.csprojResolveAssemblyReference.cache

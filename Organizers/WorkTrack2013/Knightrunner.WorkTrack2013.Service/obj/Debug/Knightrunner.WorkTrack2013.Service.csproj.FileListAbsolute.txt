@@ -9,3 +9,5 @@ C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Service\bin\
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Service\bin\Knightrunner.WorkTrack2013.Interface.pdb
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Service\obj\Debug\Knightrunner.WorkTrack2013.Service.dll
 C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Service\obj\Debug\Knightrunner.WorkTrack2013.Service.pdb
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Service\bin\Knightrunner.WorkTrack2013.Business.dll
+C:\GitHub\Alpha\Organizers\WorkTrack2013\Knightrunner.WorkTrack2013.Service\bin\Knightrunner.WorkTrack2013.Business.pdb

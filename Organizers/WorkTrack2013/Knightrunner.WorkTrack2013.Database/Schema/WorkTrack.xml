@@ -3,7 +3,7 @@
   <ColumnTypes>
     <ColumnType name="UniqueName" baseType="String" maxLength="255" />
     <ColumnType name="Description" baseType="String" maxLength="2000" />
-    <ColumnType name="Duration" baseType="Int32" />
+    <ColumnType name="Duration" baseType="Int32" description="Duration in seconds"/>
     <ColumnType name="UserId" baseType="String" maxLength="255" />
     <ColumnType name="CronString" baseType="String" maxLength="50" />
   </ColumnTypes>
@@ -13,6 +13,7 @@
         <Column name="Id" columnType="Id" inPrimaryKey="true" description="Unique ID" />
         <Column name="PublicId" columnType="UniqueName" />
         <Column name="Active" columnType="Boolean" />
+        <Column name="InitialNotificationIntervalMs"
       </Columns>
       <Indices>
         <Index unique="true" name="UsersPublicId_ux">
@@ -57,7 +58,7 @@
         <Column name="ProjectId" references="Projects.Id" canBeNull="true"/>
         <Column name="ActivityTypeId" references="ActivityTypes.Id" canBeNull="true" />
         <Column name="Start" columnType="DateTime" />
-        <Column name="Duration" columnType="Duration" canBeNull="true"/>
+        <Column name="DurationSeconds" columnType="Duration" canBeNull="true"/>
         <Column name="Text" columnType="Description" canBeNull="true"/>
       </Columns>
       <Indices>

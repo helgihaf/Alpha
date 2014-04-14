@@ -38,7 +38,7 @@ namespace Knightrunner.WorkTrack2013.Contract
         //
 
         [OperationContract]
-        Reminder GetReminders(string userId);
+        Reminder[] GetReminders(string userId);
 
         [OperationContract]
         void SaveReminder(Reminder reminder);

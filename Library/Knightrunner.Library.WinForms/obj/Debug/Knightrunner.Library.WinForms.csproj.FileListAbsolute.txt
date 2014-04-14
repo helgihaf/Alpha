@@ -5,6 +5,12 @@ C:\dev\Knightrunner\Library\Knightrunner.Library.WinForms\obj\Debug\Knightrunner
 C:\dev\Knightrunner\Library\Knightrunner.Library.WinForms\obj\Debug\Knightrunner.Library.WinForms.csprojResolveAssemblyReference.cache
 C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.WinForms.dll
 C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.WinForms.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\bin\Debug\Knightrunner.Library.WinForms.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\bin\Debug\Knightrunner.Library.WinForms.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\bin\Debug\Knightrunner.Library.Core.dll
+C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\bin\Debug\Knightrunner.Library.Core.pdb
+C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\obj\Debug\Knightrunner.Library.WinForms.csprojResolveAssemblyReference.cache
 C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\obj\Debug\Knightrunner.Library.WinForms.dll
 C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\obj\Debug\Knightrunner.Library.WinForms.pdb
-C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\obj\Debug\Knightrunner.Library.WinForms.csprojResolveAssemblyReference.cache
+C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\obj\Debug\Knightrunner.Library.WinForms.Controls.FileSystemPathTextBox.resources
+C:\GitHub\Alpha\Library\Knightrunner.Library.WinForms\obj\Debug\Knightrunner.Library.WinForms.csproj.GenerateResource.Cache

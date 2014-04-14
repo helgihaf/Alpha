@@ -15,23 +15,16 @@ namespace Knightrunner.Library.Database.Schema.Project
     {
         public const string TargetNamespace = "http://www.knightrunner.com/Library/Database/SchemaProject";
 
-        private class Options
-        {
-            public string PrimaryKeyFormatString { get; set; }
-            public string ForeignKeyFormatString { get; set; }
-            public string UniqueIndexFormatString { get; set; }
-            public string IndexFormatString { get; set; }
-        }
-        private Options options = new Options();
-
         public DataSchemaProject()
         {
             InputFiles = new List<string>();
+            Options = new ProjectOptions();
             Transformations = new List<Transformation>();
         }
 
         public string Name { get; set; }
         public List<string> InputFiles { get; private set; }
+        public ProjectOptions Options { get; private set; }
         public List<Transformation> Transformations { get; private set; }
         
         public void LoadFrom(string projectFilePath, IVerificationContext context, ISchemaTransformationFactory schemaTransformationFactory)
@@ -51,10 +44,10 @@ namespace Knightrunner.Library.Database.Schema.Project
                     }
                 }
 
-                options.PrimaryKeyFormatString = parsedProject.ProjectSettings.Options.PrimaryKeyFormatString;
-                options.ForeignKeyFormatString = parsedProject.ProjectSettings.Options.ForeignKeyFormatString;
-                options.UniqueIndexFormatString = parsedProject.ProjectSettings.Options.UniqueIndexFormatString;
-                options.IndexFormatString = parsedProject.ProjectSettings.Options.IndexFormatString;
+                Options.PrimaryKeyFormatString = parsedProject.ProjectSettings.Options.PrimaryKeyFormatString;
+                Options.ForeignKeyFormatString = parsedProject.ProjectSettings.Options.ForeignKeyFormatString;
+                Options.UniqueIndexFormatString = parsedProject.ProjectSettings.Options.UniqueIndexFormatString;
+                Options.IndexFormatString = parsedProject.ProjectSettings.Options.IndexFormatString;
 
                 foreach (var parsedTransformation in parsedProject.Transformations)
                 {
@@ -114,41 +107,10 @@ namespace Knightrunner.Library.Database.Schema.Project
 
         public void Build(IVerificationContext context, IScriptDocumentGeneratorFactory docGenFactory)
         {
-            DataSchema dataSchema = new DataSchema();
-            dataSchema.Name = Name;
-
-            foreach (var filePath in InputFiles)
+            var dataSchema = CompileSchema(context);
+            if (dataSchema == null)
             {
-                var inputFilePath = Path.GetFullPath(filePath);
-
-                if (!File.Exists(inputFilePath))
-                {
-                    
-                    context.Add(new VerificationMessage(Severity.Error, string.Format(CultureInfo.CurrentCulture, Properties.Resources.InputFileNotFound, inputFilePath)));
-                    return;
-                }
-
-                using (StreamReader reader = new StreamReader(inputFilePath))
-                {
-                    dataSchema.LoadDataSchemaFile(reader, context);
-                }
-            }
-
-            if (!string.IsNullOrEmpty(options.PrimaryKeyFormatString))
-            {
-                dataSchema.NameFormats.PrimaryKeyFormatString = options.PrimaryKeyFormatString;
-            }
-            if (!string.IsNullOrEmpty(options.ForeignKeyFormatString))
-            {
-                dataSchema.NameFormats.ForeignKeyFormatString = options.ForeignKeyFormatString;
-            }
-            if (!string.IsNullOrEmpty(options.UniqueIndexFormatString))
-            {
-                dataSchema.NameFormats.UniqueIndexFormatString = options.UniqueIndexFormatString;
-            }
-            if (!string.IsNullOrEmpty(options.IndexFormatString))
-            {
-                dataSchema.NameFormats.IndexFormatString = options.IndexFormatString;
+                return;
             }
 
             dataSchema.Verify(context);
@@ -179,6 +141,53 @@ namespace Knightrunner.Library.Database.Schema.Project
                 };
                 transformation.Method.Transform(transformationContext);
             }
+        }
+
+        public DataSchema CompileSchema(IVerificationContext context)
+        {
+            if (context == null)
+            {
+                throw new ArgumentNullException("context");
+            }
+
+            DataSchema dataSchema = new DataSchema();
+            dataSchema.Name = Name;
+
+            foreach (var filePath in InputFiles)
+            {
+                var inputFilePath = Path.GetFullPath(filePath);
+
+                if (!File.Exists(inputFilePath))
+                {
+
+                    context.Add(new VerificationMessage(Severity.Error, string.Format(CultureInfo.CurrentCulture, Properties.Resources.InputFileNotFound, inputFilePath)));
+                    return null;
+                }
+
+                using (StreamReader reader = new StreamReader(inputFilePath))
+                {
+                    dataSchema.LoadDataSchemaFile(reader, context);
+                }
+            }
+
+            if (!string.IsNullOrEmpty(Options.PrimaryKeyFormatString))
+            {
+                dataSchema.NameFormats.PrimaryKeyFormatString = Options.PrimaryKeyFormatString;
+            }
+            if (!string.IsNullOrEmpty(Options.ForeignKeyFormatString))
+            {
+                dataSchema.NameFormats.ForeignKeyFormatString = Options.ForeignKeyFormatString;
+            }
+            if (!string.IsNullOrEmpty(Options.UniqueIndexFormatString))
+            {
+                dataSchema.NameFormats.UniqueIndexFormatString = Options.UniqueIndexFormatString;
+            }
+            if (!string.IsNullOrEmpty(Options.IndexFormatString))
+            {
+                dataSchema.NameFormats.IndexFormatString = Options.IndexFormatString;
+            }
+
+            return dataSchema;
         }
     }
 }

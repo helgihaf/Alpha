@@ -28,6 +28,10 @@ using System.Text;";
         public bool UsePrimaryKeyAttribute { get; set; }
         public bool UseExplicitColumnsAttribute { get; set; }
         public bool UseColumnAttribute { get; set; }
+        public bool UseNameConstants { get; set; }
+        public string NameConstantClassName { get; set; }
+        public string TableNamePropertyName { get; set; }
+
         public List<string> UsingNamespaces { get; internal set; }
         public bool ConvertTableNamesToSingularClassNames { get; set; }
         
@@ -38,6 +42,40 @@ using System.Text;";
         public PetaPocoGenerator()
         {
             UsingNamespaces = new List<string>();
+            NameConstantClassName = "_Names";
+            TableNamePropertyName = "_Table";
+        }
+
+        public void VerifySettings(TransformationContext context)
+        {
+            const string messagePrefix = "PetaPoco transformation settings: ";
+
+            if (UseNameConstants)
+            {
+                if (string.IsNullOrWhiteSpace(NameConstantClassName))
+                {
+                    context.VerificationContext.Add(new Verification.VerificationMessage(Verification.Severity.Error, 
+                        messagePrefix + "NameConstantClassName cannot be null or empty when using name constants"));
+                }
+
+                if (string.IsNullOrWhiteSpace(TableNamePropertyName))
+                {
+                    context.VerificationContext.Add(new Verification.VerificationMessage(Verification.Severity.Error,
+                        messagePrefix + "TableNamePropertyName cannot be null or empty when using name constants"));
+                }
+            }
+
+            if (string.IsNullOrWhiteSpace(DatabaseSchemaName))
+            {
+                context.VerificationContext.Add(new Verification.VerificationMessage(Verification.Severity.Error,
+                    messagePrefix + "DatabaseSchemaName cannot be null or empty"));
+            }
+
+            if (string.IsNullOrWhiteSpace(CodeNamespace))
+            {
+                context.VerificationContext.Add(new Verification.VerificationMessage(Verification.Severity.Error,
+                    messagePrefix + "CodeNamespace cannot be null or empty"));
+            }
         }
 
         public void Generate(Table table, TextWriter writer)
@@ -58,7 +96,7 @@ using System.Text;";
             }
             if (UseTableNameAttribute)
             {
-                writer.WriteLine(indent + "[TableName(\"" + DatabaseSchemaName + "." + table.Name + "\")]");
+                writer.WriteLine("{0}[TableName({1})]", indent, GetNamingFullTableName(table, !UseNameConstants));
             }
 
             if (UsePrimaryKeyAttribute && table.HasPrimaryKey)
@@ -67,7 +105,7 @@ using System.Text;";
                 {
                     if (column.InPrimaryKey)
                     {
-                        writer.Write(indent + "[PrimaryKey(\"" + column.Name + "\"");
+                        writer.Write("{0}[PrimaryKey({1}", indent, GetNamingColumnName(column, !UseNameConstants));
                         if (column.ColumnType.IsDbGenerated)
                         {
                             writer.Write(", autoIncrement = true");
@@ -84,6 +122,11 @@ using System.Text;";
 
             writer.WriteLine(indent + "public partial class " + GenerateClassName(table.Name, ConvertTableNamesToSingularClassNames));
             writer.WriteLine(indent + "{");
+            if (UseNameConstants)
+            {
+                GenerateNameConstantClass(table, writer, indent);
+            }
+
             foreach (Column column in table.Columns)
             {
                 GenerateColumn(column, writer, indent);
@@ -94,6 +137,30 @@ using System.Text;";
                 writer.WriteLine("}");
             }
             writer.WriteLine();
+        }
+
+        private object GetNamingColumnName(Column column, bool direct)
+        {
+            if (direct)
+            {
+                return "\"" + column.Name + "\"";
+            }
+            else
+            {
+                return string.Format(CultureInfo.InvariantCulture, "{0}.{1}", NameConstantClassName, GeneratePropertyName(column));
+            }
+        }
+
+        private string GetNamingFullTableName(Table table, bool direct)
+        {
+            if (direct)
+            {
+                return "\"" + DatabaseSchemaName + "." + table.Name + "\"";
+            }
+            else
+            {
+                return string.Format(CultureInfo.InvariantCulture, "{0}.{1}", NameConstantClassName, TableNamePropertyName);
+            }
         }
 
         private void WriteHeader(TextWriter writer)
@@ -165,7 +232,7 @@ using System.Text;";
             indent += "\t";
             if (UseColumnAttribute)
             {
-                writer.WriteLine(indent + "[Column(\"" + column.Name + "\")]");
+                writer.WriteLine("{0}[Column({1})]", indent, GetNamingColumnName(column, !UseNameConstants));
             }
             writer.Write(indent + "public ");
             writer.Write(GenerateDataType(column));
@@ -190,5 +257,33 @@ using System.Text;";
             bool useNullableMarker = column.CanBeNull && !target.DotNetTypeNullable;
             return TypeToString(column, target) + (useNullableMarker ? "?" : string.Empty);
         }
+
+        private void GenerateNameConstantClass(Table table, TextWriter writer, string indent)
+        {
+            indent += "\t";
+            writer.WriteLine("{0}public static class {1}", indent, NameConstantClassName);
+            writer.WriteLine(indent + "{");
+            indent += "\t";
+
+            writer.WriteLine("{0}public const string {1} = {2};",
+                indent,
+                TableNamePropertyName,
+                GetNamingFullTableName(table, true));
+            
+            foreach (Column column in table.Columns)
+            {
+                writer.WriteLine("{0}public const string {1} = {2};",
+                    indent,
+                    GeneratePropertyName(column),
+                    GetNamingColumnName(column, true));
+            }
+            indent = indent.Substring(0, indent.Length - 1);
+
+            writer.WriteLine(indent + "}");
+            writer.WriteLine();
+        }
+
+
+
     }
 }

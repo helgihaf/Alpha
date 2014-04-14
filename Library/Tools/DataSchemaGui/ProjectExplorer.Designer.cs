@@ -61,14 +61,11 @@
             // 
             this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "DataSchema");
-            this.imageList.Images.SetKeyName(1, "Table");
-            this.imageList.Images.SetKeyName(2, "Index");
-            this.imageList.Images.SetKeyName(3, "PrimaryKey");
-            this.imageList.Images.SetKeyName(4, "ForeignKey");
-            this.imageList.Images.SetKeyName(5, "Folder");
-            this.imageList.Images.SetKeyName(6, "TargetSystem");
-            this.imageList.Images.SetKeyName(7, "DataType");
+            this.imageList.Images.SetKeyName(0, "Transformation");
+            this.imageList.Images.SetKeyName(1, "Options");
+            this.imageList.Images.SetKeyName(2, "InputFile");
+            this.imageList.Images.SetKeyName(3, "Project");
+            this.imageList.Images.SetKeyName(4, "TransformationFolder");
             // 
             // ProjectExplorer
             // 

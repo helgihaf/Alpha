@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSchemaBuild", "Tools\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knightrunner.Library.Database.Schema.PetaPoco", "Knightrunner.Library.Database.Schema.PetaPoco\Knightrunner.Library.Database.Schema.PetaPoco.csproj", "{03868DB9-996F-483A-8D7C-3982941D2352}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knightrunner.Library.Core.Tests", "Knightrunner.Library.Core.Tests\Knightrunner.Library.Core.Tests.csproj", "{56E9E64F-4297-4300-A75E-253A621FD286}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -310,6 +312,16 @@ Global
 		{03868DB9-996F-483A-8D7C-3982941D2352}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{03868DB9-996F-483A-8D7C-3982941D2352}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{03868DB9-996F-483A-8D7C-3982941D2352}.Release|x86.ActiveCfg = Release|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{56E9E64F-4297-4300-A75E-253A621FD286}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

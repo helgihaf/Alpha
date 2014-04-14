@@ -20,14 +20,14 @@ namespace DataSchemaGui
 {
     public partial class MainForm : Form, ISchemaTransformationFactory
     {
-        private DataSchema dataSchema;
+        private DataSchemaProject project;
         private VerificationContext verificationContext = new VerificationContext();
 
         public MainForm()
         {
             InitializeComponent();
             verificationContext.MessageAdded += verificationContext_MessageAdded;
-            dataSchemaView.Initialize(new DetailPageRepository());
+            projectView.Initialize(new DetailPageRepository());
         }
 
         private void verificationContext_MessageAdded(object sender, MessageAddedEventArgs e)
@@ -75,7 +75,7 @@ namespace DataSchemaGui
                 }
             }
 
-            dataSchemaView.ApplySettings(settings);
+            projectView.ApplySettings(settings);
 
         }
 
@@ -111,16 +111,15 @@ namespace DataSchemaGui
                 Cursor.Current = Cursors.WaitCursor;
                 verificationContext.Clear();
 
-                var project = new DataSchemaProject();
-
+                project = new DataSchemaProject();
                 project.LoadFrom(filePath, verificationContext, this);
 
-                dataSchema = new DataSchema();
-                using (StreamReader reader = new StreamReader(filePath))
-                {
-                    dataSchema.LoadDataSchemaFile(reader, verificationContext);
-                }
-                dataSchema.Verify(verificationContext);
+                //dataSchema = new DataSchema();
+                //using (StreamReader reader = new StreamReader(filePath))
+                //{
+                //    dataSchema.LoadDataSchemaFile(reader, verificationContext);
+                //}
+                //dataSchema.Verify(verificationContext);
 
                 AddRecentlyUsedFile(filePath);
 
@@ -139,7 +138,7 @@ namespace DataSchemaGui
             }
 
             MessageLog.WriteLine("'" + Path.GetFileName(filePath) + "' loaded.");
-            dataSchemaView.DataSchema = dataSchema;
+            projectView.Project = project;
 
         }
 
@@ -182,7 +181,7 @@ namespace DataSchemaGui
 
         private MessageLog MessageLog
         {
-            get { return dataSchemaView.MessageLog; }
+            get { return projectView.MessageLog; }
         }
 
 
@@ -205,7 +204,7 @@ namespace DataSchemaGui
                 settings.FormWidth = this.Width;
                 settings.FormHeight = this.Height;
             }
-            dataSchemaView.SaveToSettings(settings, isMaximized);
+            projectView.SaveToSettings(settings, isMaximized);
         }
 
 

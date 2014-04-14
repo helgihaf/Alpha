@@ -4,3 +4,4 @@ C:\GitHub\Alpha\Library\Knightrunner.Library.Core\obj\Debug\Knightrunner.Library
 C:\GitHub\Alpha\Library\Knightrunner.Library.Core\obj\Debug\Knightrunner.Library.Core.pdb
 C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Core.dll.CodeAnalysisLog.xml
 C:\GitHub\Alpha\Library\bin\Debug\Knightrunner.Library.Core.dll.lastcodeanalysissucceeded
+C:\GitHub\Alpha\Library\Knightrunner.Library.Core\obj\Debug\Knightrunner.Library.Core.csprojResolveAssemblyReference.cache

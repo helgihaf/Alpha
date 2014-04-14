@@ -1,6 +1,6 @@
 ﻿namespace DataSchemaGui
 {
-    partial class DataSchemaView
+    partial class ProjectView
     {
         /// <summary> 
         /// Required designer variable.
@@ -91,7 +91,7 @@
             // 
             // projectExplorer
             // 
-            this.projectExplorer.DataSchema = null;
+            this.projectExplorer.Project = null;
             this.projectExplorer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectExplorer.Location = new System.Drawing.Point(0, 0);
             this.projectExplorer.Name = "projectExplorer";
