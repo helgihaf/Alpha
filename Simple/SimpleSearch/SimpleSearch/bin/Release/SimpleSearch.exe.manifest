@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimpleSearch.exe" size="104448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimpleSearch.exe" size="103424">
       <assemblyIdentity name="SimpleSearch" version="1.0.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>JbIewz3sWvxV82amcE7a1g/SkeM=</dsig:DigestValue>
+        <dsig:DigestValue>QIrNLOfykPRyLKCrcRbI373Qgk0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

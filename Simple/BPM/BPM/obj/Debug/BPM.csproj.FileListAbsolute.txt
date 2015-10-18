@@ -7,3 +7,7 @@ C:\GitHub\Alpha\Simple\BPM\BPM\obj\Debug\BPM.Properties.Resources.resources
 C:\GitHub\Alpha\Simple\BPM\BPM\obj\Debug\BPM.csproj.GenerateResource.Cache
 C:\GitHub\Alpha\Simple\BPM\BPM\obj\Debug\BPM.exe
 C:\GitHub\Alpha\Simple\BPM\BPM\obj\Debug\BPM.pdb
+C:\GitHub\Alpha\Simple\BPM\BPM\obj\Debug\BPM.ManualBpmMeters.resources
+C:\GitHub\Alpha\Simple\BPM\BPM\bin\Debug\Sounds\sound1.wav
+C:\GitHub\Alpha\Simple\BPM\BPM\bin\Debug\Sounds\sound2.wav
+C:\GitHub\Alpha\Simple\BPM\BPM\obj\Debug\BPM.Metronome.resources

@@ -1,28 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSearch", "SimpleSearch\SimpleSearch.csproj", "{0307744A-BE8B-4305-845D-CF9C3050CEB9}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SimpleSearchSetup_x64", "SimpleSearchSetup_x64\SimpleSearchSetup_x64.vdproj", "{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SimpleSearchSetup", "SimpleSearchSetup\SimpleSearchSetup.vdproj", "{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}"
-EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.lsretail.com:8088/tfs/main
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SimpleSearch\\SimpleSearch.csproj
-		SccProjectName1 = SimpleSearch
-		SccLocalPath1 = SimpleSearch
-		SccProjectUniqueName2 = SimpleSearchSetup\\SimpleSearchSetup.vdproj
-		SccProjectName2 = SimpleSearchSetup
-		SccLocalPath2 = SimpleSearchSetup
-		SccProjectUniqueName3 = SimpleSearchSetup_x64\\SimpleSearchSetup_x64.vdproj
-		SccProjectName3 = SimpleSearchSetup_x64
-		SccLocalPath3 = SimpleSearchSetup_x64
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
@@ -38,22 +21,6 @@ Global
 		{0307744A-BE8B-4305-845D-CF9C3050CEB9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0307744A-BE8B-4305-845D-CF9C3050CEB9}.Release|x86.ActiveCfg = Release|x86
 		{0307744A-BE8B-4305-845D-CF9C3050CEB9}.Release|x86.Build.0 = Release|x86
-		{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}.Debug|Any CPU.ActiveCfg = Debug
-		{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}.Debug|Any CPU.Build.0 = Debug
-		{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}.Debug|x86.ActiveCfg = Debug
-		{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}.Debug|x86.Build.0 = Debug
-		{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}.Release|Any CPU.ActiveCfg = Release
-		{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}.Release|Any CPU.Build.0 = Release
-		{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}.Release|x86.ActiveCfg = Release
-		{D5042C2B-D593-4A8A-8C12-06AE9C5E4558}.Release|x86.Build.0 = Release
-		{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}.Debug|Any CPU.ActiveCfg = Debug
-		{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}.Debug|Any CPU.Build.0 = Debug
-		{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}.Debug|x86.ActiveCfg = Debug
-		{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}.Debug|x86.Build.0 = Debug
-		{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}.Release|Any CPU.ActiveCfg = Release
-		{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}.Release|Any CPU.Build.0 = Release
-		{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}.Release|x86.ActiveCfg = Release
-		{7AF2C4B3-C9CA-49B9-A19B-099073AD8840}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

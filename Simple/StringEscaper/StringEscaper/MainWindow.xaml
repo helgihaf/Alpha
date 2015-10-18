@@ -1,0 +1,20 @@
+﻿<Window x:Class="StringEscaper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StringEscaper"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="444.055" Width="618.814">
+    <StackPanel>
+        <Label x:Name="label" Content="String to escape"/>
+        <TextBox x:Name="textBoxSource" Height="185" TextWrapping="Wrap" Text="TextBox" AcceptsReturn="True"/>
+        <StackPanel Orientation="Horizontal">
+            <Label x:Name="label1" Content="Escaped string"/>
+            <Button x:Name="buttonEscape" Content="Escape" Click="buttonEscape_Click"/>
+        </StackPanel>
+
+        <TextBox x:Name="textBoxTarget" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Stretch" Height="164" IsReadOnly="True"/>
+
+    </StackPanel>
+</Window>

@@ -123,7 +123,7 @@ namespace SimpleSearch
 			AddStringToCombo(comboBoxDirectory);
 			AddStringToCombo(comboBoxDirPath);
 			AddStringToCombo(comboBoxFileName);
-			AddStringToCombo(comboBoxFileName);
+			AddStringToCombo(comboBoxText);
 			Search();
 		}
 
@@ -193,11 +193,11 @@ namespace SimpleSearch
 		private void AddResult(SearchFileInfo fileInfo)
 		{
 			pendingSearches.Add(fileInfo);
-			if (!timer.Enabled)
-			{
-				timer.Enabled = true;
-			}
-		}
+            if (!timer.Enabled)
+            {
+                timer.Enabled = true;
+            }
+        }
 
 		private List<SearchFileInfo> pendingSearches = new List<SearchFileInfo>();
 		private void timer_Tick(object sender, EventArgs e)
@@ -215,25 +215,32 @@ namespace SimpleSearch
 			Cursor.Current = Cursors.WaitCursor;
 			var items = new ListViewItem[pendingSearches.Count];
 			for (int i = 0; i < pendingSearches.Count; i++)
-			{
-				var searchFileInfo = pendingSearches[i];
-				ListViewItem item = new ListViewItem();
-				item.Tag = searchFileInfo;
-				item.Text = Path.GetFileName(searchFileInfo.Path);
-				item.SubItems.Add(Path.GetDirectoryName(searchFileInfo.Path));
-				item.SubItems.Add(searchFileInfo.LastWriteTime.ToString());
-				item.SubItems.Add(searchFileInfo.SearchTexts);
-				if (showImage)
-				{
-					imageLoader.AddRequest(searchFileInfo.Path, item);
-				}
-				items[i] = item;
-			}
-			listViewResults.Items.AddRange(items);
+            {
+                var searchFileInfo = pendingSearches[i];
+                ListViewItem item = CreateListViewItem(searchFileInfo);
+                items[i] = item;
+            }
+            listViewResults.Items.AddRange(items);
 			pendingSearches.Clear();
 		}
-		
-		private void imageLoader_LoadCompleted(object sender, LoadCompletedEventArgs e)
+
+        private ListViewItem CreateListViewItem(SearchFileInfo searchFileInfo)
+        {
+            ListViewItem item = new ListViewItem();
+            item.Tag = searchFileInfo;
+            item.Text = Path.GetFileName(searchFileInfo.Path);
+            item.SubItems.Add(Path.GetDirectoryName(searchFileInfo.Path));
+            item.SubItems.Add(searchFileInfo.LastWriteTime.ToString());
+            item.SubItems.Add(searchFileInfo.SearchTexts);
+            if (showImage)
+            {
+                imageLoader.AddRequest(searchFileInfo.Path, item);
+            }
+
+            return item;
+        }
+
+        private void imageLoader_LoadCompleted(object sender, LoadCompletedEventArgs e)
 		{
 			this.Invoke(new SetImageDelegate(SetImage), (ListViewItem)e.Tag, e.Image);
 		}
@@ -336,15 +343,24 @@ namespace SimpleSearch
 			textForm.Show();
 		}
 
+        private DateTime lastStatusUpdate = DateTime.MinValue;
+
 		private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
 		{
 			SearchEventArgs searchEventArgs = e.UserState as SearchEventArgs;
 			SearchFoundEventArgs searchFoundEventArgs = e.UserState as SearchFoundEventArgs;
 
-			if (searchEventArgs != null)
-				SetStatusText("Searching " + searchEventArgs.Path);
-			else if (searchFoundEventArgs != null)
-				AddResult(searchFoundEventArgs.FileInfo);
+            if (searchEventArgs != null)
+            {
+                var now = DateTime.Now;
+                if (lastStatusUpdate.AddSeconds(1) < now)
+                {
+                    SetStatusText("Searching " + searchEventArgs.Path);
+                    lastStatusUpdate = now;
+                }
+            }
+            else if (searchFoundEventArgs != null)
+                AddResult(searchFoundEventArgs.FileInfo);
 		}
 
 		private void buttonCancel_Click(object sender, EventArgs e)

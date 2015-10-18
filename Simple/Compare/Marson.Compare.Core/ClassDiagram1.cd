@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Marson.Compare.Core.Entry">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAACADAAAAAAAA=</HashCode>
+      <FileName>Entry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Left" />
+      <Property Name="Right" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ChildEntries" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Marson.Compare.Core.Item">
+    <Position X="1.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Marson.Compare.Core.FileItem">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>FileItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Marson.Compare.Core.DirItem">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DirItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
