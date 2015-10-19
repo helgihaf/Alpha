@@ -28,6 +28,7 @@
       <DatabaseSchemaName>dbo</DatabaseSchemaName>
       <UsingNamespaces>PetaPoco</UsingNamespaces>
       <ConvertTableNamesToSingularClassNames>true</ConvertTableNamesToSingularClassNames>
+      <UseNameConstants>true</UseNameConstants>
     </Transformation>
     <!--<Transformation name="Documentation" method="Documentation">
       <OutputDirectory>out\doc</OutputDirectory>

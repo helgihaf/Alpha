@@ -61,10 +61,14 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Bytes.cs" />
+    <Compile Include="Collections\BaseChild.cs" />
+    <Compile Include="Collections\ChildCollection.cs" />
     <Compile Include="Collections\DynamicKeyedItem.cs" />
     <Compile Include="Collections\DynamicKeyedItemCollection.cs" />
+    <Compile Include="Collections\IChild.cs" />
     <Compile Include="Collections\IKeyedItem.cs" />
     <Compile Include="Collections\IDynamicKeyedItem.cs" />
+    <Compile Include="Collections\IParent.cs" />
     <Compile Include="Collections\KeyedItemCollection.cs" />
     <Compile Include="CommandLineParameter.cs" />
     <Compile Include="CommandLineProcessor.cs" />

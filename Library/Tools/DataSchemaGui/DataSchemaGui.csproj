@@ -29,12 +29,13 @@
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\..\Knightrunner.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
     <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>..\..\bin\Release\</OutputPath>
@@ -66,11 +67,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSchemaView.cs">
+    <Compile Include="DetailPages\ProjectPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DataSchemaView.Designer.cs">
-      <DependentUpon>DataSchemaView.cs</DependentUpon>
+    <Compile Include="DetailPages\ProjectPage.Designer.cs">
+      <DependentUpon>ProjectPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="ProjectView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectView.Designer.cs">
+      <DependentUpon>ProjectView.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSelector.cs" />
     <Compile Include="DetailPageRepository.cs" />
@@ -136,8 +144,11 @@
     <Compile Include="Shapes\TableShape.Designer.cs">
       <DependentUpon>TableShape.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DataSchemaView.resx">
-      <DependentUpon>DataSchemaView.cs</DependentUpon>
+    <EmbeddedResource Include="DetailPages\ProjectPage.resx">
+      <DependentUpon>ProjectPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectView.resx">
+      <DependentUpon>ProjectView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailPages\BasePage.resx">
       <DependentUpon>BasePage.cs</DependentUpon>

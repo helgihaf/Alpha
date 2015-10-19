@@ -1,8 +1,8 @@
 ﻿using Knightrunner.WorkTrack2013.Contract;
 using Knightrunner.WorkTrack2013.Database;
-using Knightrunner.WorkTrack2013.Interface;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -13,94 +13,155 @@ namespace Knightrunner.WorkTrack2013.Service
 {
     public class WorkTrack : IWorkTrack
     {
+        private Business.WorkTrackContext context;
+        private Business.WorkTrack theBusiness;
+
         public Project[] GetProjects()
         {
-            using (var dataSource = CreateDataSource())
+            using (var business = GetBusiness())
             {
-                return dataSource.GetProjects().ToArray();
+                return business.GetProjects().ConvertAll(Converters.ProjectToContract).ToArray();
             }
         }
 
         public Project[] GetChildProjects(string publicId)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                return business.GetChildProjects(publicId).ConvertAll(Converters.ProjectToContract).ToArray();
+            }
         }
 
         public void SaveProject(Project project)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                business.SaveProject(Converters.ProjectToInterface(project));
+            }
         }
 
         public ActivityType[] GetActivityTypes()
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                return business.GetActivityTypes().ConvertAll(Converters.ActivityTypeToContract).ToArray();
+            }
         }
 
         public void SaveActivityType(ActivityType activityType)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                business.SaveActivityType(Converters.ActivityTypeToInterface(activityType));
+            }
         }
 
-        public Reminder GetReminders(string userId)
+        public Reminder[] GetReminders(string userId)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                return business.GetReminders(userId).ConvertAll(Converters.ReminderToContract).ToArray();
+            }
         }
 
         public void SaveReminder(Reminder reminder)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                business.SaveReminder(Converters.ReminderToInterface(reminder));
+            }
         }
 
         public void DeleteReminder(long id)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                business.DeleteReminder(id);
+            }
         }
 
         public JournalEntry[] GetJournalEntries(string userId, DateTime from, DateTime to)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                return business.GetJournalEntries(userId, from, to).ConvertAll(Converters.JournalEntryToContract).ToArray();
+            }
         }
 
         public void SaveJournalEntry(JournalEntry journalEntry)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                business.SaveJournalEntry(Converters.JouralEntryToInterface(journalEntry));
+            }
         }
 
         public void DeleteJournalEntry(long id)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                business.DeleteJournalEntry(id);
+            }
         }
 
         public Activity[] GetActivities(string userId, DateTime from, DateTime to)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                return business.GetActivities(userId, from, to).ConvertAll(Converters.ActivityToContract).ToArray();
+            }
         }
 
         public void SaveActivity(Activity activity)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                business.SaveActivity(Converters.ActivityToInterface(activity));
+            }
         }
 
         public void DeleteActivity(long id)
         {
-            throw new NotImplementedException();
+            using (var business = GetBusiness())
+            {
+                business.DeleteActivity(id);
+            }
         }
 
-        private IDataSource CreateDataSource()
+
+        private Business.WorkTrack GetBusiness()
         {
-            var cs = System.Configuration.ConfigurationManager.AppSettings["connectionString"];
-            if (string.IsNullOrEmpty(cs))
+            if (theBusiness == null)
             {
-                throw new ApplicationException("connectionString configuration missing or empty");
+                theBusiness = new Business.WorkTrack(GetWorkTrackContext());
             }
+            return theBusiness;
+        }
 
-            var providerName = System.Configuration.ConfigurationManager.AppSettings["providerName"];
-            if (string.IsNullOrEmpty(providerName))
+        private Business.WorkTrackContext GetWorkTrackContext()
+        {
+            if (context == null)
             {
-                throw new ApplicationException("providerName configuration missing or empty");
-            }
+                var appSettings = System.Configuration.ConfigurationManager.AppSettings;
 
-            return new DataSource(cs, providerName);
+                string connectionString = appSettings["connectionString"];
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    throw new ConfigurationErrorsException("connectionString configuration missing or empty");
+                }
+
+                string providerName = appSettings["providerName"];
+                if (string.IsNullOrEmpty(providerName))
+                {
+                    throw new ConfigurationErrorsException("providerName configuration missing or empty");
+                }
+
+                context = new Business.WorkTrackContext
+                {
+                    DataSourceFactory = new DataSourceFactory(connectionString, providerName)
+                };
+            }
+            return context;
         }
     }
 }

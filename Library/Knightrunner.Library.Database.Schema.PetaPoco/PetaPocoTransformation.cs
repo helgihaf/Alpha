@@ -21,13 +21,24 @@ namespace Knightrunner.Library.Database.Schema.PetaPoco
             generator.UseExplicitColumnsAttribute = accessor.GetBool("UseExplicitColumnsAttribute");
             generator.UsePrimaryKeyAttribute = accessor.GetBool("UsePrimaryKeyAttribute");
             generator.UseTableNameAttribute = accessor.GetBool("UseTableNameAttribute");
+            generator.UseNameConstants = accessor.GetBool("UseNameConstants");
+            ActionIfNotNull(() => accessor.GetStringOrDefault("NameConstantClassName"), b => generator.NameConstantClassName = b);
+            ActionIfNotNull(() => accessor.GetStringOrDefault("TableNamePropertyName"), b => generator.TableNamePropertyName = b);
             generator.UsingNamespaces.AddRange(SplitUsings(accessor.GetStringOrDefault("UsingNamespaces")));
             generator.ConvertTableNamesToSingularClassNames = accessor.GetBool("ConvertTableNamesToSingularClassNames");
             generator.DatabaseSchemaName = accessor.GetString("DatabaseSchemaName");
             generator.CodeNamespace = accessor.GetString("CodeNamespace");
             generator.TargetSystem = context.TargetSystem;
+            
+            generator.VerifySettings(context);
+            if (context.VerificationContext.HasErrors)
+            {
+                return;
+            }
 
             var directoryPath = accessor.GetString("DirectoryPath");
+            
+            // Do transformation
             foreach (Table table in context.DataSchema.Tables)
             {
                 string fileName = GetFileName(table.Name, generator.ConvertTableNamesToSingularClassNames);
@@ -52,6 +63,15 @@ namespace Knightrunner.Library.Database.Schema.PetaPoco
                 {
                     context.VerificationContext.Add(new Verification.VerificationMessage(Verification.Severity.Warning, string.Format(CultureInfo.CurrentCulture, Properties.Resources.FileIsReadOnly, filePath)));
                 }
+            }
+        }
+
+        private void ActionIfNotNull<T>(Func<T> getValueFunc, Action<T> setValueAction)
+        {
+            var value = getValueFunc();
+            if (value != null)
+            {
+                setValueAction(value);
             }
         }
 

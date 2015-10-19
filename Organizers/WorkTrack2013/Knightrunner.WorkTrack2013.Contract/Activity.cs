@@ -20,7 +20,7 @@ namespace Knightrunner.WorkTrack2013.Contract
         [DataMember]
         public string ProjectPublicId { get; set; }
         [DataMember]
-        public string ActivityPublicId { get; set; }
+        public string ActivityTypePublicId { get; set; }
         [DataMember]
         public string Text { get; set; }
     }

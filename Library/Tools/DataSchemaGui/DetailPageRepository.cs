@@ -39,18 +39,22 @@ namespace DataSchemaGui
             Control parentControl = director.PageParentControl;
             Control control = null;
 
-            if (dataObjectType == typeof(Knightrunner.Library.Database.Schema.DataSchema))
+            if (dataObjectType == typeof(Knightrunner.Library.Database.Schema.Project.DataSchemaProject))
             {
-                control = new DetailPages.DataSchemaPage();
+                control = new DetailPages.ProjectPage();
             }
-            else if (dataObjectType == typeof(Knightrunner.Library.Database.Schema.TargetSystem))
-            {
-                control = new DetailPages.TargetSystemPage();
-            }
-            else if (dataObjectType == typeof(Knightrunner.Library.Database.Schema.ColumnType))
-            {
-                control = new DetailPages.ColumnTypePage();
-            }
+            //if (dataObjectType == typeof(Knightrunner.Library.Database.Schema.DataSchema))
+            //{
+            //    control = new DetailPages.DataSchemaPage();
+            //}
+            //else if (dataObjectType == typeof(Knightrunner.Library.Database.Schema.TargetSystem))
+            //{
+            //    control = new DetailPages.TargetSystemPage();
+            //}
+            //else if (dataObjectType == typeof(Knightrunner.Library.Database.Schema.ColumnType))
+            //{
+            //    control = new DetailPages.ColumnTypePage();
+            //}
 
             if (control != null)
             {

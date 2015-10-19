@@ -21,7 +21,6 @@ C:\GitHub\Alpha\Library\bin\Debug\DataSchemaGui.exe.config
 C:\GitHub\Alpha\Library\bin\Debug\DataSchemaGui.exe
 C:\GitHub\Alpha\Library\bin\Debug\DataSchemaGui.pdb
 C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.csprojResolveAssemblyReference.cache
-C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.DataSchemaView.resources
 C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.DetailPages.BasePage.resources
 C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.DetailPages.ColumnTypePage.resources
 C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.DetailPages.DataSchemaPage.resources
@@ -36,3 +35,5 @@ C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.Shapes.Table
 C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.csproj.GenerateResource.Cache
 C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.exe
 C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.pdb
+C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.ProjectView.resources
+C:\GitHub\Alpha\Library\Tools\DataSchemaGui\obj\Debug\DataSchemaGui.DetailPages.ProjectPage.resources

@@ -74,7 +74,7 @@
   <xs:element name="GetRemindersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Knightrunner.WorkTrack2013.Contract" minOccurs="0" name="GetRemindersResult" nillable="true" type="q6:Reminder" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Knightrunner.WorkTrack2013.Contract" minOccurs="0" name="GetRemindersResult" nillable="true" type="q6:ArrayOfReminder" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

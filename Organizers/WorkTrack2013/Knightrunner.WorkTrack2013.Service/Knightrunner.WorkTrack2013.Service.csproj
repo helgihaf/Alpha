@@ -63,6 +63,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters.cs" />
     <Compile Include="WorkTrack.svc.cs">
       <DependentUpon>WorkTrack.svc</DependentUpon>
     </Compile>
@@ -80,6 +81,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Knightrunner.WorkTrack2013.Business\Knightrunner.WorkTrack2013.Business.csproj">
+      <Project>{6aac1954-5794-4c85-914a-ed995097da44}</Project>
+      <Name>Knightrunner.WorkTrack2013.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Knightrunner.WorkTrack2013.Contract\Knightrunner.WorkTrack2013.Contract.csproj">
       <Project>{3825ea26-38b4-4207-906a-393b27c15421}</Project>
       <Name>Knightrunner.WorkTrack2013.Contract</Name>

@@ -87,6 +87,7 @@
     <Compile Include="Parsing\Project.cs">
       <DependentUpon>Project.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Project\ProjectOptions.cs" />
     <Compile Include="Project\Transformation.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

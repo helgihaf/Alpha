@@ -8,21 +8,22 @@ using System.Text;
 using System.Windows.Forms;
 using Knightrunner.Library.Database.Schema;
 using Knightrunner.Library.Controls.PageSelection;
+using Knightrunner.Library.Database.Schema.Project;
+using System.IO;
 
 namespace DataSchemaGui
 {
     public partial class ProjectExplorer : UserControl, ISelector
     {
-        private const string ImageKeyDataSchema = "DataSchema";
-        private const string ImageKeyTable = "Table";
-        private const string ImageKeyIndex = "Index";
-        private const string ImageKeyPrimaryKey = "PrimaryKey";
-        private const string ImageKeyForeignKey = "ForeignKey";
-        private const string ImageKeyFolder = "Folder";
-        private const string ImageKeyTargetSystem = "TargetSystem";
-        private const string ImageKeyColumnType = "DataType";
+        private static class ImageKey
+        {
+            public const string Project = "Project";
+            public const string InputFile = "InputFile";
+            public const string Transformation = "Transformation";
+            public const string TransformationFolder = "TransformationFolder";
+        }
 
-        private DataSchema dataSchema;
+        private DataSchemaProject project;
         private bool allowInternalEvents;
         private bool allowExternalEvents;
 
@@ -40,24 +41,22 @@ namespace DataSchemaGui
         public IDirector Director { get; private set; }
 
 
-        public DataSchema DataSchema
+        public DataSchemaProject Project
         {
             get
             {
-                return dataSchema;
+                return project;
             }
 
             set
             {
-                if (!object.ReferenceEquals(dataSchema, value))
+                if (!object.ReferenceEquals(project, value))
                 {
-                    dataSchema = value;
+                    project = value;
                     RefreshExplorer();
                 }
             }
         }
-
-
 
         private void RefreshExplorer()
         {
@@ -82,122 +81,45 @@ namespace DataSchemaGui
         
         private void BuildTree()
         {
-            // Data schema
-            var dataSchemaNode = new TreeNode();
-            dataSchemaNode.Text = dataSchema.Name;
-            dataSchemaNode.ImageKey = ImageKeyDataSchema;
-            dataSchemaNode.SelectedImageKey = dataSchemaNode.ImageKey;
-            dataSchemaNode.Tag = dataSchema;
-            
-            // Targets
-            var targetsNode = new TreeNode();
-            targetsNode.Text = "Target systems";
-            targetsNode.ImageKey = ImageKeyFolder;
-            targetsNode.SelectedImageKey = targetsNode.ImageKey;
-            BuildTargetSystemNodes(targetsNode);
-            dataSchemaNode.Nodes.Add(targetsNode);
+            // Project
+            var projectNode = new TreeNode();
+            projectNode.Text = project.Name;
+            projectNode.ImageKey = ImageKey.Project;
+            projectNode.SelectedImageKey = projectNode.ImageKey;
+            projectNode.Tag = project;
 
-            // Column types
-            var columnTypesNode = new TreeNode();
-            columnTypesNode.Text = "Column types";
-            columnTypesNode.ImageKey = ImageKeyFolder;
-            columnTypesNode.SelectedImageKey = columnTypesNode.ImageKey;
-            BuildColumnTypeNodes(columnTypesNode);
-            dataSchemaNode.Nodes.Add(columnTypesNode);
+            // Transformations
+            var transformationFolderNode = new TreeNode();
+            transformationFolderNode.Text = "Transformations";
+            transformationFolderNode.ImageKey = ImageKey.TransformationFolder;
+            transformationFolderNode.SelectedImageKey = transformationFolderNode.ImageKey;
+            foreach (var transformation in project.Transformations)
+            {
+                var transformationNode = new TreeNode();
+                transformationNode.Text = transformation.Name;
+                transformationNode.ImageKey = ImageKey.Transformation;
+                transformationNode.SelectedImageKey = transformationNode.ImageKey;
+                transformationNode.Tag = transformation;
+                transformationFolderNode.Nodes.Add(transformationNode);
+            }
+            projectNode.Nodes.Add(transformationFolderNode);
 
-            // Tables
-            var tablesNode = new TreeNode();
-            tablesNode.Text = "Tables";
-            tablesNode.ImageKey = ImageKeyFolder;
-            tablesNode.SelectedImageKey = tablesNode.ImageKey;
-            BuildTableNodes(tablesNode);
-            dataSchemaNode.Nodes.Add(tablesNode);
-            tablesNode.Expand();
+            foreach (var inputFilePath in project.InputFiles.OrderBy(i => Path.GetFileName(i)))
+            {
+                var inputFileNode = new TreeNode();
+                inputFileNode.Text = Path.GetFileName(inputFilePath);
+                inputFileNode.ImageKey = ImageKey.InputFile;
+                inputFileNode.SelectedImageKey = inputFileNode.ImageKey;
+                projectNode.Nodes.Add(inputFileNode);
+            }
+
 
             // Add all to tree
             treeView.Nodes.Clear();
-            treeView.Nodes.Add(dataSchemaNode);
-            dataSchemaNode.Expand();
+            treeView.Nodes.Add(projectNode);
+            projectNode.Expand();
         }
 
-        private void BuildTargetSystemNodes(TreeNode parentNode)
-        {
-            foreach (var targetSystem in dataSchema.TargetSystems.OrderBy(ts => ts.Name))
-            {
-                var node = new TreeNode();
-                SetTargetSystemNode(node, targetSystem);
-                parentNode.Nodes.Add(node);
-            }
-        }
-
-        private void SetTargetSystemNode(TreeNode node, TargetSystem targetSystem)
-        {
-            node.Text = targetSystem.Name;
-            node.ImageKey = ImageKeyTargetSystem;
-            node.SelectedImageKey = node.ImageKey;
-            node.Tag = targetSystem;
-        }
-
-        private void BuildColumnTypeNodes(TreeNode parentNode)
-        {
-            foreach (var columnType in dataSchema.ColumnTypes.OrderBy(ct => ct.Name))
-            {
-                var node = new TreeNode();
-                SetColumnTypeNode(node, columnType);
-                parentNode.Nodes.Add(node);
-            }
-        }
-
-        private void SetColumnTypeNode(TreeNode node, ColumnType columnType)
-        {
-            node.Text = columnType.Name;
-            node.ImageKey = ImageKeyColumnType;
-            node.SelectedImageKey = node.ImageKey;
-            node.Tag = columnType;
-        }
-
-        private void BuildTableNodes(TreeNode parentNode)
-        {
-            foreach (var table in dataSchema.Tables.OrderBy(tab => tab.Name))
-            {
-                var node = new TreeNode();
-                SetTableNode(node, table);
-
-                foreach (var index in table.Indices)
-                {
-                    BuildIndexNodes(table, node);
-                }
-
-                parentNode.Nodes.Add(node);
-            }
-        }
-
-        private void SetTableNode(TreeNode node, Table table)
-        {
-            node.Text = table.Name;
-            node.ImageKey = ImageKeyTable;
-            node.SelectedImageKey = node.ImageKey;
-            node.Tag = table;
-        }
-
-
-        private void BuildIndexNodes(Table table, TreeNode parentNode)
-        {
-            foreach (var index in table.Indices.OrderBy(idx => idx.Name))
-            {
-                var node = new TreeNode();
-                SetIndexNode(node, index);
-                parentNode.Nodes.Add(node);
-            }
-        }
-
-        private void SetIndexNode(TreeNode node, Index index)
-        {
-            node.Text = index.Name;
-            node.ImageKey = ImageKeyIndex;
-            node.SelectedImageKey = node.ImageKey;
-            node.Tag = index;
-        }
 
         private void treeView_BeforeSelect(object sender, TreeViewCancelEventArgs e)
         {
@@ -209,9 +131,6 @@ namespace DataSchemaGui
         {
             Director.ShowObjectPage(e.Node.Tag);
         }
-
-
-
 
         internal Image GetCurrentImage()
         {
